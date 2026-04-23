@@ -585,7 +585,7 @@
       ],
       "website": "https://www.voyagier.com/",
       "description": "Voyagier is an AI-powered luxury travel planning platform that recently emerged from stealth and is gearing up for a seed round.",
-      "isNew": false,
+      "isNew": true,
       "lastUpdated": "2026-04-23",
       "_autoDiscovered": true,
       "founded": "2023-01-01"
