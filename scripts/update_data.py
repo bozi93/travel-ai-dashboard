@@ -190,14 +190,39 @@ def fetch_reddit(subreddit, query):
 # New company extraction (heuristic)
 # ---------------------------------------------------------------------------
 
-# Blocklist: filter out government entities, tourism boards, and non-startups
+# Blocklist: if the ENTIRE title/summary is about these, skip
 GOVERNMENT_BLOCKLIST = [
-    "tourism board", "ministry of", "department of", "bureau of",
-    "government", "official", "national tourism", "tourism authority",
-    "tourism administration", "embassy", "consulate",
+    "tourism board", "ministry of tourism", "department of tourism",
+    "bureau of tourism", "tourism authority", "tourism administration",
+    "national tourism", "tourism development", "tourism promotion",
+    "embassy ", "consulate ", "government announces", "government launches",
 ]
 
-# Geographic/adjective prefixes to strip before extracting company names
+# Words that should NEVER be extracted as company names
+BLOCKED_COMPANY_WORDS = [
+    "tourism", "travel", "trip", "trips", "booking", "vacation",
+    "holiday", "resort", "hotel", "airline", "airport",
+    "ministry", "department", "bureau", "authority", "board",
+    "council", "commission", "organization", "association",
+]
+
+# Geographic names that should NEVER be company names
+GEO_COUNTRY_NAMES = [
+    "south africa", "saudi arabia", "thailand", "vietnam", "indonesia",
+    "malaysia", "singapore", "philippines", "japan", "korea", "china",
+    "india", "brazil", "mexico", "australia", "new zealand", "canada",
+    "united states", "united kingdom", "france", "germany", "italy",
+    "spain", "portugal", "netherlands", "switzerland", "austria",
+    "sweden", "norway", "denmark", "finland", "poland", "turkey",
+    "russia", "uae", "qatar", "dubai", "abu dhabi", "egypt",
+    "morocco", "kenya", "nigeria", "argentina", "chile", "colombia",
+    "peru", "costa rica", "jamaica", "bahamas", "maldives",
+    "sri lanka", "nepal", "cambodia", "laos", "myanmar",
+    "sonoma county", "california", "texas", "florida", "hawaii",
+    "new york", "london", "paris", "rome", "tokyo", "bangkok",
+]
+
+# Short geo adjectives that may appear before "startup/company"
 GEO_ADJECTIVES = [
     "dutch", "german", "french", "italian", "spanish", "british",
     "american", "canadian", "australian", "japanese", "korean",
@@ -205,75 +230,128 @@ GEO_ADJECTIVES = [
     "african", "european", "asian", "latin", "nordic",
     "south african", "saudi", "emirati", "qatari", "turkish",
     "swiss", "swedish", "norwegian", "danish", "finnish",
+    "thai", "vietnamese", "indonesian", "malaysian",
     "uae-based", "us-based", "uk-based", "eu-based",
-    "bay area", "silicon valley",
 ]
 
-def is_government_entity(name):
-    """Check if a name refers to a government/tourism board entity."""
-    name_lower = name.lower()
+
+def is_government_entity(title):
+    """Check if the title is about a government/tourism board entity."""
+    text = title.lower()
     for blocked in GOVERNMENT_BLOCKLIST:
-        if blocked in name_lower:
+        if blocked in text:
             return True
     return False
 
-def strip_geo_prefix(text):
-    """Remove geographic/adjective prefixes from headlines."""
-    text_lower = text.lower()
-    for geo in sorted(GEO_ADJECTIVES, key=len, reverse=True):
-        # Match "Geo adjective + startup/company/platform/firm + ..."
-        pattern = rf'\b{re.escape(geo)}\s+(startup|company|platform|firm|app|business)\s+'
-        if re.search(pattern, text_lower):
-            # Remove the geo prefix but keep the rest
-            text = re.sub(pattern, r'\2 ', text, count=1, flags=re.IGNORECASE)
-            break
-    return text
+
+def is_geo_only_name(name):
+    """Check if a name is purely a geographic place (country/city)."""
+    name_lower = name.lower().strip()
+    # Direct match against country/city list
+    if name_lower in GEO_COUNTRY_NAMES:
+        return True
+    # Common abbreviations
+    short_forms = {"tat": True, "sato": True, "pata": True, "unwto": True, "wttc": True}
+    if name_lower.strip() in short_forms:
+        return True
+    # Check against blocked company words
+    if name_lower in BLOCKED_COMPANY_WORDS:
+        return True
+    return False
+
+
+def is_valid_company_name(name):
+    """Check if a name looks like a real company name."""
+    if not name or len(name) < 3:
+        return False
+    name_lower = name.lower().strip()
+    # Reject if it's purely a geo name or blocked word
+    if name_lower in GEO_COUNTRY_NAMES or name_lower in BLOCKED_COMPANY_WORDS:
+        return False
+    # Reject common abbreviations
+    short_forms = {"tat": True, "sato": True, "pata": True, "unwto": True, "wttc": True}
+    if name_lower in short_forms:
+        return False
+    # Accept names starting with capital letter
+    if re.match(r'^[A-Z]', name):
+        return True
+    return False
+
 
 def extract_company_name_from_title(title):
-    """Try to extract the company/product name from a news headline."""
+    """
+    Extract company/product name from a news headline.
+    """
     text = title.strip()
 
-    # Step 1: Strip geographic prefixes like "Dutch startup", "German company"
-    text = strip_geo_prefix(text)
-
-    # Step 2: Check for government/tourism board entities early
+    # Early reject: government/tourism board articles
     if is_government_entity(text):
         return None
 
-    # Pattern: "X raises...", "X launches...", "X debuts..."
-    m = re.search(r'^([A-Z][A-Za-z0-9\s&\']+?)\s+(raises|launches|debuts|unveils|introduces|emerges|announces)',
-                  text)
-    if m:
-        name = m.group(1).strip()
-        name = re.sub(r'[\s:]+$', '', name)
-        # Filter out government entities
-        if len(name) >= 3 and not is_government_entity(name):
-            # Take only the last capitalized word if it looks like "Adjective CompanyName"
-            # e.g., "Travel Tech WeTravel" -> "WeTravel"
-            words = name.split()
-            if len(words) > 1:
-                # Return the most likely company name (last capitalized word or compound)
-                name = words[-1]
-            return name
+    # --- Pattern 1: "[Geo] ... startup/company/platform X ..." ---
+    # e.g. "Dutch startup WeTravel launches AI platform"
+    # e.g. "Dutch TravelTech platform GeniusTravel launches AI booking"
+    for geo in GEO_ADJECTIVES:
+        pattern = rf'\b{re.escape(geo)}\s+.*?(?:startup|company|firm|platform|app)\s+([A-Z][A-Za-z0-9]+)'
+        m = re.search(pattern, text, re.IGNORECASE)
+        if m:
+            company = m.group(1).strip()
+            if is_valid_company_name(company):
+                return company
 
-    # Pattern: "startup X ...", "company X ..."
-    m = re.search(r'(?:new\s+)?(?:startup|company|app|platform|firm)\s+([A-Z][A-Za-z0-9\s&\']+?)[\s,;:\-]', text)
+    # --- Pattern 2: "X launches/raises/debuts/unveils..." (subject at start) ---
+    # e.g. "WeTravel launches AI platform" or "BizTrip AI launches assistant"
+    m = re.search(
+        r'^([A-Z][A-Za-z0-9]*(?:\s+[A-Z][A-Za-z0-9]*)*)\s+'
+        r'(raises|launches|debuts|unveils|introduces|emerges|announces|secures|closes|gets)',
+        text
+    )
     if m:
-        name = m.group(1).strip()
-        name = re.sub(r'[\s:]+$', '', name)
-        if len(name) >= 3 and not is_government_entity(name):
-            # Extract clean company name
-            words = name.split()
-            if len(words) > 1:
-                name = words[-1]
-            return name
+        raw_name = m.group(1).strip()
+        words = raw_name.split()
+        # If multi-word like "BizTrip AI", take the first meaningful word
+        # If it's "Passprt Trips", take "Passprt"
+        if len(words) >= 2:
+            # Check if last word is a generic term
+            if words[-1].lower() in ('ai', 'trips', 'trip', 'travel', 'app', 'platform', 'tech'):
+                company = words[-2] if len(words) >= 2 else words[-1]
+            else:
+                company = words[-1]
+        else:
+            company = words[0] if words else raw_name
+        if is_valid_company_name(company):
+            return company
 
-    # Pattern: "X, a Y-based startup, ..." or "X — a startup..."
-    m = re.search(r'([A-Z][A-Za-z0-9\']+)\s*[,—–-]\s*(?:a|an)\s+(?:new\s+)?(?:y-)?(?:based\s+)?(?:startup|company|app|platform)', text)
+    # --- Pattern 3: "...startup/company X..." anywhere in title ---
+    # e.g. "AI travel startup WeTravel raises $5M"
+    m = re.search(
+        r'(?:new\s+)?(?:startup|company|firm)\s+([A-Z][A-Za-z0-9]+)',
+        text
+    )
     if m:
-        name = m.group(1).strip()
-        if len(name) >= 3 and not is_government_entity(name):
-            return name
+        company = m.group(1).strip()
+        if is_valid_company_name(company):
+            return company
+
+    # --- Pattern 4: "X, a [geo] startup, ..." ---
+    m = re.search(
+        r'([A-Z][A-Za-z0-9]+)\s*,\s*(?:a|an)\s+(?:.*?)\s*(?:startup|company|firm)',
+        text
+    )
+    if m:
+        company = m.group(1).strip()
+        if is_valid_company_name(company):
+            return company
+
+    # --- Pattern 5: "X — a [geo] startup..." ---
+    m = re.search(
+        r'([A-Z][A-Za-z0-9]+)\s*[—–-]\s*(?:a|an)\s+(?:.*?)\s*(?:startup|company|firm)',
+        text
+    )
+    if m:
+        company = m.group(1).strip()
+        if is_valid_company_name(company):
+            return company
 
     return None
 
@@ -375,9 +453,9 @@ def main():
                 if not company_name:
                     company_name = extract_company_name_from_title(title)
 
-                # Skip government/tourism board entities
-                if company_name and is_government_entity(company_name):
-                    print(f"  [SKIP] Filtered out government entity: {company_name}")
+                # Skip government/tourism board entities and pure geo names
+                if company_name and (is_government_entity(company_name) or is_geo_only_name(company_name)):
+                    print(f"  [SKIP] Filtered out: {company_name}")
                     continue
 
                 if company_name and company_name.lower() not in existing_names:
