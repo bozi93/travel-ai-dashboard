@@ -84,9 +84,10 @@ def extract_domain(url):
 def news_id(title, date):
     return hashlib.md5(f"{date}:{title}".encode()).hexdigest()[:12]
 
-def is_news_known(company, title, date):
+def is_news_known(company, title):
+    """Check if a news title is already known (regardless of date)."""
     for n in company.get('news', []):
-        if n.get('title') == title and n.get('date') == date:
+        if n.get('title') == title:
             return True
     return False
 
@@ -431,7 +432,7 @@ def main():
 
         if matched:
             # Add news to existing company
-            if not is_news_known(matched, title, today):
+            if not is_news_known(matched, title):
                 # Use the actual published date if available, otherwise fall back to today
                 news_date = entry.get('published') or today
                 matched.setdefault('news', []).insert(0, {
@@ -472,6 +473,18 @@ def main():
                         product_field = company_name
                         # Clean description: remove source suffix like " - Technical.ly"
                         clean_summary = re.sub(r'\s*[-–—]\s*\w+(\.\w+)+$', '', summary).strip()
+                        # Extract a meaningful product description from the title
+                        product_desc = re.sub(
+                            r'^(?:' + '|'.join(GEO_ADJECTIVES) + r')\s+.*?\s+(?:startup|company|firm|platform|app)\s+',
+                            '', title, flags=re.IGNORECASE
+                        )
+                        product_desc = re.sub(
+                            r'\s+(raises|launches|debuts|unveils|introduces|emerges|announces|secures|closes|gets)\s+.*$',
+                            '', product_desc
+                        ).strip()
+                        if len(product_desc) < 10 or product_desc.lower() == company_name.lower():
+                            product_desc = f"AI-powered travel technology by {company_name}"
+
                         candidates.append({
                             "id": f"auto-{news_id(company_name, news_date)}",
                             "name": company_name,
@@ -479,7 +492,7 @@ def main():
                             "location": "Unknown",
                             "stage": "Unknown",
                             "totalFunding": "N/A",
-                            "product": product_field,
+                            "product": product_desc,
                             "investors": "",
                             "metrics": {"newsCount": 1, "newsRecency": news_date, "socialMentions": 0, "trafficGrowth": "N/A"},
                             "news": [{
@@ -489,7 +502,7 @@ def main():
                                 "source": link,
                             }],
                             "website": "",
-                            "description": clean_summary[:200] if clean_summary else title,
+                            "description": clean_summary[:200] if clean_summary and not clean_summary.startswith('<') else product_desc,
                             "isNew": True,
                             "lastUpdated": today,
                             "_autoDiscovered": True,
