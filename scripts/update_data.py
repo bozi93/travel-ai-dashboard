@@ -362,6 +362,87 @@ def extract_company_name_from_title(title):
 
     return None
 
+
+def infer_location_from_title(title):
+    """Infer location from geo adjectives or country mentions in the title."""
+    text = title.lower()
+    geo_map = {
+        'dutch': 'Netherlands',
+        'german': 'Germany',
+        'french': 'France',
+        'italian': 'Italy',
+        'spanish': 'Spain',
+        'british': 'United Kingdom',
+        'american': 'USA',
+        'canadian': 'Canada',
+        'australian': 'Australia',
+        'japanese': 'Japan',
+        'korean': 'South Korea',
+        'chinese': 'China',
+        'indian': 'India',
+        'brazilian': 'Brazil',
+        'mexican': 'Mexico',
+        'russian': 'Russia',
+        'african': 'Africa',
+        'european': 'Europe',
+        'asian': 'Asia',
+        'latin': 'Latin America',
+        'nordic': 'Nordic',
+        'south african': 'South Africa',
+        'saudi': 'Saudi Arabia',
+        'emirati': 'UAE',
+        'qatari': 'Qatar',
+        'turkish': 'Turkey',
+        'swiss': 'Switzerland',
+        'swedish': 'Sweden',
+        'norwegian': 'Norway',
+        'danish': 'Denmark',
+        'finnish': 'Finland',
+        'thai': 'Thailand',
+        'vietnamese': 'Vietnam',
+        'indonesian': 'Indonesia',
+        'malaysian': 'Malaysia',
+        'uae-based': 'UAE',
+        'us-based': 'USA',
+        'uk-based': 'United Kingdom',
+        'eu-based': 'Europe',
+    }
+    for adj, country in geo_map.items():
+        if adj in text:
+            return country
+    # Try to find "in City" or "based in City"
+    m = re.search(r'(?:based\s+in|in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)', title)
+    if m:
+        city = m.group(1).strip()
+        if city.lower() not in GEO_COUNTRY_NAMES and city.lower() not in BLOCKED_COMPANY_WORDS:
+            return city
+    return 'Unknown'
+
+
+def infer_website(company_name):
+    """Generate a likely website URL from the company name."""
+    if not company_name:
+        return ''
+    clean = re.sub(r'[^\w]', '', company_name).lower()
+    if not clean:
+        return ''
+    # Try common startup domains
+    for tld in ['.ai', '.com', '.co', '.io']:
+        guess = f'https://www.{clean}{tld}'
+        # We return the guess; the dashboard can show it as "unverified"
+        return guess
+    return ''
+
+
+def extract_founded_year(title, summary=''):
+    """Extract founded year from text like 'Founded in 2023'."""
+    text = title + ' ' + summary
+    m = re.search(r'[Ff]ounded\s+(?:in\s+)?(\d{4})', text)
+    if m:
+        return m.group(1) + '-01-01'
+    return ''
+
+
 # ---------------------------------------------------------------------------
 # LLM enhancement (optional)
 # ---------------------------------------------------------------------------
@@ -485,15 +566,21 @@ def main():
                         if len(product_desc) < 10 or product_desc.lower() == company_name.lower():
                             product_desc = f"AI-powered travel technology by {company_name}"
 
+                        location = infer_location_from_title(title)
+                        website = infer_website(company_name)
+                        founded = extract_founded_year(title, summary)
+                        if not founded:
+                            founded = f"{datetime.now().year}-01-01"
+
                         candidates.append({
                             "id": f"auto-{news_id(company_name, news_date)}",
                             "name": company_name,
                             "type": "startup",
-                            "location": "Unknown",
+                            "location": location,
                             "stage": "Unknown",
                             "totalFunding": "N/A",
                             "product": product_desc,
-                            "investors": "",
+                            "investors": "N/A",
                             "metrics": {"newsCount": 1, "newsRecency": news_date, "socialMentions": 5, "trafficGrowth": "待观察"},
                             "news": [{
                                 "date": news_date,
@@ -501,11 +588,12 @@ def main():
                                 "type": "product",
                                 "source": link,
                             }],
-                            "website": "",
+                            "website": website,
                             "description": clean_summary[:200] if clean_summary and not clean_summary.startswith('<') else product_desc,
                             "isNew": True,
                             "lastUpdated": today,
                             "_autoDiscovered": True,
+                            "founded": founded,
                         })
 
     # Append candidates
