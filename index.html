@@ -250,13 +250,17 @@
                     <h3 class="text-base sm:text-lg font-semibold mb-1">订阅动态提醒</h3>
                     <p class="text-gray-600 text-xs sm:text-sm">有新公司或新闻时邮件通知</p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-                    <input type="email" id="emailInput" placeholder="输入邮箱地址" class="px-3 sm:px-4 py-2 border rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
-                    <button onclick="subscribeEmail()" class="px-4 sm:px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
+                <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/" class="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto" onsubmit="handleSubscribeSubmit(event)">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    <input type="email" name="email" id="emailInput" placeholder="输入邮箱地址" required class="px-3 sm:px-4 py-2 border rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                    <button type="submit" class="px-4 sm:px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
                         订阅
                     </button>
-                </div>
+                </form>
             </div>
+            <p id="subscribeMessage" class="text-xs mt-2 hidden"></p>
         </div>
     </main>
 
@@ -1420,47 +1424,45 @@
             });
         }
 
-        function subscribeEmail() {
-            const email = document.getElementById('emailInput').value;
+        function handleSubscribeSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const emailInput = document.getElementById('emailInput');
+            const msgEl = document.getElementById('subscribeMessage');
+            const email = emailInput.value;
+
             if (!email || !email.includes('@')) {
-                alert('请输入有效的邮箱地址');
+                msgEl.textContent = '请输入有效的邮箱地址';
+                msgEl.className = 'text-xs mt-2 text-red-600';
+                msgEl.classList.remove('hidden');
                 return;
             }
-            
-            // Try to add subscriber via GitHub API (requires GITHUB_TOKEN secret)
-            // Fallback to localStorage if GitHub API not available
-            const addSubscriber = async () => {
-                try {
-                    // Attempt to create a GitHub Issue as subscription record
-                    // The workflow will read subscribers.json on each run
-                    const response = await fetch('https://api.github.com/repos/bozi93/travel-ai-dashboard/issues', {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': `token ${localStorage.getItem('github_token') || ''}`,
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            title: `Subscribe: ${email}`,
-                            labels: ['subscriber'],
-                        }),
-                    });
-                    
-                    if (response.ok) {
-                        alert('订阅成功！\n\n当发现新公司时，GitHub Actions 会自动发送邮件通知。');
-                    } else {
-                        // Fallback to localStorage
-                        localStorage.setItem('travel_ai_subscriber_email', email);
-                        alert('订阅成功！\n\n注意：当前使用本地存储，邮件通知需要配置 GitHub Secrets。\n详见 README 中的 Resend 配置指南。');
-                    }
-                } catch (err) {
-                    // Fallback to localStorage
+
+            msgEl.textContent = '正在提交...';
+            msgEl.className = 'text-xs mt-2 text-gray-500';
+            msgEl.classList.remove('hidden');
+
+            // Submit via Netlify Forms AJAX API
+            const formData = new FormData(form);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Accept': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    msgEl.textContent = '订阅成功！发现新公司时会收到邮件通知。';
+                    msgEl.className = 'text-xs mt-2 text-green-600';
+                    emailInput.value = '';
                     localStorage.setItem('travel_ai_subscriber_email', email);
-                    alert('订阅成功！\n\n注意：当前使用本地存储，邮件通知需要配置 GitHub Secrets。\n详见 README 中的 Resend 配置指南。');
+                } else {
+                    throw new Error('Submit failed');
                 }
-                document.getElementById('emailInput').value = '';
-            };
-            
-            addSubscriber();
+            })
+            .catch(() => {
+                msgEl.textContent = '提交失败，请稍后重试。';
+                msgEl.className = 'text-xs mt-2 text-red-600';
+            });
         }
 
         // 点击modal外部关闭

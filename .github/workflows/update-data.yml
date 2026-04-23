@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: pip install requests feedparser
 
+      - name: Sync Netlify subscribers
+        env:
+          NETLIFY_API_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: python scripts/sync_netlify_subscribers.py
+
       - name: Run scraper
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

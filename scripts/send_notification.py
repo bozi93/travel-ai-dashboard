@@ -162,8 +162,22 @@ def main():
     for email in subscriber_list:
         if send_email(email, subject, html_body):
             success_count += 1
-    
+
     print(f"Email notifications sent: {success_count}/{len(subscriber_list)} succeeded")
+
+    # Clear isNew flag after successful notification
+    if success_count > 0:
+        with open(DATA_PATH, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        cleared = 0
+        for company in data.get('companies', []):
+            if company.get('isNew', False):
+                company['isNew'] = False
+                cleared += 1
+        with open(DATA_PATH, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write('\n')
+        print(f"Cleared isNew flag for {cleared} company(ies)")
 
 if __name__ == '__main__':
     main()
