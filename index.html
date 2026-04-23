@@ -677,12 +677,15 @@
                     });
 
                     // 3. 更新公司其他字段
-                    if (remoteCompany.stage !== localCompany.stage) {
-                        localCompany.stage = remoteCompany.stage;
-                        hasChanges = true;
-                    }
-                    if (remoteCompany.totalFunding !== localCompany.totalFunding) {
-                        localCompany.totalFunding = remoteCompany.totalFunding;
+                    const fieldsToSync = ['name', 'location', 'stage', 'totalFunding', 'product', 'investors', 'website', 'description', 'founded', 'launched', 'company', 'entityInfo'];
+                    fieldsToSync.forEach(field => {
+                        if (remoteCompany[field] !== undefined && remoteCompany[field] !== localCompany[field]) {
+                            localCompany[field] = remoteCompany[field];
+                            hasChanges = true;
+                        }
+                    });
+                    if (remoteCompany.fundingRounds && JSON.stringify(remoteCompany.fundingRounds) !== JSON.stringify(localCompany.fundingRounds)) {
+                        localCompany.fundingRounds = remoteCompany.fundingRounds;
                         hasChanges = true;
                     }
                     if (remoteCompany.metrics && JSON.stringify(remoteCompany.metrics) !== JSON.stringify(localCompany.metrics)) {
