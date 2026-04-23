@@ -189,25 +189,92 @@ def fetch_reddit(subreddit, query):
 # ---------------------------------------------------------------------------
 # New company extraction (heuristic)
 # ---------------------------------------------------------------------------
+
+# Blocklist: filter out government entities, tourism boards, and non-startups
+GOVERNMENT_BLOCKLIST = [
+    "tourism board", "ministry of", "department of", "bureau of",
+    "government", "official", "national tourism", "tourism authority",
+    "tourism administration", "embassy", "consulate",
+]
+
+# Geographic/adjective prefixes to strip before extracting company names
+GEO_ADJECTIVES = [
+    "dutch", "german", "french", "italian", "spanish", "british",
+    "american", "canadian", "australian", "japanese", "korean",
+    "chinese", "indian", "brazilian", "mexican", "russian",
+    "african", "european", "asian", "latin", "nordic",
+    "south african", "saudi", "emirati", "qatari", "turkish",
+    "swiss", "swedish", "norwegian", "danish", "finnish",
+    "uae-based", "us-based", "uk-based", "eu-based",
+    "bay area", "silicon valley",
+]
+
+def is_government_entity(name):
+    """Check if a name refers to a government/tourism board entity."""
+    name_lower = name.lower()
+    for blocked in GOVERNMENT_BLOCKLIST:
+        if blocked in name_lower:
+            return True
+    return False
+
+def strip_geo_prefix(text):
+    """Remove geographic/adjective prefixes from headlines."""
+    text_lower = text.lower()
+    for geo in sorted(GEO_ADJECTIVES, key=len, reverse=True):
+        # Match "Geo adjective + startup/company/platform/firm + ..."
+        pattern = rf'\b{re.escape(geo)}\s+(startup|company|platform|firm|app|business)\s+'
+        if re.search(pattern, text_lower):
+            # Remove the geo prefix but keep the rest
+            text = re.sub(pattern, r'\2 ', text, count=1, flags=re.IGNORECASE)
+            break
+    return text
+
 def extract_company_name_from_title(title):
     """Try to extract the company/product name from a news headline."""
     text = title.strip()
+
+    # Step 1: Strip geographic prefixes like "Dutch startup", "German company"
+    text = strip_geo_prefix(text)
+
+    # Step 2: Check for government/tourism board entities early
+    if is_government_entity(text):
+        return None
+
     # Pattern: "X raises...", "X launches...", "X debuts..."
-    m = re.search(r'^([A-Z][A-Za-z0-9\s&]+?)\s+(raises|launches|debuts|unveils|introduces|emerges|announces)',
+    m = re.search(r'^([A-Z][A-Za-z0-9\s&\']+?)\s+(raises|launches|debuts|unveils|introduces|emerges|announces)',
                   text)
     if m:
         name = m.group(1).strip()
-        # Clean up trailing punctuation
         name = re.sub(r'[\s:]+$', '', name)
-        if len(name) >= 3:
+        # Filter out government entities
+        if len(name) >= 3 and not is_government_entity(name):
+            # Take only the last capitalized word if it looks like "Adjective CompanyName"
+            # e.g., "Travel Tech WeTravel" -> "WeTravel"
+            words = name.split()
+            if len(words) > 1:
+                # Return the most likely company name (last capitalized word or compound)
+                name = words[-1]
             return name
-    # Pattern: "New startup X ..."
-    m = re.search(r'(?:new\s+)?(?:startup|company|app|platform)\s+([A-Z][A-Za-z0-9\s&]+?)[\s,;:\-]', text)
+
+    # Pattern: "startup X ...", "company X ..."
+    m = re.search(r'(?:new\s+)?(?:startup|company|app|platform|firm)\s+([A-Z][A-Za-z0-9\s&\']+?)[\s,;:\-]', text)
     if m:
         name = m.group(1).strip()
         name = re.sub(r'[\s:]+$', '', name)
-        if len(name) >= 3:
+        if len(name) >= 3 and not is_government_entity(name):
+            # Extract clean company name
+            words = name.split()
+            if len(words) > 1:
+                name = words[-1]
             return name
+
+    # Pattern: "X, a Y-based startup, ..." or "X — a startup..."
+    m = re.search(r'([A-Z][A-Za-z0-9\']+)\s*[,—–-]\s*(?:a|an)\s+(?:new\s+)?(?:y-)?(?:based\s+)?(?:startup|company|app|platform)', text)
+    if m:
+        name = m.group(1).strip()
+        if len(name) >= 3 and not is_government_entity(name):
+            return name
+
     return None
 
 # ---------------------------------------------------------------------------
@@ -307,6 +374,11 @@ def main():
                     company_name = llm_result.get('company_name')
                 if not company_name:
                     company_name = extract_company_name_from_title(title)
+
+                # Skip government/tourism board entities
+                if company_name and is_government_entity(company_name):
+                    print(f"  [SKIP] Filtered out government entity: {company_name}")
+                    continue
 
                 if company_name and company_name.lower() not in existing_names:
                     # Check we haven't already queued this candidate today
