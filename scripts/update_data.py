@@ -149,10 +149,20 @@ def fetch_rss(url):
         for e in fp.entries:
             published = e.get('published', '')
             pub_date = parse_rss_date(published)
+            # Use original source URL for Google News RSS instead of the temporary redirect link
+            raw_link = e.get('link', '')
+            source_href = ''
+            if hasattr(e, 'source') and e.source:
+                source_href = e.source.get('href', '')
+            # If link is a Google News redirect, prefer the original publisher URL
+            if 'news.google.com' in raw_link and source_href:
+                link = source_href
+            else:
+                link = raw_link
             entries.append({
                 'title': e.get('title', ''),
                 'summary': e.get('summary', e.get('description', '')),
-                'link': e.get('link', ''),
+                'link': link,
                 'published': pub_date or '',
             })
         return entries
