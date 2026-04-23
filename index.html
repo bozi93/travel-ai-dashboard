@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>旅游行业AI to C产品动态Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); transform: translateY(-2px); }
+        .startup-card { border-left: 4px solid #667eea; }
+        .ota-card { border-left: 4px solid #10b981; }
+        .card.new-company { border: 2px solid #f59e0b; animation: pulse 2s infinite; }
+        .card.has-updates { border-right: 4px solid #ef4444; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); } 50% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); } }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; overflow-y: auto; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { background: white; border-radius: 16px; max-width: 900px; width: 90%; max-height: 90vh; overflow-y: auto; }
+        .tab { cursor: pointer; padding: 12px 20px; border-bottom: 2px solid transparent; transition: all 0.2s; }
+        .tab.active { border-bottom-color: #667eea; color: #667eea; font-weight: 600; }
+        .timeline-item { position: relative; padding-left: 24px; border-left: 2px solid #e5e7eb; }
+        .timeline-item.new-event::before { background: #ef4444; animation: blink 1s infinite; }
+        .timeline-item.new-event { border-left-color: #ef4444; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .timeline-item::before { content: ''; position: absolute; left: -6px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: #667eea; }
+        .filter-btn { padding: 8px 16px; border-radius: 20px; border: 1px solid #e5e7eb; background: white; cursor: pointer; transition: all 0.2s; }
+        .filter-btn.active { background: #667eea; color: white; border-color: #667eea; }
+        .news-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+        .news-funding { background: #dbeafe; color: #1e40af; }
+        .news-product { background: #d1fae5; color: #065f46; }
+        .news-partnership { background: #fce7f3; color: #9d174d; }
+        .news-milestone { background: #f3f4f6; color: #374151; }
+        .metric-card { background: #f8fafc; border-radius: 8px; padding: 12px; text-align: center; }
+        .metric-value { font-size: 20px; font-weight: 700; color: #1e40af; }
+        .metric-label { font-size: 12px; color: #64748b; margin-top: 4px; }
+        .source-link { color: #3b82f6; font-size: 12px; text-decoration: none; }
+        .source-link:hover { text-decoration: underline; }
+        .update-badge { position: absolute; top: -8px; right: -8px; background: #ef4444; color: white; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+        .toast { position: fixed; bottom: 20px; right: 20px; background: white; border-radius: 12px; padding: 16px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 2000; transform: translateX(400px); transition: transform 0.3s ease; max-width: 350px; }
+        .toast.show { transform: translateX(0); }
+        .toast.new-company { border-left: 4px solid #f59e0b; }
+        .toast.new-updates { border-left: 4px solid #3b82f6; }
+        .last-updated { font-size: 12px; color: #6b7280; }
+        .refreshing { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .new-tag { display: inline-block; background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-left: 8px; font-weight: 600; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            /* Header */
+            header .max-w-7xl { padding: 16px; }
+            header h1 { font-size: 20px; }
+            header p { font-size: 12px; }
+            
+            /* Stats Cards */
+            header .grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            header .text-3xl { font-size: 20px; }
+            header .backdrop-blur { padding: 12px; }
+            
+            /* Filters */
+            .flex-wrap.gap-3 {
+                gap: 8px;
+            }
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            /* Company Grid */
+            #companyGrid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            /* Card */
+            .card { padding: 16px; }
+            .card h3 { font-size: 18px; }
+            .metric-value { font-size: 16px; }
+            .metric-label { font-size: 11px; }
+            
+            /* Modal */
+            .modal-content {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                border-radius: 0;
+            }
+            .modal.active {
+                align-items: flex-end;
+            }
+            
+            /* Tabs */
+            .tab {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            
+            /* Grid in modal */
+            .grid.grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Timeline */
+            .timeline-item {
+                padding-left: 16px;
+            }
+            
+            /* Toast */
+            .toast {
+                left: 16px;
+                right: 16px;
+                max-width: none;
+            }
+        }
+
+        /* 小屏幕手机 */
+        @media (max-width: 375px) {
+            header h1 { font-size: 18px; }
+            .card h3 { font-size: 16px; }
+            .metric-card { padding: 8px; }
+        }
+
+        /* 触摸优化 */
+        @media (hover: none) {
+            .card:hover {
+                transform: none;
+            }
+            .filter-btn:active {
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div id="toastContent"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start gap-4">
+                <div>
+                    <h1 class="text-xl sm:text-3xl font-bold mb-2">旅游行业AI to C产品动态Dashboard</h1>
+                    <p class="text-white/80 text-sm sm:text-base">全球旅游AI创业公司及OTA内部AI产品监测</p>
+                </div>
+                <div class="text-left sm:text-right">
+                    <div class="text-xs sm:text-sm text-white/70">数据更新至</div>
+                    <div class="text-lg sm:text-xl font-semibold" id="lastUpdatedTime">2026年4月16日</div>
+                    <div class="text-xs mt-1" id="dataSourceStatus"><span class="inline-block w-2 h-2 rounded-full bg-yellow-400 mr-1"></span>加载中...</div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mt-6 sm:mt-8">
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 sm:p-4">
+                    <div class="text-xl sm:text-3xl font-bold" id="totalCompanies">10</div>
+                    <div class="text-xs sm:text-sm text-white/80">监测产品总数</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 sm:p-4">
+                    <div class="text-xl sm:text-3xl font-bold" id="startupCount">6</div>
+                    <div class="text-xs sm:text-sm text-white/80">AI创业公司</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 sm:p-4">
+                    <div class="text-xl sm:text-3xl font-bold" id="otaCount">4</div>
+                    <div class="text-xs sm:text-sm text-white/80">OTA AI产品</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-xl p-3 sm:p-4">
+                    <div class="text-xl sm:text-3xl font-bold" id="newUpdatesCount">0</div>
+                    <div class="text-xs sm:text-sm text-white/80">本次新动态</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <!-- Filters & Controls -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6 items-center">
+            <button class="filter-btn active text-xs sm:text-sm" onclick="filterCompanies('all')">全部</button>
+            <button class="filter-btn text-xs sm:text-sm" onclick="filterCompanies('startup')">创业公司</button>
+            <button class="filter-btn text-xs sm:text-sm" onclick="filterCompanies('ota')">OTA产品</button>
+            <button class="filter-btn text-xs sm:text-sm" onclick="filterCompanies('new')">🆕 新发现</button>
+            <button class="filter-btn text-xs sm:text-sm" onclick="filterCompanies('updated')">📰 有更新</button>
+            <select id="stageFilter" class="filter-btn text-xs sm:text-sm" onchange="filterByStage(this.value)">
+                <option value="">所有阶段</option>
+                <option value="Seed">Seed</option>
+                <option value="Series A">Series A</option>
+                <option value="Series B">Series B+</option>
+                <option value="Internal">内部产品</option>
+            </select>
+        </div>
+        
+        <!-- Mobile Control Buttons -->
+        <div class="flex items-center gap-2 mb-4 sm:hidden">
+            <span class="last-updated text-xs">自动更新: <span class="auto-update-status">关闭</span></span>
+            <button class="filter-btn px-3 py-2" onclick="toggleAutoUpdate()">
+                <i class="fas fa-play auto-update-icon"></i>
+            </button>
+            <button class="filter-btn px-3 py-2" onclick="manualRefresh(this)">
+                <i class="fas fa-sync-alt refresh-icon"></i>
+            </button>
+            <button class="filter-btn px-3 py-2" onclick="showHiddenManager()">
+                <i class="fas fa-eye-slash"></i>
+            </button>
+            <button class="filter-btn px-3 py-2 ml-auto" onclick="exportData()">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+
+        <!-- Desktop Control Buttons -->
+        <div class="hidden sm:flex items-center gap-2 mb-6">
+            <span class="last-updated">自动更新: <span class="auto-update-status">关闭</span></span>
+            <button class="filter-btn" onclick="toggleAutoUpdate()">
+                <i class="fas fa-play auto-update-icon"></i>
+            </button>
+            <button class="filter-btn" onclick="manualRefresh(this)">
+                <i class="fas fa-sync-alt refresh-icon"></i> 刷新
+            </button>
+            <button class="filter-btn" onclick="showHiddenManager()">
+                <i class="fas fa-eye-slash"></i> 已隐藏
+            </button>
+            <button class="filter-btn ml-auto" onclick="exportData()">
+                <i class="fas fa-download"></i> 导出
+            </button>
+        </div>
+
+        <!-- Company Grid -->
+        <div id="companyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Companies will be rendered here -->
+        </div>
+
+        <!-- Email Subscription -->
+        <div class="card p-4 sm:p-6 mt-6 sm:mt-8">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-base sm:text-lg font-semibold mb-1">订阅动态提醒</h3>
+                    <p class="text-gray-600 text-xs sm:text-sm">有新公司或新闻时邮件通知</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+                    <input type="email" id="emailInput" placeholder="输入邮箱地址" class="px-3 sm:px-4 py-2 border rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                    <button onclick="subscribeEmail()" class="px-4 sm:px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
+                        订阅
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Company Detail Modal -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // 数据存储 - 使用localStorage持久化
+        // ============================================
+        const STORAGE_KEY = 'travel_ai_dashboard_data';
+        const LAST_CHECK_KEY = 'travel_ai_last_check';
+        const PREVIOUS_IDS_KEY = 'travel_ai_previous_ids';
+        const DATA_VERSION_KEY = 'travel_ai_data_version';
+
+        // 外部数据源URL - 可以替换为任何可访问的JSON地址
+        const DATA_URL = './data.json';
+
+        // 缓存的远程数据
+        let remoteData = null;
+
+        // 初始数据（降级用，当无法加载外部数据时使用）
+        const fallbackData = [
+            {
+                id: '1',
+                name: 'Mindtrip',
+                type: 'startup',
+                location: 'San Francisco, USA',
+                founded: '2023-03-01',
+                stage: 'Series A',
+                fundingRounds: [
+                    { date: '2024-04-15', round: 'Seed', amount: '$7M', investors: 'Costanoa Ventures, Blackhorn Ventures', source: 'https://app.dealroom.co/news/feed/mindtrip-raises-7m-for-ai-travel-planning' },
+                    { date: '2025-12-08', round: 'Series A', amount: '$12M', investors: 'Amex Ventures, Capital One Ventures, United Airlines Ventures', source: 'https://www.businesswire.com/news/home/20251208469469/en/Mindtrip-Unveils-New-AI-Travel-and-Events-Features' }
+                ],
+                totalFunding: '$19M',
+                product: 'AI-powered travel planning platform with real-time booking',
+                investors: 'Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures',
+                metrics: { newsCount: 8, newsRecency: '2026-03-01', socialMentions: 45, trafficGrowth: '+18%' },
+                news: [
+                    { date: '2026-03-15', title: 'Mindtrip推出AI活动和会议规划功能', type: 'product' },
+                    { date: '2025-12-08', title: '完成$12M A轮融资，Amex Ventures、Capital One Ventures、美联航风投参投', type: 'funding', source: 'https://www.businesswire.com/news/home/20251208469469/en/Mindtrip-Unveils-New-AI-Travel-and-Events-Features' },
+                    { date: '2025-05-20', title: '与多家航空公司建立合作伙伴关系', type: 'partnership', source: 'https://www.phocuswire.com/mindtrip-ai-travel-planning-capital-one-ventures-united-airlines-ventures' }
+                ],
+                website: 'https://mindtrip.ai',
+                description: 'Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '2',
+                name: 'Layla',
+                type: 'startup',
+                location: 'Berlin, Germany',
+                founded: '2023-02-01',
+                stage: 'Series A',
+                fundingRounds: [
+                    { date: '2023-12-20', round: 'Seed', amount: '€3M', investors: 'Firstminute Capital, M13, Barry Smith, Andy Phillips, Paris Hilton', source: 'https://www.crunchbase.com/organization/layla-7376' },
+                    { date: '2025-12-15', round: 'Pre-A', amount: '€2M', investors: 'United Airlines Ventures, 百度风投, 渶策资本, M13, Firstminute Capital, SparkLabs', source: 'https://pitchbook.com/profiles/company/541176-22' }
+                ],
+                totalFunding: '€5M',
+                product: 'AI travel planner with creator content integration',
+                investors: 'United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs',
+                metrics: { newsCount: 12, newsRecency: '2026-03-01', socialMentions: 68, trafficGrowth: '+25%' },
+                news: [
+                    { date: '2026-03-10', title: '累计规划旅行价值突破10亿美元，用户达500万', type: 'product', source: 'https://finance.yahoo.com/news/layla-surpasses-1-billion-trips-165400507.html' },
+                    { date: '2025-12-15', title: '完成€200万pre-A轮融资，美联航风投和百度风投参投', type: 'funding' },
+                    { date: '2025-09-18', title: '推出AI旅行创作者合作计划', type: 'partnership' }
+                ],
+                website: 'https://layla.ai',
+                description: 'Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '3',
+                name: 'Wanderboat',
+                type: 'startup',
+                location: 'San Francisco, USA',
+                founded: '2023-05-01',
+                stage: 'Series A',
+                fundingRounds: [
+                    { date: '2024-03-18', round: 'Seed', amount: '$8M', investors: 'Redpoint Ventures, Lightspeed Venture Partners', source: 'https://tracxn.com/d/companies/wanderboat/__vJsaIdf_x3juK0ck7RlGUMK3cfwqkd2nSWQfDIB2j3Q' },
+                    { date: '2025-03-12', round: 'Series A', amount: '$18M', investors: '红杉中国, Coatue Management', source: 'https://app.fundz.net/fundings/uta-ai-funding-round-2c5cd6' }
+                ],
+                totalFunding: '$26M',
+                product: 'AI-powered local discovery and hotel booking platform',
+                investors: '红杉中国, Coatue Management, Redpoint Ventures, Lightspeed Venture Partners',
+                metrics: { newsCount: 6, newsRecency: '2026-01-01', socialMentions: 32, trafficGrowth: '+15%' },
+                news: [
+                    { date: '2026-01-20', title: '推出AI酒店精选和预订平台', type: 'product', source: 'https://www.knoxnews.com/press-release/story/55469/end-travel-planning-headaches-wanderboat-ai-launches-new-service' },
+                    { date: '2025-12-10', title: '扩展城市市场覆盖，进军亚太市场', type: 'partnership', source: 'https://www.dnj.com/press-release/story/37197/wanderboat-tackles-travel-paradox-of-choice' },
+                    { date: '2025-03-12', title: '完成$1800万A轮融资，红杉中国领投', type: 'funding' }
+                ],
+                website: 'https://wanderboat.ai',
+                description: 'Wanderboat AI专注于解决旅行"选择悖论"，通过AI驱动的本地发现和酒店精选平台，帮助用户轻松发现和预订理想酒店。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '4',
+                name: 'iMean',
+                type: 'startup',
+                location: 'Hangzhou, China',
+                founded: '2023-07-01',
+                stage: 'Seed',
+                fundingRounds: [
+                    { date: '2021-12-15', round: 'Seed', amount: '数千万人民币', investors: '奇绩创坛', source: 'https://www.miracleplus.com/', note: '前身跨越星空融资，股东平移至新主体' }
+                ],
+                totalFunding: '数千万人民币',
+                product: 'AI travel itinerary planner with smart route optimization',
+                investors: 'YC中国(奇绩创坛), 小米联合创始人王川, 小米前总裁王翔, 前IDG合伙人Stella Jin',
+                entityInfo: '新主体（非跨越星空），由股东平移成立',
+                metrics: { newsCount: 4, newsRecency: '2026-02-01', socialMentions: 18, trafficGrowth: '+8%' },
+                news: [
+                    { date: '2026-02-20', title: 'iMean AI行程规划器新增多语言支持', type: 'product' },
+                    { date: '2025-11-15', title: '与华为云深化合作，加入华为云初创计划', type: 'partnership' },
+                    { date: '2025-08-25', title: '推出智能航班和酒店预订功能', type: 'product' }
+                ],
+                website: 'https://www.imean.ai',
+                description: 'iMean AI由尚晏仪创立，总部位于杭州。公司为新设立主体，股东包括YC中国(奇绩创坛)、小米联合创始人王川、小米前总裁王翔及前IDG合伙人Stella Jin。专注于AI旅行行程规划，提供智能路线优化、多日行程规划和交互式地图功能。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '5',
+                name: 'Steller',
+                type: 'startup',
+                location: 'Kirkland, Washington, USA',
+                founded: '2023-01-15',
+                stage: 'Series B',
+                fundingRounds: [
+                    { date: '2023-06-20', round: 'Seed', amount: '$6M', investors: 'Trilogy Equity Partners', source: 'https://tracxn.com/d/companies/steller/__ghJoloQBqQHEN3teVNjLjYTusNqfxY6ixML1wU-xiC8' },
+                    { date: '2024-02-13', round: 'Series A', amount: '$15M', investors: 'Madrona Venture Group', source: 'https://skift.com/2024/01/13/steller-raises-5-million-for-ai-trip-planner-startup-funding-roundup/' },
+                    { date: '2025-01-28', round: 'Series B', amount: '$21M', investors: 'TVC, 现有投资者跟投', source: 'https://pitchbook.com/profiles/company/436429-36' }
+                ],
+                totalFunding: '$42M',
+                product: 'Video-based travel planning platform with AI recommendations',
+                investors: 'TVC, Madrona Venture Group, Trilogy Equity Partners',
+                metrics: { newsCount: 7, newsRecency: '2026-01-01', socialMentions: 52, trafficGrowth: '+12%' },
+                news: [
+                    { date: '2026-01-28', title: '推出团队旅行协作功能，整合发现、沟通、规划和预订', type: 'product', source: 'https://www.prnewswire.com/news-releases/steller-unveils-group-trip-planning-302347630.html' },
+                    { date: '2025-10-15', title: 'Trips by Steller用户突破5万，内容库超3000万条', type: 'product' },
+                    { date: '2025-06-20', title: '与旅游目的地合作，转化率超18%', type: 'partnership' }
+                ],
+                website: 'https://steller.co',
+                description: 'Steller是由Pete Bryant领导的视频驱动旅行规划平台，整合创作者内容与AI推荐，让用户基于真实体验发现和预订旅行。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '6',
+                name: 'Wanderlog',
+                type: 'startup',
+                location: 'San Francisco, USA',
+                founded: '2019-06-01',
+                stage: 'Seed',
+                fundingRounds: [
+                    { date: '2020-01-15', round: 'Pre-seed', amount: '$150K', investors: 'Y Combinator', source: 'https://www.ycombinator.com/companies/wanderlog' },
+                    { date: '2021-06-15', round: 'Seed', amount: '$1.5M', investors: 'Unpopular Ventures', source: 'https://tracxn.com/d/companies/wanderlog/__lelvNWkEOVXLC2fYXKoX0fazml8sWLb7U2Epc5HPuJA' }
+                ],
+                totalFunding: '$1.65M',
+                product: 'Collaborative trip planning app with AI features',
+                investors: 'Y Combinator, Unpopular Ventures',
+                metrics: { newsCount: 3, newsRecency: '2026-02-01', socialMentions: 22, trafficGrowth: '+5%' },
+                news: [
+                    { date: '2026-02-10', title: '推出AI驱动的旅行预算优化功能', type: 'product' },
+                    { date: '2025-12-20', title: 'Pro版本功能升级，年费$39.99', type: 'product' },
+                    { date: '2025-09-25', title: '入选2026年最佳旅行规划应用榜单', type: 'partnership' }
+                ],
+                website: 'https://wanderlog.com',
+                description: 'Wanderlog是一款协作式旅行规划应用，帮助用户规划行程、管理预算和协作规划，近期加入AI功能增强用户体验。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '7',
+                name: '携程问道',
+                type: 'ota',
+                location: 'Shanghai, China',
+                company: '携程集团',
+                launched: '2023-07-17',
+                stage: 'Internal',
+                fundingRounds: [],
+                totalFunding: 'N/A',
+                product: '旅游垂直大模型 + TripGenie AI助手',
+                investors: '携程集团内部研发',
+                metrics: { newsCount: 15, newsRecency: '2026-03-01', socialMentions: 85, trafficGrowth: '+22%' },
+                news: [
+                    { date: '2026-03-20', title: '携程AI问答使用率同比增长270%', type: 'product', source: 'https://m.itouchtv.cn/article/06490add03608e1b8fa48fc3ea6a2dce' },
+                    { date: '2026-01-15', title: '梁建章：AI创新是携程长期战略核心', type: 'product', source: 'https://www.traveldaily.cn/article/178066/' },
+                    { date: '2025-11-20', title: 'TripGenie带动订单转化率翻倍，机票自助解决率达78%', type: 'product', source: 'https://www.vocust.com/school/insightcase/364.html' }
+                ],
+                website: 'https://trip.com',
+                description: '携程问道是携程自研的旅游垂直大模型，结合精确的结构性实时数据和历史算法构建可靠答案数据库。AI旅行助手TripGenie带动订单转化率翻倍，机票自助解决率达78%，酒店达68%。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '8',
+                name: '程心AI',
+                type: 'ota',
+                location: 'Suzhou, China',
+                company: '同程旅行',
+                launched: '2024-03-15',
+                stage: 'Internal',
+                fundingRounds: [],
+                totalFunding: 'N/A',
+                product: 'AI旅行助手 DeepTrip 2.0',
+                investors: '同程旅行内部研发',
+                metrics: { newsCount: 10, newsRecency: '2026-04-01', socialMentions: 48, trafficGrowth: '+16%' },
+                news: [
+                    { date: '2026-04-14', title: '程心AI亮相第六届消博会，发布AI面对面翻译屏和AI导览', type: 'product', source: 'https://finance.sina.com.cn/tech/2026-04-14/doc-inhunawe4150784.shtml' },
+                    { date: '2026-03-25', title: 'DeepTrip 2.0升级：支持17种语言交互和模糊机票查询', type: 'product', source: 'https://www.cinn.cn/sz/2026/04-15/gDanR6Ak.html' },
+                    { date: '2025-12-18', title: '程心AI落地呀诺达、恭王府等景区', type: 'partnership', source: 'https://www.stcn.com/article/detail/3747700.html' },
+                    { date: '2025-03-24', title: '程心AI升级新域名，支持多语种服务', type: 'product', source: 'https://ttgchina.com/2025/03/24/同程旅行宣布程心ai升级-新域名支持多种语言/' }
+                ],
+                website: 'https://ly.com',
+                description: '程心AI是同程旅行的AI旅行解决方案，DeepTrip 2.0旅行智能体支持智能行程规划、模糊机票查询和全开放生态，已支持17种语言交互。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '9',
+                name: '飞猪问一问',
+                type: 'ota',
+                location: 'Hangzhou, China',
+                company: '飞猪（阿里巴巴）',
+                launched: '2025-04-15',
+                stage: 'Internal',
+                fundingRounds: [],
+                totalFunding: 'N/A',
+                product: 'AI旅行规划助手（飞猪产品）',
+                investors: '阿里巴巴内部研发',
+                metrics: { newsCount: 11, newsRecency: '2026-04-01', socialMentions: 72, trafficGrowth: '+35%' },
+                news: [
+                    { date: '2026-04-02', title: '飞猪问一问与80+旅行品牌达成AI合作', type: 'partnership', source: 'https://finance.sina.com.cn/stock/estate/integration/2026-04-02/doc-inhtaraf4400511.shtml' },
+                    { date: '2026-04-02', title: '春节期间AI订单量环比增长超800%，门票订单大增24倍', type: 'product', source: 'https://news.qq.com/rain/a/20260402A03MEU00' },
+                    { date: '2026-04-10', title: '问一问正式上线，支持个性化旅行规划', type: 'product', source: 'https://hea.china.com/articles/20260410/202604101843490.html' }
+                ],
+                website: 'https://fliggy.com',
+                description: '飞猪问一问是阿里巴巴旗下飞猪推出的AI旅行规划产品，基于千问大模型，已合作80+国内外旅行品牌，春节期间AI订单量增长显著。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            },
+            {
+                id: '10',
+                name: 'GuideGeek',
+                type: 'startup',
+                location: 'New York, USA',
+                founded: '2023-03-01',
+                stage: 'Seed',
+                fundingRounds: [
+                    { date: '2023-08-15', round: 'Seed', amount: '$3M', investors: 'Techstars', source: 'https://tracxn.com/d/companies/guidegeek/__crAP554S3osSJRfKSXP7VFPQBpY6HWbdFeREuH7D1PE' }
+                ],
+                totalFunding: '$3M',
+                product: 'AI travel assistant for brands and destinations',
+                investors: 'Techstars',
+                metrics: { newsCount: 5, newsRecency: '2026-03-01', socialMentions: 15, trafficGrowth: '+6%' },
+                news: [
+                    { date: '2025-11-20', title: 'WildChina推出基于GuideGeek的WildConcierge AI助手', type: 'partnership' },
+                    { date: '2025-06-15', title: '与新不伦瑞克旅游局合作推出AI旅行规划服务', type: 'partnership', source: 'https://www.breakingtravelnews.com/news/article/guidegeek-launches-ai-travel-genius-for-new-brunswick-trip-planners/' }
+                ],
+                website: 'https://guidegeek.com',
+                description: 'GuideGeek为旅游品牌和目的地提供AI旅行助手解决方案，帮助合作伙伴提升用户参与度和预订转化率。',
+                isNew: false,
+                lastUpdated: '2026-04-16'
+            }
+        ];
+
+
+
+        // ============================================
+        // 状态管理
+        // ============================================
+        let companies = [];
+        let currentFilter = 'all';
+        let autoUpdateEnabled = false;
+        let autoUpdateInterval = null;
+        let newUpdatesThisSession = [];
+
+        // ============================================
+        // 数据持久化
+        // ============================================
+
+        // 从远程加载数据
+        function updateDataSourceStatus(status, message) {
+            const el = document.getElementById('dataSourceStatus');
+            if (!el) return;
+            const colors = {
+                connected: 'bg-green-400',
+                error: 'bg-red-400',
+                cached: 'bg-blue-400',
+                loading: 'bg-yellow-400'
+            };
+            el.innerHTML = `<span class="inline-block w-2 h-2 rounded-full ${colors[status] || colors.loading} mr-1"></span>${message}`;
+        }
+
+        async function fetchRemoteData() {
+            try {
+                updateDataSourceStatus('loading', '连接中...');
+                const response = await fetch(DATA_URL, { cache: 'no-cache' });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                remoteData = data;
+                updateDataSourceStatus('connected', '已连接远程数据');
+                return data;
+            } catch (error) {
+                console.warn('Failed to fetch remote data:', error);
+                updateDataSourceStatus('error', '远程数据连接失败');
+                return null;
+            }
+        }
+
+        function loadData() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                companies = JSON.parse(stored);
+            } else {
+                // 首次访问，使用降级数据
+                companies = JSON.parse(JSON.stringify(fallbackData));
+                saveData();
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(companies));
+        }
+
+        function getPreviousIds() {
+            const stored = localStorage.getItem(PREVIOUS_IDS_KEY);
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function savePreviousIds() {
+            localStorage.setItem(PREVIOUS_IDS_KEY, JSON.stringify(companies.map(c => c.id)));
+        }
+
+        function getLastCheckTime() {
+            const stored = localStorage.getItem(LAST_CHECK_KEY);
+            return stored ? new Date(stored) : new Date('2026-01-01');
+        }
+
+        function saveLastCheckTime() {
+            localStorage.setItem(LAST_CHECK_KEY, new Date().toISOString());
+        }
+
+        // 检测并合并远程数据中的变化
+        function mergeRemoteChanges(remoteCompanies) {
+            if (!remoteCompanies || remoteCompanies.length === 0) return false;
+
+            const localIds = companies.map(c => c.id);
+            const remoteIds = remoteCompanies.map(c => c.id);
+            let hasChanges = false;
+            let newCompanies = [];
+            let updatedCompanies = [];
+
+            // 1. 检测新公司（远程有，本地没有）
+            remoteCompanies.forEach(remoteCompany => {
+                const localIndex = companies.findIndex(c => c.id === remoteCompany.id);
+
+                if (localIndex === -1) {
+                    // 全新的公司
+                    const newCompany = JSON.parse(JSON.stringify(remoteCompany));
+                    newCompany.isNew = true;
+                    newCompany.addedAt = new Date().toISOString();
+                    companies.push(newCompany);
+                    newCompanies.push(newCompany);
+                    hasChanges = true;
+                } else {
+                    // 现有公司 - 检查是否有新新闻并同步字段
+                    const localCompany = companies[localIndex];
+                    const remoteNews = remoteCompany.news || [];
+                    const localNews = localCompany.news || [];
+                    const localNewsTitles = localNews.map(n => n.title);
+
+                    // 1. 检测新增的新闻
+                    const newNews = remoteNews.filter(n => !localNewsTitles.includes(n.title));
+
+                    if (newNews.length > 0) {
+                        localCompany.news = [...newNews, ...localNews];
+                        localCompany.hasNewUpdates = true;
+                        localCompany.newNewsCount = newNews.length;
+                        updatedCompanies.push({
+                            company: localCompany,
+                            newNewsCount: newNews.length
+                        });
+                        hasChanges = true;
+                    }
+
+                    // 2. 同步现有新闻的字段（如source更新、日期修正等）
+                    localNews.forEach(localNewsItem => {
+                        const remoteNewsItem = remoteNews.find(n => n.title === localNewsItem.title);
+                        if (remoteNewsItem) {
+                            // 更新source（如果远程有但本地没有）
+                            if (remoteNewsItem.source && !localNewsItem.source) {
+                                localNewsItem.source = remoteNewsItem.source;
+                                hasChanges = true;
+                            }
+                            // 删除source（如果远程没有但本地有）
+                            if (!remoteNewsItem.source && localNewsItem.source) {
+                                delete localNewsItem.source;
+                                hasChanges = true;
+                            }
+                            // 更新其他字段
+                            if (remoteNewsItem.date !== localNewsItem.date) {
+                                localNewsItem.date = remoteNewsItem.date;
+                                hasChanges = true;
+                            }
+                            if (remoteNewsItem.type !== localNewsItem.type) {
+                                localNewsItem.type = remoteNewsItem.type;
+                                hasChanges = true;
+                            }
+                        }
+                    });
+
+                    // 3. 更新公司其他字段
+                    if (remoteCompany.stage !== localCompany.stage) {
+                        localCompany.stage = remoteCompany.stage;
+                        hasChanges = true;
+                    }
+                    if (remoteCompany.totalFunding !== localCompany.totalFunding) {
+                        localCompany.totalFunding = remoteCompany.totalFunding;
+                        hasChanges = true;
+                    }
+                    if (remoteCompany.metrics && JSON.stringify(remoteCompany.metrics) !== JSON.stringify(localCompany.metrics)) {
+                        localCompany.metrics = { ...localCompany.metrics, ...remoteCompany.metrics };
+                        hasChanges = true;
+                    }
+                    if (remoteCompany.lastUpdated !== localCompany.lastUpdated) {
+                        localCompany.lastUpdated = remoteCompany.lastUpdated;
+                        hasChanges = true;
+                    }
+                }
+            });
+
+            // 2. 检测被删除的公司（本地有，远程没有）- 可选，暂时保留
+
+            if (hasChanges) {
+                saveData();
+
+                if (newCompanies.length > 0) {
+                    showToast('new_company',
+                        `发现 ${newCompanies.length} 个新产品`,
+                        newCompanies.map(c => c.name).join('、')
+                    );
+                }
+
+                if (updatedCompanies.length > 0) {
+                    setTimeout(() => {
+                        showToast('new_updates',
+                            `${updatedCompanies.length} 个产品有新动态`,
+                            updatedCompanies.map(u => `${u.company.name}(${u.newNewsCount}条)`).join('、')
+                        );
+                    }, newCompanies.length > 0 ? 3000 : 0);
+                }
+            }
+
+            return hasChanges;
+        }
+
+        // ============================================
+        // 初始化
+        // ============================================
+        document.addEventListener('DOMContentLoaded', async function() {
+            // 清除之前保存的isNew状态（重置NEW标记）
+            resetNewStatus();
+            // 清理实时新闻
+            cleanupRealtimeNews();
+
+            // 1. 先加载本地缓存数据（用于快速渲染）
+            loadData();
+            renderCompanies();
+            updateStats();
+            updateLastUpdatedTime();
+
+            // 2. 尝试从远程加载最新数据
+            const remoteDataResult = await fetchRemoteData();
+
+            if (remoteDataResult && remoteDataResult.companies) {
+                // 3. 合并远程数据变化
+                const hasChanges = mergeRemoteChanges(remoteDataResult.companies);
+
+                if (hasChanges) {
+                    // 有变化，重新渲染
+                    renderCompanies();
+                    updateStats();
+                    updateNewUpdatesCount();
+                }
+
+                // 保存数据版本号
+                if (remoteDataResult.version) {
+                    localStorage.setItem(DATA_VERSION_KEY, remoteDataResult.version);
+                }
+            } else {
+                // 远程数据加载失败，回退到本地缓存/fallback
+                const hadLocalData = localStorage.getItem(STORAGE_KEY);
+                updateDataSourceStatus('cached', hadLocalData ? '使用本地缓存' : '使用内置数据');
+                if (!hadLocalData) {
+                    showToast('new_updates', '远程数据连接失败', '已加载内置数据，部分信息可能不是最新的。点击刷新重试。');
+                }
+            }
+
+            // 4. 运行本地更新检测
+            detectNewUpdates();
+            startAutoUpdate();
+            savePreviousIds();
+        });
+
+        // 重置所有公司的NEW标记
+        function resetNewStatus() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                const data = JSON.parse(stored);
+                data.forEach(c => {
+                    c.isNew = false;
+                    c.hasNewUpdates = false;
+                    c.newNewsCount = 0;
+                });
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            }
+        }
+
+        // 清理实时新闻
+        function cleanupRealtimeNews() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                const data = JSON.parse(stored);
+                let hasChanges = false;
+                data.forEach(c => {
+                    const originalLength = c.news.length;
+                    // 删除标题包含"[实时]"的新闻
+                    c.news = c.news.filter(n => !n.title.includes('[实时]'));
+                    if (c.news.length !== originalLength) {
+                        hasChanges = true;
+                        // 更新metrics
+                        c.metrics.newsCount = c.news.length;
+                    }
+                });
+                if (hasChanges) {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                }
+            }
+        }
+
+        // ============================================
+        // 新更新检测
+        // ============================================
+        function detectNewUpdates() {
+            const lastCheck = getLastCheckTime();
+            const previousIds = getPreviousIds();
+            const currentIds = companies.map(c => c.id);
+            
+            newUpdatesThisSession = [];
+
+            // 1. 检测新公司
+            const newCompanyIds = currentIds.filter(id => !previousIds.includes(id));
+            newCompanyIds.forEach(id => {
+                const company = companies.find(c => c.id === id);
+                if (company) {
+                    company.isNew = true;
+                    newUpdatesThisSession.push({
+                        type: 'new_company',
+                        company: company,
+                        message: `新增监测：${company.name}`
+                    });
+                }
+            });
+
+            // 2. 检测现有公司的新新闻
+            companies.forEach(company => {
+                const newNews = company.news.filter(n => new Date(n.date) > lastCheck);
+                if (newNews.length > 0) {
+                    company.hasNewUpdates = true;
+                    company.newNewsCount = newNews.length;
+                    newUpdatesThisSession.push({
+                        type: 'news',
+                        company: company,
+                        count: newNews.length,
+                        message: `${company.name} 有 ${newNews.length} 条新动态`
+                    });
+                }
+            });
+
+            // 3. 显示通知
+            if (newUpdatesThisSession.length > 0) {
+                const newCompanies = newUpdatesThisSession.filter(u => u.type === 'new_company');
+                const newsUpdates = newUpdatesThisSession.filter(u => u.type === 'news');
+                
+                if (newCompanies.length > 0) {
+                    showToast('new_company', 
+                        `发现 ${newCompanies.length} 个新产品`, 
+                        newCompanies.map(u => u.company.name).join('、')
+                    );
+                }
+                
+                if (newsUpdates.length > 0) {
+                    setTimeout(() => {
+                        showToast('new_updates', 
+                            `${newsUpdates.length} 个产品有新动态`, 
+                            '点击查看详情'
+                        );
+                    }, 3000);
+                }
+            }
+
+            saveLastCheckTime();
+            updateNewUpdatesCount();
+        }
+
+        // ============================================
+        // Toast 通知
+        // ============================================
+        function showToast(type, title, message) {
+            const toast = document.getElementById('toast');
+            const content = document.getElementById('toastContent');
+            
+            toast.className = `toast ${type}`;
+            content.innerHTML = `
+                <div class="font-semibold mb-1">${title}</div>
+                <div class="text-sm text-gray-600">${message}</div>
+            `;
+            
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 5000);
+        }
+
+        // ============================================
+        // 自动更新机制
+        // ============================================
+        function startAutoUpdate() {
+            if (autoUpdateInterval) clearInterval(autoUpdateInterval);
+            // 默认不开启自动更新，需要用户手动开启
+            autoUpdateEnabled = false;
+            autoUpdateInterval = null;
+            updateAutoUpdateUI();
+        }
+
+        function toggleAutoUpdate() {
+            autoUpdateEnabled = !autoUpdateEnabled;
+            updateAutoUpdateUI();
+            
+            if (autoUpdateEnabled) {
+                // 开启自动更新
+                autoUpdateInterval = setInterval(() => {
+                    checkForRemoteUpdates();
+                }, 60000);
+                showToast('new_updates', '自动更新已开启', '每分钟检查一次新数据');
+            } else {
+                // 关闭自动更新
+                if (autoUpdateInterval) {
+                    clearInterval(autoUpdateInterval);
+                    autoUpdateInterval = null;
+                }
+                showToast('new_updates', '自动更新已关闭', '点击刷新按钮手动更新');
+            }
+        }
+
+        function updateAutoUpdateUI() {
+            document.querySelectorAll('.auto-update-status').forEach(el => {
+                el.textContent = autoUpdateEnabled ? '开启' : '关闭';
+            });
+            document.querySelectorAll('.auto-update-icon').forEach(el => {
+                el.className = autoUpdateEnabled ? 'fas fa-pause auto-update-icon' : 'fas fa-play auto-update-icon';
+            });
+        }
+
+        async function manualRefresh(button) {
+            // 给所有刷新图标添加动画
+            document.querySelectorAll('.refresh-icon').forEach(icon => {
+                icon.classList.add('refreshing');
+            });
+
+            // 强制重新加载远程数据
+            const remoteDataResult = await fetchRemoteData();
+
+            if (remoteDataResult && remoteDataResult.companies) {
+                const hasChanges = mergeRemoteChanges(remoteDataResult.companies);
+
+                if (hasChanges) {
+                    renderCompanies();
+                    updateStats();
+                    updateNewUpdatesCount();
+                } else {
+                    showToast('new_updates', '暂无新动态', '远程数据与本地一致');
+                }
+            } else {
+                showToast('new_updates', '刷新失败', '无法连接到远程数据源');
+            }
+
+            detectNewUpdates();
+            updateLastUpdatedTime();
+
+            document.querySelectorAll('.refresh-icon').forEach(icon => {
+                icon.classList.remove('refreshing');
+            });
+        }
+
+        // 定时检查远程更新（自动更新开启时调用）
+        async function checkForRemoteUpdates() {
+            const remoteDataResult = await fetchRemoteData();
+
+            if (remoteDataResult && remoteDataResult.companies) {
+                const hasChanges = mergeRemoteChanges(remoteDataResult.companies);
+
+                if (hasChanges) {
+                    renderCompanies();
+                    updateStats();
+                    updateNewUpdatesCount();
+                }
+            }
+
+            updateLastUpdatedTime();
+        }
+
+        // ============================================
+        // 渲染函数
+        // ============================================
+        function renderCompanies() {
+            const grid = document.getElementById('companyGrid');
+            grid.innerHTML = '';
+
+            const hiddenIds = getHiddenIds();
+
+            const filtered = companies.filter(c => {
+                if (hiddenIds.includes(c.id)) return false;
+                if (currentFilter === 'all') return true;
+                if (currentFilter === 'startup') return c.type === 'startup';
+                if (currentFilter === 'ota') return c.type === 'ota';
+                if (currentFilter === 'new') return c.isNew;
+                if (currentFilter === 'updated') return c.hasNewUpdates;
+                return true;
+            });
+
+            filtered.forEach(company => {
+                const card = createCompanyCard(company);
+                grid.appendChild(card);
+            });
+
+            // Show empty state if all hidden
+            if (filtered.length === 0 && companies.length > 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-gray-400">
+                        <i class="fas fa-eye-slash text-4xl mb-4"></i>
+                        <p>所有公司已被隐藏</p>
+                        <button onclick="showHiddenManager()" class="mt-4 text-blue-600 hover:underline">管理已隐藏的公司</button>
+                    </div>
+                `;
+            }
+        }
+
+        function createCompanyCard(company) {
+            const card = document.createElement('div');
+            const isNew = company.isNew;
+            const hasUpdates = company.hasNewUpdates;
+            
+            card.className = `card p-4 sm:p-5 cursor-pointer relative ${company.type === 'startup' ? 'startup-card' : 'ota-card'} ${isNew ? 'new-company' : ''} ${hasUpdates ? 'has-updates' : ''}`;
+            card.onclick = () => openModal(company.id);
+
+            const typeLabel = company.type === 'startup' ? '创业公司' : 'OTA产品';
+            const typeColor = company.type === 'startup' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800';
+            const m = company.metrics;
+
+            const daysSinceNews = getDaysSince(m.newsRecency);
+            const newsRecencyText = daysSinceNews <= 7 ? '本周' : daysSinceNews <= 30 ? '本月' : daysSinceNews <= 90 ? '3月内' : '3月+';
+            const newsRecencyColor = daysSinceNews <= 7 ? 'text-green-600' : daysSinceNews <= 30 ? 'text-blue-600' : 'text-gray-400';
+
+            let badgeHtml = '';
+            if (isNew) {
+                badgeHtml = '<span class="new-tag">NEW</span>';
+            } else if (hasUpdates && company.newNewsCount) {
+                badgeHtml = `<span class="update-badge">${company.newNewsCount}</span>`;
+            }
+
+            card.innerHTML = `
+                ${badgeHtml}
+                <button class="absolute top-2 right-2 text-gray-300 hover:text-red-400 text-sm p-1" title="隐藏此卡片" onclick="event.stopPropagation(); hideCompany('${company.id}')">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="flex justify-between items-start mb-2 sm:mb-3 pr-6">
+                    <div>
+                        <span class="inline-block px-2 py-1 rounded text-xs font-medium ${typeColor} mb-1 sm:mb-2">${typeLabel}</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900">${company.name}</h3>
+                    </div>
+                </div>
+
+                <div class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+                    <div><i class="fas fa-map-marker-alt w-4 sm:w-5"></i>${company.location}</div>
+                    <div><i class="fas fa-tag w-4 sm:w-5"></i>${company.stage}</div>
+                    ${company.totalFunding !== 'N/A' ? `<div><i class="fas fa-dollar-sign w-4 sm:w-5"></i>总融资: ${company.totalFunding}</div>` : ''}
+                </div>
+
+                <div class="mb-3 sm:mb-4">
+                    <div class="text-xs text-gray-500 mb-1 sm:mb-2">关键指标（近90天）</div>
+                    <div class="grid grid-cols-3 gap-1 sm:gap-2">
+                        <div class="metric-card">
+                            <div class="metric-value">${m.newsCount}</div>
+                            <div class="metric-label">新闻报道</div>
+                            <div class="text-xs ${newsRecencyColor}">${newsRecencyText}</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">${m.socialMentions}</div>
+                            <div class="metric-label">社交提及</div>
+                            <div class="text-xs text-gray-400">近30天</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">${m.trafficGrowth}</div>
+                            <div class="metric-label">流量增长</div>
+                            <div class="text-xs text-gray-400">月环比</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-end pt-2 sm:pt-3 border-t">
+                    <span class="text-blue-600 text-xs sm:text-sm font-medium">查看详情 <i class="fas fa-arrow-right ml-1"></i></span>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // ============================================
+        // Modal 相关
+        // ============================================
+        function openModal(companyId) {
+            const company = companies.find(c => c.id === companyId);
+            if (!company) return;
+
+            // 标记已读
+            if (company.hasNewUpdates) {
+                company.hasNewUpdates = false;
+                company.newNewsCount = 0;
+                saveData();
+                renderCompanies();
+                updateNewUpdatesCount();
+            }
+
+            currentModalCompanyId = companyId;
+
+            const modal = document.getElementById('companyModal');
+            const content = document.getElementById('modalContent');
+
+            content.innerHTML = `
+                <div class="p-4 sm:p-6">
+                    <div class="flex justify-between items-start mb-4 sm:mb-6">
+                        <div class="flex-1 pr-4">
+                            <span class="inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${company.type === 'startup' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'} mb-2">
+                                ${company.type === 'startup' ? 'AI创业公司' : 'OTA AI产品'}
+                            </span>
+                            <h2 class="text-xl sm:text-2xl font-bold">${company.name}</h2>
+                            <p class="text-gray-600 mt-1 text-sm sm:text-base">${company.description}</p>
+                            ${company.entityInfo ? `<p class="text-xs sm:text-sm text-orange-600 mt-1"><i class="fas fa-info-circle mr-1"></i>${company.entityInfo}</p>` : ''}
+                        </div>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 p-2 -mr-2">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex border-b mb-4 sm:mb-6 overflow-x-auto">
+                        <div class="tab active whitespace-nowrap" onclick="switchTab('overview')">概览</div>
+                        <div class="tab whitespace-nowrap" onclick="switchTab('timeline')">动态时间线</div>
+                        <div class="tab whitespace-nowrap" onclick="switchTab('metrics')">关键指标</div>
+                    </div>
+
+                    <div id="tabContent">${renderOverviewTab(company)}</div>
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        // 全局变量：当前打开的Modal公司ID
+        let currentModalCompanyId = null;
+
+        function closeModal() {
+            document.getElementById('companyModal').classList.remove('active');
+            currentModalCompanyId = null;
+        }
+
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const company = companies.find(c => c.id === currentModalCompanyId);
+            if (!company) return;
+
+            const tabContent = document.getElementById('tabContent');
+            if (tab === 'overview') tabContent.innerHTML = renderOverviewTab(company);
+            else if (tab === 'timeline') tabContent.innerHTML = renderTimelineTab(company);
+            else if (tab === 'metrics') tabContent.innerHTML = renderMetricsTab(company);
+        }
+
+        // ============================================
+        // Tab 渲染
+        // ============================================
+        function renderOverviewTab(company) {
+            return `
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2 sm:mb-3 text-gray-900 text-sm sm:text-base">基本信息</h4>
+                        <div class="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                            <div class="flex justify-between py-2 border-b">
+                                <span class="text-gray-600">总部</span>
+                                <span class="font-medium">${company.location}</span>
+                            </div>
+                            ${company.founded ? `<div class="flex justify-between py-2 border-b"><span class="text-gray-600">成立时间</span><span class="font-medium">${company.founded}</span></div>` : ''}
+                            ${company.company ? `<div class="flex justify-between py-2 border-b"><span class="text-gray-600">所属公司</span><span class="font-medium">${company.company}</span></div>` : ''}
+                            ${company.launched ? `<div class="flex justify-between py-2 border-b"><span class="text-gray-600">上线时间</span><span class="font-medium">${company.launched}</span></div>` : ''}
+                            <div class="flex justify-between py-2 border-b">
+                                <span class="text-gray-600">当前阶段</span>
+                                <span class="font-medium">${company.stage}</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b">
+                                <span class="text-gray-600">总融资额</span>
+                                <span class="font-medium">${company.totalFunding}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 sm:mb-3 text-gray-900 text-sm sm:text-base">投资人情况</h4>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">${company.investors}</p>
+                        <h4 class="font-semibold mb-2 sm:mb-3 mt-4 sm:mt-6 text-gray-900 text-sm sm:text-base">产品服务</h4>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">${company.product}</p>
+                        ${company.website ? `<a href="${company.website}" target="_blank" class="inline-flex items-center mt-3 sm:mt-4 text-blue-600 hover:text-blue-800 text-xs sm:text-sm font-medium">访问官网 <i class="fas fa-external-link-alt ml-2"></i></a>` : ''}
+                    </div>
+                </div>
+                ${company.fundingRounds && company.fundingRounds.length > 0 ? `
+                <div class="mt-4 sm:mt-6">
+                    <h4 class="font-semibold mb-2 sm:mb-3 text-gray-900 text-sm sm:text-base">融资历史</h4>
+                    <div class="space-y-2 sm:space-y-3">
+                        ${company.fundingRounds.map(round => `
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between p-2 sm:p-3 bg-gray-50 rounded-lg">
+                                <div class="mb-1 sm:mb-0">
+                                    <div class="font-medium text-sm">${round.round}</div>
+                                    <div class="text-xs text-gray-600">${round.date}</div>
+                                </div>
+                                <div class="text-left sm:text-right">
+                                    <div class="font-semibold text-blue-600 text-sm">${round.amount}</div>
+                                    <div class="text-xs text-gray-500">${round.investors}</div>
+                                    ${round.note ? `<div class="text-xs text-orange-600"><i class="fas fa-info-circle mr-1"></i>${round.note}</div>` : ''}
+                                    ${round.source ? `<a href="${round.source}" target="_blank" class="source-link"><i class="fas fa-external-link-alt mr-1"></i>来源</a>` : ''}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>` : ''}
+            `;
+        }
+
+        function renderTimelineTab(company) {
+            const lastCheck = getLastCheckTime();
+            const newsList = company.news || [];
+
+            // 如果 news 中的融资报道缺少 source，从 fundingRounds 中补充
+            const fundingSourceMap = new Map((company.fundingRounds || []).map(f => [f.date, f.source]));
+            const enrichedNewsList = newsList.map(n => ({
+                ...n,
+                source: n.source || (n.type === 'funding' && fundingSourceMap.get(n.date)) || undefined
+            }));
+
+            // 去重：检查 fundingRounds 是否已在 news 中报道过
+            // 策略：通过日期匹配。融资新闻通常和 funding round 日期一致
+            const newsDates = new Set(enrichedNewsList.map(n => n.date));
+            const uniqueFundingRounds = (company.fundingRounds || []).filter(f => {
+                return !newsDates.has(f.date);
+            });
+
+            const allEvents = [
+                ...(company.founded ? [{ date: company.founded, title: `${company.name} 成立`, type: 'milestone', source: null }] : []),
+                ...(company.launched ? [{ date: company.launched, title: `${company.name} 产品上线`, type: 'milestone', source: null }] : []),
+                ...uniqueFundingRounds.map(f => ({ date: f.date, title: `${f.round}融资 ${f.amount}`, type: 'funding', source: f.source })),
+                ...enrichedNewsList.map(n => ({ ...n, isNew: new Date(n.date) > lastCheck }))
+            ].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            return `
+                <div class="space-y-0">
+                    ${allEvents.map(event => `
+                        <div class="timeline-item pb-6 ${event.isNew ? 'new-event' : ''}">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-sm text-gray-500">${event.date}</span>
+                                ${event.isNew ? '<span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded">新</span>' : ''}
+                            </div>
+                            <div class="font-medium text-gray-900">${event.title}</div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="news-badge news-${event.type}">${event.type === 'funding' ? '融资' : event.type === 'product' ? '产品' : event.type === 'partnership' ? '合作' : '里程碑'}</span>
+                                ${event.source ? `<a href="${event.source}" target="_blank" class="source-link"><i class="fas fa-external-link-alt mr-1"></i>查看来源</a>` : ''}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderMetricsTab(company) {
+            const m = company.metrics;
+            return `
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-4 text-gray-900">关键指标（原始数据）</h4>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <div class="text-3xl font-bold text-blue-600">${m.newsCount}</div>
+                            <div class="text-sm text-blue-700 mt-1">近90天报道数</div>
+                            <div class="text-xs text-gray-500 mt-2">最新：${m.newsRecency}</div>
+                        </div>
+                        <div class="p-4 bg-purple-50 rounded-lg border border-purple-100">
+                            <div class="text-3xl font-bold text-purple-600">${m.socialMentions}</div>
+                            <div class="text-sm text-purple-700 mt-1">近30天提及数</div>
+                            <div class="text-xs text-gray-500 mt-2">来源：Reddit + Twitter</div>
+                        </div>
+                        <div class="p-4 bg-green-50 rounded-lg border border-green-100">
+                            <div class="text-3xl font-bold text-green-600">${m.trafficGrowth}</div>
+                            <div class="text-sm text-green-700 mt-1">月环比增长</div>
+                            <div class="text-xs text-gray-500 mt-2">基于SimilarWeb估算</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <h4 class="font-semibold mb-2 text-gray-900"><i class="fas fa-info-circle mr-2"></i>指标说明</h4>
+                    <div class="text-sm text-gray-600 space-y-1">
+                        <p><strong>新闻热度：</strong>近90天内被Skift、PhocusWire、环球旅讯等行业媒体报道的次数</p>
+                        <p><strong>社交热度：</strong>近30天内在Reddit r/travel、Twitter/X上被提及的次数</p>
+                        <p><strong>流量趋势：</strong>网站访问量月环比增长率（基于SimilarWeb估算数据）</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ============================================
+        // 工具函数
+        // ============================================
+        function getDaysSince(dateStr) {
+            if (!dateStr || dateStr === 'N/A') return 999;
+            const date = new Date(dateStr);
+            const now = new Date();
+            return Math.floor((now - date) / (1000 * 60 * 60 * 24));
+        }
+
+        function updateStats() {
+            document.getElementById('totalCompanies').textContent = companies.length;
+            document.getElementById('startupCount').textContent = companies.filter(c => c.type === 'startup').length;
+            document.getElementById('otaCount').textContent = companies.filter(c => c.type === 'ota').length;
+        }
+
+        function updateNewUpdatesCount() {
+            const newCompanies = companies.filter(c => c.isNew).length;
+            const updatedCompanies = companies.filter(c => c.hasNewUpdates).length;
+            document.getElementById('newUpdatesCount').textContent = newCompanies + updatedCompanies;
+        }
+
+        function updateLastUpdatedTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            document.getElementById('lastUpdatedTime').textContent = `${year}年${month}月${day}日`;
+        }
+
+        // ============================================
+        // 隐藏/恢复公司
+        // ============================================
+        const HIDDEN_KEY = 'travel_ai_hidden_ids';
+
+        function getHiddenIds() {
+            const stored = localStorage.getItem(HIDDEN_KEY);
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function hideCompany(companyId) {
+            const hidden = getHiddenIds();
+            if (!hidden.includes(companyId)) {
+                hidden.push(companyId);
+                localStorage.setItem(HIDDEN_KEY, JSON.stringify(hidden));
+            }
+            const company = companies.find(c => c.id === companyId);
+            renderCompanies();
+            updateStats();
+            showToast('new_updates', '已隐藏', company ? `${company.name} 已从列表中隐藏` : '卡片已隐藏');
+        }
+
+        function restoreCompany(companyId) {
+            let hidden = getHiddenIds();
+            hidden = hidden.filter(id => id !== companyId);
+            localStorage.setItem(HIDDEN_KEY, JSON.stringify(hidden));
+            renderCompanies();
+            updateStats();
+            const company = companies.find(c => c.id === companyId);
+            showToast('new_company', '已恢复', company ? `${company.name} 已恢复显示` : '卡片已恢复');
+        }
+
+        function showHiddenManager() {
+            const hiddenIds = getHiddenIds();
+            const hiddenCompanies = companies.filter(c => hiddenIds.includes(c.id));
+            if (hiddenCompanies.length === 0) {
+                showToast('new_updates', '没有隐藏的公司', '所有公司都在显示中');
+                return;
+            }
+            const listHtml = hiddenCompanies.map(c => `
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="font-medium">${c.name}</span>
+                    <button onclick="restoreCompany('${c.id}'); closeModal();" class="text-blue-600 text-sm hover:underline">恢复显示</button>
+                </div>
+            `).join('');
+
+            const modal = document.getElementById('companyModal');
+            const content = document.getElementById('modalContent');
+            content.innerHTML = `
+                <div class="p-4 sm:p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-xl font-bold">已隐藏的公司</h2>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 p-2 -mr-2"><i class="fas fa-times text-xl"></i></button>
+                    </div>
+                    <div class="max-h-96 overflow-y-auto">${listHtml}</div>
+                </div>
+            `;
+            modal.classList.add('active');
+        }
+
+        // ============================================
+        // 筛选功能
+        // ============================================
+        function filterCompanies(type) {
+            currentFilter = type;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderCompanies();
+            
+            // 显示筛选结果信息
+            if (type === 'new') {
+                const newCompanies = companies.filter(c => c.isNew);
+                if (newCompanies.length === 0) {
+                    showToast('new_updates', '暂无新发现的产品', '所有产品都已浏览过');
+                } else {
+                    showToast('new_company', `发现 ${newCompanies.length} 个新产品`, newCompanies.map(c => c.name).join('、'));
+                }
+            } else if (type === 'updated') {
+                const updatedCompanies = companies.filter(c => c.hasNewUpdates);
+                if (updatedCompanies.length === 0) {
+                    showToast('new_updates', '暂无更新动态', '所有产品都是最新状态');
+                } else {
+                    showToast('new_updates', `${updatedCompanies.length} 个产品有新动态`, updatedCompanies.map(c => `${c.name}(${c.newNewsCount}条)`).join('、'));
+                }
+            }
+        }
+
+        function filterByStage(stage) {
+            if (!stage) {
+                renderCompanies();
+                return;
+            }
+            const grid = document.getElementById('companyGrid');
+            grid.innerHTML = '';
+            companies.filter(c => c.stage === stage).forEach(company => {
+                grid.appendChild(createCompanyCard(company));
+            });
+        }
+
+        function subscribeEmail() {
+            const email = document.getElementById('emailInput').value;
+            if (!email || !email.includes('@')) {
+                alert('请输入有效的邮箱地址');
+                return;
+            }
+            localStorage.setItem('travel_ai_subscriber_email', email);
+            // Note: Email subscription is frontend-only currently.
+            // To enable real email notifications, you would need to integrate
+            // a service like Resend, SendGrid, or a GitHub Actions step that sends emails.
+            alert('订阅成功！\n\n注意：当前为纯前端演示，尚未接入邮件发送服务。\n如需真实邮件通知，请配置后端服务或 GitHub Actions + Resend/SendGrid。');
+            document.getElementById('emailInput').value = '';
+        }
+
+        // 点击modal外部关闭
+        document.getElementById('companyModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ============================================
+        // 导出数据功能
+        // ============================================
+        function exportData() {
+            const choice = prompt('请选择导出格式：\n1 - JSON\n2 - CSV\n3 - PDF\n\n请输入数字 (1/2/3):', '1');
+            
+            switch(choice) {
+                case '1':
+                    exportAsJSON();
+                    break;
+                case '2':
+                    exportAsCSV();
+                    break;
+                case '3':
+                    exportAsPDF();
+                    break;
+                default:
+                    showToast('new_updates', '取消导出', '未选择有效格式');
+            }
+        }
+
+        // 导出为JSON
+        function exportAsJSON() {
+            const exportData = {
+                exportTime: new Date().toISOString(),
+                totalCompanies: companies.length,
+                companies: companies.map(c => ({
+                    id: c.id,
+                    name: c.name,
+                    type: c.type,
+                    location: c.location,
+                    stage: c.stage,
+                    totalFunding: c.totalFunding,
+                    product: c.product,
+                    investors: c.investors,
+                    website: c.website,
+                    description: c.description,
+                    founded: c.founded || c.launched,
+                    metrics: c.metrics,
+                    newsCount: c.news.length,
+                    fundingRoundsCount: c.fundingRounds ? c.fundingRounds.length : 0
+                }))
+            };
+
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `travel-ai-dashboard-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast('new_updates', '导出成功', `已导出 ${companies.length} 家公司数据为 JSON`);
+        }
+
+        // 导出为CSV
+        function exportAsCSV() {
+            const headers = ['ID', '名称', '类型', '总部', '阶段', '总融资', '产品', '投资人', '网站', '成立时间', '新闻报道数', '社交提及数', '流量增长'];
+            
+            const rows = companies.map(c => [
+                c.id,
+                c.name,
+                c.type === 'startup' ? '创业公司' : 'OTA产品',
+                c.location,
+                c.stage,
+                c.totalFunding,
+                c.product,
+                c.investors,
+                c.website,
+                c.founded || c.launched || '',
+                c.metrics.newsCount,
+                c.metrics.socialMentions,
+                c.metrics.trafficGrowth
+            ]);
+
+            // 处理包含逗号的字段
+            const escapeCSV = (str) => {
+                if (typeof str !== 'string') str = String(str);
+                if (str.includes(',') || str.includes('\n') || str.includes('"')) {
+                    return `"${str.replace(/"/g, '""')}"`;
+                }
+                return str;
+            };
+
+            const csvContent = [
+                headers.join(','),
+                ...rows.map(row => row.map(escapeCSV).join(','))
+            ].join('\n');
+
+            const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `travel-ai-dashboard-${new Date().toISOString().split('T')[0]}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast('new_updates', '导出成功', `已导出 ${companies.length} 家公司数据为 CSV`);
+        }
+
+        // 导出为PDF
+        function exportAsPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // 添加中文字体支持（使用默认字体）
+            doc.setFont('helvetica');
+            
+            // 标题
+            doc.setFontSize(20);
+            doc.text('Travel AI Dashboard Report', 14, 20);
+            
+            // 导出信息
+            doc.setFontSize(10);
+            doc.text(`Export Date: ${new Date().toLocaleDateString('zh-CN')}`, 14, 30);
+            doc.text(`Total Companies: ${companies.length}`, 14, 36);
+            doc.text(`Startups: ${companies.filter(c => c.type === 'startup').length}`, 14, 42);
+            doc.text(`OTA Products: ${companies.filter(c => c.type === 'ota').length}`, 14, 48);
+            
+            // 准备表格数据
+            const tableData = companies.map(c => [
+                c.name,
+                c.type === 'startup' ? 'Startup' : 'OTA',
+                c.location,
+                c.stage,
+                c.totalFunding,
+                c.metrics.newsCount,
+                c.metrics.socialMentions,
+                c.metrics.trafficGrowth
+            ]);
+            
+            // 添加表格
+            doc.autoTable({
+                head: [['Name', 'Type', 'Location', 'Stage', 'Funding', 'News', 'Social', 'Traffic']],
+                body: tableData,
+                startY: 55,
+                styles: { fontSize: 9, cellPadding: 2 },
+                headStyles: { fillColor: [102, 126, 234], textColor: 255 },
+                alternateRowStyles: { fillColor: [245, 247, 250] },
+                columnStyles: {
+                    0: { cellWidth: 35 },
+                    1: { cellWidth: 20 },
+                    2: { cellWidth: 35 },
+                    3: { cellWidth: 25 },
+                    4: { cellWidth: 25 },
+                    5: { cellWidth: 15 },
+                    6: { cellWidth: 15 },
+                    7: { cellWidth: 20 }
+                }
+            });
+            
+            // 添加详细信息（每家公司一页）
+            let currentY = doc.lastAutoTable.finalY + 15;
+            
+            companies.forEach((company, index) => {
+                // 检查是否需要新页面
+                if (currentY > 250) {
+                    doc.addPage();
+                    currentY = 20;
+                }
+                
+                doc.setFontSize(12);
+                doc.setTextColor(102, 126, 234);
+                doc.text(`${index + 1}. ${company.name}`, 14, currentY);
+                
+                doc.setFontSize(9);
+                doc.setTextColor(0, 0, 0);
+                
+                const details = [
+                    `Type: ${company.type === 'startup' ? 'Startup' : 'OTA Product'}`,
+                    `Location: ${company.location}`,
+                    `Stage: ${company.stage}`,
+                    `Funding: ${company.totalFunding}`,
+                    `Product: ${company.product.substring(0, 80)}${company.product.length > 80 ? '...' : ''}`,
+                    `Website: ${company.website}`,
+                    `News Count: ${company.metrics.newsCount} | Social Mentions: ${company.metrics.socialMentions} | Traffic: ${company.metrics.trafficGrowth}`
+                ];
+                
+                details.forEach((line, i) => {
+                    doc.text(line, 14, currentY + 7 + (i * 5));
+                });
+                
+                currentY += 45;
+            });
+            
+            // 保存PDF
+            doc.save(`travel-ai-dashboard-${new Date().toISOString().split('T')[0]}.pdf`);
+            
+            showToast('new_updates', '导出成功', `已导出 ${companies.length} 家公司数据为 PDF`);
+        }
+    </script>
+</body>
+</html>

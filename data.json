@@ -1,0 +1,516 @@
+{
+  "version": "2026-04-21",
+  "lastUpdated": "2026-04-21",
+  "companies": [
+    {
+      "id": "1",
+      "name": "Mindtrip",
+      "type": "startup",
+      "location": "San Francisco, USA",
+      "founded": "2023-03-01",
+      "stage": "Series A",
+      "fundingRounds": [
+        {
+          "date": "2024-04-15",
+          "round": "Seed",
+          "amount": "$7M",
+          "investors": "Costanoa Ventures, Blackhorn Ventures",
+          "source": "https://app.dealroom.co/news/feed/mindtrip-raises-7m-for-ai-travel-planning"
+        },
+        {
+          "date": "2025-12-08",
+          "round": "Series A",
+          "amount": "$12M",
+          "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures",
+          "source": "https://www.businesswire.com/news/home/20251208469469/en/Mindtrip-Unveils-New-AI-Travel-and-Events-Features"
+        }
+      ],
+      "totalFunding": "$19M",
+      "product": "AI-powered travel planning platform with real-time booking",
+      "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
+      "metrics": {
+        "newsCount": 8,
+        "newsRecency": "2026-03-01",
+        "socialMentions": 45,
+        "trafficGrowth": "+18%"
+      },
+      "news": [
+        {
+          "date": "2026-03-15",
+          "title": "Mindtrip推出AI活动和会议规划功能",
+          "type": "product"
+        },
+        {
+          "date": "2025-12-08",
+          "title": "完成$12M A轮融资，Amex Ventures、Capital One Ventures、美联航风投参投",
+          "type": "funding",
+          "source": "https://www.businesswire.com/news/home/20251208469469/en/Mindtrip-Unveils-New-AI-Travel-and-Events-Features"
+        },
+        {
+          "date": "2025-05-20",
+          "title": "与多家航空公司建立合作伙伴关系",
+          "type": "partnership",
+          "source": "https://www.phocuswire.com/mindtrip-ai-travel-planning-capital-one-ventures-united-airlines-ventures"
+        }
+      ],
+      "website": "https://mindtrip.ai",
+      "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "2",
+      "name": "Layla",
+      "type": "startup",
+      "location": "Berlin, Germany",
+      "founded": "2023-02-01",
+      "stage": "Series A",
+      "fundingRounds": [
+        {
+          "date": "2023-12-20",
+          "round": "Seed",
+          "amount": "€3M",
+          "investors": "Firstminute Capital, M13, Barry Smith, Andy Phillips, Paris Hilton",
+          "source": "https://www.crunchbase.com/organization/layla-7376"
+        },
+        {
+          "date": "2025-12-15",
+          "round": "Pre-A",
+          "amount": "€2M",
+          "investors": "United Airlines Ventures, 百度风投, 渶策资本, M13, Firstminute Capital, SparkLabs",
+          "source": "https://pitchbook.com/profiles/company/541176-22"
+        }
+      ],
+      "totalFunding": "€5M",
+      "product": "AI travel planner with creator content integration",
+      "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
+      "metrics": {
+        "newsCount": 12,
+        "newsRecency": "2026-03-01",
+        "socialMentions": 68,
+        "trafficGrowth": "+25%"
+      },
+      "news": [
+        {
+          "date": "2026-03-10",
+          "title": "累计规划旅行价值突破10亿美元，用户达500万",
+          "type": "product",
+          "source": "https://finance.yahoo.com/news/layla-surpasses-1-billion-trips-165400507.html"
+        },
+        {
+          "date": "2025-12-15",
+          "title": "完成€200万pre-A轮融资，美联航风投和百度风投参投",
+          "type": "funding"
+        },
+        {
+          "date": "2025-09-18",
+          "title": "推出AI旅行创作者合作计划",
+          "type": "partnership"
+        }
+      ],
+      "website": "https://layla.ai",
+      "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "3",
+      "name": "Wanderboat",
+      "type": "startup",
+      "location": "San Francisco, USA",
+      "founded": "2023-05-01",
+      "stage": "Series A",
+      "fundingRounds": [
+        {
+          "date": "2024-03-18",
+          "round": "Seed",
+          "amount": "$8M",
+          "investors": "Redpoint Ventures, Lightspeed Venture Partners",
+          "source": "https://tracxn.com/d/companies/wanderboat/__vJsaIdf_x3juK0ck7RlGUMK3cfwqkd2nSWQfDIB2j3Q"
+        },
+        {
+          "date": "2025-03-12",
+          "round": "Series A",
+          "amount": "$18M",
+          "investors": "红杉中国, Coatue Management",
+          "source": "https://app.fundz.net/fundings/uta-ai-funding-round-2c5cd6"
+        }
+      ],
+      "totalFunding": "$26M",
+      "product": "AI-powered local discovery and hotel booking platform",
+      "investors": "红杉中国, Coatue Management, Redpoint Ventures, Lightspeed Venture Partners",
+      "metrics": {
+        "newsCount": 6,
+        "newsRecency": "2026-01-01",
+        "socialMentions": 32,
+        "trafficGrowth": "+15%"
+      },
+      "news": [
+        {
+          "date": "2026-01-20",
+          "title": "推出AI酒店精选和预订平台",
+          "type": "product",
+          "source": "https://www.knoxnews.com/press-release/story/55469/end-travel-planning-headaches-wanderboat-ai-launches-new-service"
+        },
+        {
+          "date": "2025-12-10",
+          "title": "扩展城市市场覆盖，进军亚太市场",
+          "type": "partnership",
+          "source": "https://www.dnj.com/press-release/story/37197/wanderboat-tackles-travel-paradox-of-choice"
+        },
+        {
+          "date": "2025-03-12",
+          "title": "完成$1800万A轮融资，红杉中国领投",
+          "type": "funding"
+        }
+      ],
+      "website": "https://wanderboat.ai",
+      "description": "Wanderboat AI专注于解决旅行「选择悖论」，通过AI驱动的本地发现和酒店精选平台，帮助用户轻松发现和预订理想酒店。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "4",
+      "name": "iMean",
+      "type": "startup",
+      "location": "Hangzhou, China",
+      "founded": "2023-07-01",
+      "stage": "Seed",
+      "fundingRounds": [
+        {
+          "date": "2021-12-15",
+          "round": "Seed",
+          "amount": "数千万人民币",
+          "investors": "奇绩创坛",
+          "source": "https://www.miracleplus.com/",
+          "note": "前身跨越星空融资，股东平移至新主体"
+        }
+      ],
+      "totalFunding": "数千万人民币",
+      "product": "AI travel itinerary planner with smart route optimization",
+      "investors": "YC中国(奇绩创坛), 小米联合创始人王川, 小米前总裁王翔, 前IDG合伙人Stella Jin",
+      "entityInfo": "新主体（非跨越星空），由股东平移成立",
+      "metrics": {
+        "newsCount": 4,
+        "newsRecency": "2026-02-01",
+        "socialMentions": 18,
+        "trafficGrowth": "+8%"
+      },
+      "news": [
+        {
+          "date": "2026-02-20",
+          "title": "iMean AI行程规划器新增多语言支持",
+          "type": "product"
+        },
+        {
+          "date": "2025-11-15",
+          "title": "与华为云深化合作，加入华为云初创计划",
+          "type": "partnership"
+        },
+        {
+          "date": "2025-08-25",
+          "title": "推出智能航班和酒店预订功能",
+          "type": "product"
+        }
+      ],
+      "website": "https://www.imean.ai",
+      "description": "iMean AI由尚晏仪创立，总部位于杭州。公司为新设立主体，股东包括YC中国(奇绩创坛)、小米联合创始人王川、小米前总裁王翔及前IDG合伙人Stella Jin。专注于AI旅行行程规划，提供智能路线优化、多日行程规划和交互式地图功能。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "5",
+      "name": "Steller",
+      "type": "startup",
+      "location": "Kirkland, Washington, USA",
+      "founded": "2023-01-15",
+      "stage": "Series B",
+      "fundingRounds": [
+        {
+          "date": "2023-06-20",
+          "round": "Seed",
+          "amount": "$6M",
+          "investors": "Trilogy Equity Partners",
+          "source": "https://tracxn.com/d/companies/steller/__ghJoloQBqQHEN3teVNjLjYTusNqfxY6ixML1wU-xiC8"
+        },
+        {
+          "date": "2024-02-13",
+          "round": "Series A",
+          "amount": "$15M",
+          "investors": "Madrona Venture Group",
+          "source": "https://skift.com/2024/01/13/steller-raises-5-million-for-ai-trip-planner-startup-funding-roundup/"
+        },
+        {
+          "date": "2025-01-28",
+          "round": "Series B",
+          "amount": "$21M",
+          "investors": "TVC, 现有投资者跟投",
+          "source": "https://pitchbook.com/profiles/company/436429-36"
+        }
+      ],
+      "totalFunding": "$42M",
+      "product": "Video-based travel planning platform with AI recommendations",
+      "investors": "TVC, Madrona Venture Group, Trilogy Equity Partners",
+      "metrics": {
+        "newsCount": 7,
+        "newsRecency": "2026-01-01",
+        "socialMentions": 52,
+        "trafficGrowth": "+12%"
+      },
+      "news": [
+        {
+          "date": "2026-01-28",
+          "title": "推出团队旅行协作功能，整合发现、沟通、规划和预订",
+          "type": "product",
+          "source": "https://www.prnewswire.com/news-releases/steller-unveils-group-trip-planning-302347630.html"
+        },
+        {
+          "date": "2025-10-15",
+          "title": "Trips by Steller用户突破5万，内容库超3000万条",
+          "type": "product"
+        },
+        {
+          "date": "2025-06-20",
+          "title": "与旅游目的地合作，转化率超18%",
+          "type": "partnership"
+        }
+      ],
+      "website": "https://steller.co",
+      "description": "Steller是由Pete Bryant领导的视频驱动旅行规划平台，整合创作者内容与AI推荐，让用户基于真实体验发现和预订旅行。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "6",
+      "name": "Wanderlog",
+      "type": "startup",
+      "location": "San Francisco, USA",
+      "founded": "2019-06-01",
+      "stage": "Seed",
+      "fundingRounds": [
+        {
+          "date": "2020-01-15",
+          "round": "Pre-seed",
+          "amount": "$150K",
+          "investors": "Y Combinator",
+          "source": "https://www.ycombinator.com/companies/wanderlog"
+        },
+        {
+          "date": "2021-06-15",
+          "round": "Seed",
+          "amount": "$1.5M",
+          "investors": "Unpopular Ventures",
+          "source": "https://tracxn.com/d/companies/wanderlog/__lelvNWkEOVXLC2fYXKoX0fazml8sWLb7U2Epc5HPuJA"
+        }
+      ],
+      "totalFunding": "$1.65M",
+      "product": "Collaborative trip planning app with AI features",
+      "investors": "Y Combinator, Unpopular Ventures",
+      "metrics": {
+        "newsCount": 3,
+        "newsRecency": "2026-02-01",
+        "socialMentions": 22,
+        "trafficGrowth": "+5%"
+      },
+      "news": [
+        {
+          "date": "2026-02-10",
+          "title": "推出AI驱动的旅行预算优化功能",
+          "type": "product"
+        },
+        {
+          "date": "2025-12-20",
+          "title": "Pro版本功能升级，年费$39.99",
+          "type": "product"
+        },
+        {
+          "date": "2025-09-25",
+          "title": "入选2026年最佳旅行规划应用榜单",
+          "type": "partnership"
+        }
+      ],
+      "website": "https://wanderlog.com",
+      "description": "Wanderlog是一款协作式旅行规划应用，帮助用户规划行程、管理预算和协作规划，近期加入AI功能增强用户体验。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "7",
+      "name": "携程问道",
+      "type": "ota",
+      "location": "Shanghai, China",
+      "company": "携程集团",
+      "launched": "2023-07-17",
+      "stage": "Internal",
+      "fundingRounds": [],
+      "totalFunding": "N/A",
+      "product": "旅游垂直大模型 + TripGenie AI助手",
+      "investors": "携程集团内部研发",
+      "metrics": {
+        "newsCount": 15,
+        "newsRecency": "2026-03-01",
+        "socialMentions": 85,
+        "trafficGrowth": "+22%"
+      },
+      "news": [
+        {
+          "date": "2026-03-20",
+          "title": "携程AI问答使用率同比增长270%",
+          "type": "product",
+          "source": "https://m.itouchtv.cn/article/06490add03608e1b8fa48fc3ea6a2dce"
+        },
+        {
+          "date": "2026-01-15",
+          "title": "梁建章：AI创新是携程长期战略核心",
+          "type": "product",
+          "source": "https://www.traveldaily.cn/article/178066/"
+        },
+        {
+          "date": "2025-11-20",
+          "title": "TripGenie带动订单转化率翻倍，机票自助解决率达78%",
+          "type": "product",
+          "source": "https://www.vocust.com/school/insightcase/364.html"
+        }
+      ],
+      "website": "https://trip.com",
+      "description": "携程问道是携程自研的旅游垂直大模型，结合精确的结构性实时数据和历史算法构建可靠答案数据库。AI旅行助手TripGenie带动订单转化率翻倍，机票自助解决率达78%，酒店达68%。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "8",
+      "name": "程心AI",
+      "type": "ota",
+      "location": "Suzhou, China",
+      "company": "同程旅行",
+      "launched": "2024-03-15",
+      "stage": "Internal",
+      "fundingRounds": [],
+      "totalFunding": "N/A",
+      "product": "AI旅行助手 DeepTrip 2.0",
+      "investors": "同程旅行内部研发",
+      "metrics": {
+        "newsCount": 10,
+        "newsRecency": "2026-04-01",
+        "socialMentions": 48,
+        "trafficGrowth": "+16%"
+      },
+      "news": [
+        {
+          "date": "2026-04-14",
+          "title": "程心AI亮相第六届消博会，发布AI面对面翻译屏和AI导览",
+          "type": "product",
+          "source": "https://finance.sina.com.cn/tech/2026-04-14/doc-inhunawe4150784.shtml"
+        },
+        {
+          "date": "2026-03-25",
+          "title": "DeepTrip 2.0升级：支持17种语言交互和模糊机票查询",
+          "type": "product",
+          "source": "https://www.cinn.cn/sz/2026/04-15/gDanR6Ak.html"
+        },
+        {
+          "date": "2025-12-18",
+          "title": "程心AI落地呀诺达、恭王府等景区",
+          "type": "partnership",
+          "source": "https://www.stcn.com/article/detail/3747700.html"
+        },
+        {
+          "date": "2025-03-24",
+          "title": "程心AI升级新域名，支持多语种服务",
+          "type": "product",
+          "source": "https://ttgchina.com/2025/03/24/同程旅行宣布程心ai升级-新域名支持多种语言/"
+        }
+      ],
+      "website": "https://ly.com",
+      "description": "程心AI是同程旅行的AI旅行解决方案，DeepTrip 2.0旅行智能体支持智能行程规划、模糊机票查询和全开放生态，已支持17种语言交互。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "9",
+      "name": "飞猪问一问",
+      "type": "ota",
+      "location": "Hangzhou, China",
+      "company": "飞猪（阿里巴巴）",
+      "launched": "2025-04-15",
+      "stage": "Internal",
+      "fundingRounds": [],
+      "totalFunding": "N/A",
+      "product": "AI旅行规划助手（飞猪产品）",
+      "investors": "阿里巴巴内部研发",
+      "metrics": {
+        "newsCount": 11,
+        "newsRecency": "2026-04-01",
+        "socialMentions": 72,
+        "trafficGrowth": "+35%"
+      },
+      "news": [
+        {
+          "date": "2026-04-02",
+          "title": "飞猪问一问与80+旅行品牌达成AI合作",
+          "type": "partnership",
+          "source": "https://finance.sina.com.cn/stock/estate/integration/2026-04-02/doc-inhtaraf4400511.shtml"
+        },
+        {
+          "date": "2026-04-02",
+          "title": "春节期间AI订单量环比增长超800%，门票订单大增24倍",
+          "type": "product",
+          "source": "https://news.qq.com/rain/a/20260402A03MEU00"
+        },
+        {
+          "date": "2026-04-10",
+          "title": "问一问正式上线，支持个性化旅行规划",
+          "type": "product",
+          "source": "https://hea.china.com/articles/20260410/202604101843490.html"
+        }
+      ],
+      "website": "https://fliggy.com",
+      "description": "飞猪问一问是阿里巴巴旗下飞猪推出的AI旅行规划产品，基于千问大模型，已合作80+国内外旅行品牌，春节期间AI订单量增长显著。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "10",
+      "name": "GuideGeek",
+      "type": "startup",
+      "location": "New York, USA",
+      "founded": "2023-03-01",
+      "stage": "Seed",
+      "fundingRounds": [
+        {
+          "date": "2023-08-15",
+          "round": "Seed",
+          "amount": "$3M",
+          "investors": "Techstars",
+          "source": "https://tracxn.com/d/companies/guidegeek/__crAP554S3osSJRfKSXP7VFPQBpY6HWbdFeREuH7D1PE"
+        }
+      ],
+      "totalFunding": "$3M",
+      "product": "AI travel assistant for brands and destinations",
+      "investors": "Techstars",
+      "metrics": {
+        "newsCount": 5,
+        "newsRecency": "2026-03-01",
+        "socialMentions": 15,
+        "trafficGrowth": "+6%"
+      },
+      "news": [
+        {
+          "date": "2025-11-20",
+          "title": "WildChina推出基于GuideGeek的WildConcierge AI助手",
+          "type": "partnership"
+        },
+        {
+          "date": "2025-06-15",
+          "title": "与新不伦瑞克旅游局合作推出AI旅行规划服务",
+          "type": "partnership",
+          "source": "https://www.breakingtravelnews.com/news/article/guidegeek-launches-ai-travel-genius-for-new-brunswick-trip-planners/"
+        }
+      ],
+      "website": "https://guidegeek.com",
+      "description": "GuideGeek为旅游品牌和目的地提供AI旅行助手解决方案，帮助合作伙伴提升用户参与度和预订转化率。",
+      "isNew": false,
+      "lastUpdated": "2026-04-16"
+    }
+  ]
+}/n
