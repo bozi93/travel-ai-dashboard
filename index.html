@@ -1423,12 +1423,41 @@
                 alert('请输入有效的邮箱地址');
                 return;
             }
-            localStorage.setItem('travel_ai_subscriber_email', email);
-            // Note: Email subscription is frontend-only currently.
-            // To enable real email notifications, you would need to integrate
-            // a service like Resend, SendGrid, or a GitHub Actions step that sends emails.
-            alert('订阅成功！\n\n注意：当前为纯前端演示，尚未接入邮件发送服务。\n如需真实邮件通知，请配置后端服务或 GitHub Actions + Resend/SendGrid。');
-            document.getElementById('emailInput').value = '';
+            
+            // Try to add subscriber via GitHub API (requires GITHUB_TOKEN secret)
+            // Fallback to localStorage if GitHub API not available
+            const addSubscriber = async () => {
+                try {
+                    // Attempt to create a GitHub Issue as subscription record
+                    // The workflow will read subscribers.json on each run
+                    const response = await fetch('https://api.github.com/repos/bozi93/travel-ai-dashboard/issues', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `token ${localStorage.getItem('github_token') || ''}`,
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            title: `Subscribe: ${email}`,
+                            labels: ['subscriber'],
+                        }),
+                    });
+                    
+                    if (response.ok) {
+                        alert('订阅成功！\n\n当发现新公司时，GitHub Actions 会自动发送邮件通知。');
+                    } else {
+                        // Fallback to localStorage
+                        localStorage.setItem('travel_ai_subscriber_email', email);
+                        alert('订阅成功！\n\n注意：当前使用本地存储，邮件通知需要配置 GitHub Secrets。\n详见 README 中的 Resend 配置指南。');
+                    }
+                } catch (err) {
+                    // Fallback to localStorage
+                    localStorage.setItem('travel_ai_subscriber_email', email);
+                    alert('订阅成功！\n\n注意：当前使用本地存储，邮件通知需要配置 GitHub Secrets。\n详见 README 中的 Resend 配置指南。');
+                }
+                document.getElementById('emailInput').value = '';
+            };
+            
+            addSubscriber();
         }
 
         // 点击modal外部关闭

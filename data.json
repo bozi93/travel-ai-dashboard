@@ -511,6 +511,35 @@
       "description": "GuideGeek为旅游品牌和目的地提供AI旅行助手解决方案，帮助合作伙伴提升用户参与度和预订转化率。",
       "isNew": false,
       "lastUpdated": "2026-04-16"
+    },
+    {
+      "id": "auto-6d2a46f80339",
+      "name": "Voyagier",
+      "type": "startup",
+      "location": "Philadelphia, USA",
+      "stage": "Pre-seed",
+      "totalFunding": "N/A",
+      "product": "Voyagier",
+      "investors": "",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-04-23",
+        "socialMentions": 0,
+        "trafficGrowth": "N/A"
+      },
+      "news": [
+        {
+          "date": "2026-04-23",
+          "title": "Voyagier launches AI luxury travel platform as it gears up for a seed round",
+          "type": "product",
+          "source": "https://technical.ly/startups/voyagier-ai-luxury-travel-platform/"
+        }
+      ],
+      "website": "",
+      "description": "Voyagier is an AI-powered luxury travel planning platform that recently emerged from stealth and is gearing up for a seed round.",
+      "isNew": true,
+      "lastUpdated": "2026-04-23",
+      "_autoDiscovered": true
     }
   ]
-}/n
+}
