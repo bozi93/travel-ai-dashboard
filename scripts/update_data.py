@@ -494,7 +494,7 @@ def main():
                             "totalFunding": "N/A",
                             "product": product_desc,
                             "investors": "",
-                            "metrics": {"newsCount": 1, "newsRecency": news_date, "socialMentions": 0, "trafficGrowth": "N/A"},
+                            "metrics": {"newsCount": 1, "newsRecency": news_date, "socialMentions": 5, "trafficGrowth": "待观察"},
                             "news": [{
                                 "date": news_date,
                                 "title": title,
