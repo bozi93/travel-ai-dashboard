@@ -29,12 +29,36 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 12,
+        "newsCount": 16,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2025-05-05",
+          "title": "Nevada’s Tourism Gets a Digital Makeover with Mindtrip’s AI Planning Experience for Visitors: Know More - Travel And Tour World",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNalk2MlNwVGZhRzZ0QWtsdHM3QTY2cUsxU1hOeTB1V0tnNjhncnFXSUhxSGRzM29pMEZwUzFzalI2Qkd3NEJkNHlMUEdDYkpCbHJWN2E4Zm5CWktQWVluOW9iT2NLaHB3VUZjM01oZTBadE9uY0dHcWhXR3NEdlZJTkVmNmFLVllMazFVb0xoeUktSkZYdFRYV0VrbmlycGVMSXBIZWpacGlkdW56ZWN3NzRhdklxRUpZekJaaVZoTXc2blE2MUlndDAtUzFYN0Zha29XaUVqNTFyb2VXQ1c1S01BRQ?oc=5"
+        },
+        {
+          "date": "2025-06-25",
+          "title": "AI trip planning platform Mindtrip launches mobile app - PhocusWire",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LLVRxWHJvS0F0WlJ0TTAwOVpDZ1lVRFc5eWVYalZVNzlTY2hhdXB6SmZLZkdaai1oYVRhMjFlSWdtMktYWjBBdGRXemhPNDVzTzZSbVFGcTVhdEV1MFlwUFFVS2c2SmplVlRMb1IwcEYyenY2clVHNFZHQQ?oc=5"
+        },
+        {
+          "date": "2026-02-12",
+          "title": "Sabre, Mindtrip, PayPal partner to launch agentic AI assistant for travel - PhocusWire",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORXhNcGk1bk8xZ1ZLT0RsLVJTSVpMNWxDOHNSU0RZUGl2ZEZXZUJCY0lkbU9jOVJ1dmVjUDA5UzhSa1RmdUFXcW5PcnZKYTJlTFJySXJHcXhva2ptSzZrUnhRdk5UZXNkOENwWkljQ1YzLWdsb0J1OXI2aDgtdGswWGpIRFVRMjA5YW5zeA?oc=5"
+        },
+        {
+          "date": "2025-10-16",
+          "title": "Mindtrip launches AI-powered tools for travel inspiration, organization - PhocusWire",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TclZJTkR5dGRSR000dnJqdkJvaHMxZ0lPSmRBWXNBZHJZaE9sc0NuRHB6RkdTTWNzRlhNRXE0Qy1yMzdJZUREaU9oYzlGWjZicV9hejVfTEw3bGpTbVRmQmhJa2JGQ25oaWZDU2ZVUHc2dw?oc=5"
+        },
         {
           "date": "2025-05-05",
           "title": "Nevada’s Tourism Gets a Digital Makeover with Mindtrip’s AI Planning Experience for Visitors: Know More - Travel And Tour World",
@@ -276,12 +300,18 @@
       "product": "Video-based travel planning platform with AI recommendations",
       "investors": "TVC, Madrona Venture Group, Trilogy Equity Partners",
       "metrics": {
-        "newsCount": 8,
+        "newsCount": 9,
         "newsRecency": "2026-01-01",
         "socialMentions": 52,
         "trafficGrowth": "+12%"
       },
       "news": [
+        {
+          "date": "2024-01-13",
+          "title": "Steller Raises $5 Million for AI Trip Planner: Startup Funding Roundup - Skift",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPanRvWkItSkpDM0tNUU1iUy1YdVlJWHRJN01WR2dBVHYydEl5elFvblNPSmp5ZG5zX0FLMzExbVNLc0lmczQ2YnpXZzJrNXZQZlF0LTZoVTdsSW5EVjlFS2ZqVVJnZGV2Nng3RnMtc08tRnFOeUV4bFVTNGZCZzZFcS1Dc3ZmTTlEUE40VThKQWlkT3h4dEw5MG5vckwzanc?oc=5"
+        },
         {
           "date": "2024-01-13",
           "title": "Steller Raises $5 Million for AI Trip Planner: Startup Funding Roundup - Skift",
@@ -519,12 +549,24 @@
       "product": "AI travel assistant for brands and destinations",
       "investors": "Techstars",
       "metrics": {
-        "newsCount": 7,
+        "newsCount": 9,
         "newsRecency": "2026-03-01",
         "socialMentions": 15,
         "trafficGrowth": "+6%"
       },
       "news": [
+        {
+          "date": "2025-08-01",
+          "title": "Tourism New Zealand Leverages GuideGeek Travel AI Technology to Drive Engagement - Breaking Travel News",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWC0wdHg1Wmh0M2s3ZHloUnByanNOZWhrN1NLbFhoWEJCa242RFFoZ2t1dmVyNGxpa2FGRlA0cDlzNEx2S0J5WWlaQXpsVDFWZzlEQlB2Vnh6ejB1T1BoNEFYUHpHVlVMS3UtNVdNTjhnYmUwWGlPTUJodC1uVHlYeWZVM0swaHBxWFF0X29WdVR4TWZiTzVnYXAxamJDVzhPM1ZsbWlGTEdGaG9SZVg0Rmd6OUxXVWVjbm9IbzBTRTFPdw?oc=5"
+        },
+        {
+          "date": "2025-12-13",
+          "title": "South African Tourism and GuideGeek launch new AI travel genius, ‘Siyanda’ - Breaking Travel News",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPelNHUFZMWjRBaldTaWRYU1NSSUtfX0kzeWRab1dramtsTGFHcFl3TW5VSjdsRk9RdHVyeDFDUDBxQWVaN0NpNXRZZnF4ODVmSlFWNlVtdkM1ZGZhRnU2a3hOUzBnWjBPY0hMSExPUFdQSFdXanNSRmE4ZVVJQ1dKMkdxeHg0a0l6ZXRmUERRMHd6WG1YdzFaMnFsT2llY0I5QUQtNXdVMDdrbnVISkZvRS1La09ZRm9xZERKTw?oc=5"
+        },
         {
           "date": "2025-08-01",
           "title": "Tourism New Zealand Leverages GuideGeek Travel AI Technology to Drive Engagement - Breaking Travel News",
@@ -564,12 +606,18 @@
       "product": "Voyagier",
       "investors": "",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-04-23",
         "socialMentions": 0,
         "trafficGrowth": "N/A"
       },
       "news": [
+        {
+          "date": "2026-04-22",
+          "title": "Voyagier launches AI luxury travel platform as it gears up for a seed round - Technical.ly",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNOXVfWEVrenVPTDRjSktIcEFwTzhLR09sZ2tidGJjSHV1SDBzOVJhaDhReWVMcnR0OHRidFJJaVdCRDJFR1dHTE5hajRsQWFoSktGOUNBaDFneGt0NUE4a0lzR244X1hjWDFJSF9Cak9TSWVVZ2NWUlVrUzVXczFqbm5B?oc=5"
+        },
         {
           "date": "2026-04-22",
           "title": "Voyagier launches AI luxury travel platform as it gears up for a seed round - Technical.ly",
@@ -599,12 +647,18 @@
       "product": "WeTravel",
       "investors": "",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2025-09-25",
         "socialMentions": 0,
         "trafficGrowth": "N/A"
       },
       "news": [
+        {
+          "date": "2025-09-25",
+          "title": "Dutch startup WeTravel raises $92M to scale its multi-day travel operations with AI - Tech Funding News",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdzFDQThINGx6T0ZNMVIwYWtycnlZaWN1WHE3VEE0ci1ESC16NUEwOXAwWThtZ2JzTHBwaFV5MzU3Rm1OamE3UTNKazZEWHhBcXlGOUlrQktlb2NTV0tEX0JEc2NEbVY2YS03UEV0NW1yODVXeUFDMkdlX0c1TUFtakdmZGJsVndfZE5BRDVpLWdMZ19JWTdvZDBoU2dTYlJZWXltbXZQVFVsQjlIOVlpbg?oc=5"
+        },
         {
           "date": "2025-09-25",
           "title": "Dutch startup WeTravel raises $92M to scale its multi-day travel operations with AI - Tech Funding News",
@@ -628,12 +682,18 @@
       "product": "LIAD",
       "investors": "",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-03-19",
         "socialMentions": 0,
         "trafficGrowth": "N/A"
       },
       "news": [
+        {
+          "date": "2026-03-19",
+          "title": "Korean Travel AI Startup LIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9yeWp1Nm52c2RKazhQOHk5VW9LLTJxUWhMdTJvbGlCQUQ1VkxVa3ktb2hSeG84Qi01ZlpzVng5ZF9BSXRtUnVOWGVLOXBXTzNQek5n?oc=5"
+        },
         {
           "date": "2026-03-19",
           "title": "Korean Travel AI Startup LIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
@@ -657,12 +717,18 @@
       "product": "Passprt",
       "investors": "",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2025-07-30",
         "socialMentions": 0,
         "trafficGrowth": "N/A"
       },
       "news": [
+        {
+          "date": "2025-07-30",
+          "title": "Passprt Trips raises $500K to build AI-powered travel platform - ET TravelWorld",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVTBvUFBnV1lHdW5ya3ZwR2gtWEIxTi1RbnVhNENNQXAzNktTNU94eXlOanJUMV9TV0xUSnc0ajliN2VkTm1sLTd1bk8zWUs1MjIwb0RuZFJCM3R4MGtnVDZVeWVEZjJMZUVaVjRyUGpCNGJtRUVVMW91NnNBTDcwelhWR05tbFR5WHVDZGx3S0RKTVFvQ2dCNzBXSGQ5eWo4Q0hTT0Z0RlUyUWxobTRHMkUwWFI5R1l4alBDeVRoYktNakZOVUJ2VHJKaGRvR05KWFlUZVF0d3pMb1NiQ0RfWWl30gHnAUFVX3lxTE5Hbmw1V2FDSnJ5LVlLbEtwUWRUM2Uta1Bxck1Dc2ZpcF9GcEtrcVNXeHFucFE1eXJVTk81dllUWWkwck9WaU4zdzM5VTE4a09MN0lrS1F3UzNfcGFrcWlJaDhaNEkzZElHVE4zSGI4SXJlV19LQTc0RTJzYzg3bWhJeFFscnhHQ2UwbmxSRHE3UEJaWUJSYXFhbUkzV3BiU3FjZmxYbE02ZXRvQ1RHT0NwNUNVUFl6Mmt5OTNLOElCLWhpekNpYTY5YTIzSF83MlU3d2tzZ3VoZGU5MmlwRDJUenpGMnZpTQ?oc=5"
+        },
         {
           "date": "2025-07-30",
           "title": "Passprt Trips raises $500K to build AI-powered travel platform - ET TravelWorld",
@@ -686,12 +752,18 @@
       "product": "GeniusTravel",
       "investors": "",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2025-07-07",
         "socialMentions": 0,
         "trafficGrowth": "N/A"
       },
       "news": [
+        {
+          "date": "2025-07-07",
+          "title": "Dutch TravelTech platform GeniusTravel raises €2 million to roll out travel packages app - EU-Startups",
+          "type": "product",
+          "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTnV4X0dXXzQyQlJucEo3a3dMT09XQTRFVkRwNUg3U0ZKNDRDc2dkbW9Ya3JWdkhRSDJmY3lFMUVPYVlMS2UxbTB4OXBWSU9YR2E0YTQ5SUF5VTNlOGZPbi1tQlhsZjdIbl9TQWlsa3phUUVQaXZJVG0tOHU0S21HU1RiSWhSSlVxWnBWNDJnNGZqWUMyU0c4b2FBTGdZTFJzcVlZbWU4a0JPTXdtSEtlV0Y0aFItd1dEUTViNTFwTUlHR2s?oc=5"
+        },
         {
           "date": "2025-07-07",
           "title": "Dutch TravelTech platform GeniusTravel raises €2 million to roll out travel packages app - EU-Startups",
