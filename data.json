@@ -704,35 +704,6 @@
       "isNew": true,
       "lastUpdated": "2026-04-23",
       "_autoDiscovered": true
-    },
-    {
-      "id": "auto-e0d718e9270a",
-      "name": "Africa",
-      "type": "startup",
-      "location": "Unknown",
-      "stage": "Unknown",
-      "totalFunding": "N/A",
-      "product": "Africa",
-      "investors": "",
-      "metrics": {
-        "newsCount": 1,
-        "newsRecency": "2026-01-12",
-        "socialMentions": 0,
-        "trafficGrowth": "N/A"
-      },
-      "news": [
-        {
-          "date": "2026-01-12",
-          "title": "South Africa launches Siyanda AI Assistant for smarter travel planning - TravelMole",
-          "type": "product",
-          "source": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBERjZyek5TMEtoZXhSY1FzNWhuSk95UUswOTJzUGhfV21RdVVGd1J1V1BMZk1sUXVfbWNPZkZpd1MyLVFHdUt6aXNaaGJEUDV5VUlrX2V2VnNndUpUUUZhbVZYYy0zZ2VkV1BlMWZTV2pIY2F2OW1Hb0FZdw?oc=5"
-        }
-      ],
-      "website": "",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBERjZyek5TMEtoZXhSY1FzNWhuSk95UUswOTJzUGhfV21RdVVGd1J1V1BMZk1sUXVfbWNPZkZpd1MyLVFHdUt6aXNaaGJEUDV5VUlrX2V2VnNndUpUUUZhbVZYYy0zZ2VkV1BlMWZTV2",
-      "isNew": true,
-      "lastUpdated": "2026-04-23",
-      "_autoDiscovered": true
     }
   ]
 }

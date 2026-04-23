@@ -220,6 +220,12 @@ GEO_COUNTRY_NAMES = [
     "sri lanka", "nepal", "cambodia", "laos", "myanmar",
     "sonoma county", "california", "texas", "florida", "hawaii",
     "new york", "london", "paris", "rome", "tokyo", "bangkok",
+    # Continent names and parts that appear as company names
+    "africa", "asia", "europe", "americas", "oceania", "antarctica",
+    "south", "north", "east", "west", "central",
+    # Country name parts
+    "south", "north", "republic", "kingdom", "emirates", "states",
+    "arabia", "zealand", "islands",
 ]
 
 # Short geo adjectives that may appear before "startup/company"
