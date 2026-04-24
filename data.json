@@ -1,6 +1,6 @@
 {
-  "version": "2026-04-23",
-  "lastUpdated": "2026-04-23",
+  "version": "2026-04-24",
+  "lastUpdated": "2026-04-24",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 16,
+        "newsCount": 17,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2025-12-04",
+          "title": "Capital One Ventures, United Airlines Ventures invest in Mindtrip - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2025-05-05",
           "title": "Nevada’s Tourism Gets a Digital Makeover with Mindtrip’s AI Planning Experience for Visitors: Know More - Travel And Tour World",
@@ -80,7 +86,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-04-23"
+      "lastUpdated": "2026-04-24"
     },
     {
       "id": "2",
@@ -745,6 +751,36 @@
           "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTnV4X0dXXzQyQlJucEo3a3dMT09XQTRFVkRwNUg3U0ZKNDRDc2dkbW9Ya3JWdkhRSDJmY3lFMUVPYVlMS2UxbTB4OXBWSU9YR2E0YTQ5SUF5VTNlOGZPbi1tQlhsZjdIbl9TQWlsa3phUUVQaXZJVG0tOHU0S21HU1RiSWhSSlVxWnBWNDJnNGZqWUMyU0c4b2FBTGdZTFJzcVlZbWU4a0JPTXdtSEtlV0Y0aFItd1dEUTViNTFwTUlHR2s?oc=5"
         }
       ]
+    },
+    {
+      "id": "auto-fc16654d9108",
+      "name": "BizTrip",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "BizTrip AI",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-02-02",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-02-02",
+          "title": "BizTrip AI raises $1.5 million for product development, hiring - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.biztrip.ai",
+      "description": "BizTrip AI",
+      "isNew": true,
+      "lastUpdated": "2026-04-24",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
     }
   ]
 }
