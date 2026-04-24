@@ -18,8 +18,13 @@ NETLIFY_API_BASE = 'https://api.netlify.com/api/v1'
 
 def load_subscribers():
     if os.path.exists(SUBSCRIBERS_FILE):
-        with open(SUBSCRIBERS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(SUBSCRIBERS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"WARNING: {SUBSCRIBERS_FILE} is not valid JSON: {e}")
+            print("Treating as empty subscriber list.")
+            return {"subscribers": []}
     return {"subscribers": []}
 
 

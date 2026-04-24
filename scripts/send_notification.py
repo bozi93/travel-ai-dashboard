@@ -19,8 +19,13 @@ FROM_EMAIL = os.environ.get('FROM_EMAIL', 'Travel AI Dashboard <onboarding@resen
 def load_subscribers():
     """Load subscriber emails from subscribers.json."""
     if os.path.exists(SUBSCRIBERS_FILE):
-        with open(SUBSCRIBERS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(SUBSCRIBERS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"WARNING: {SUBSCRIBERS_FILE} is not valid JSON: {e}")
+            print("Treating as empty subscriber list.")
+            return {"subscribers": []}
     return {"subscribers": []}
 
 def get_new_companies():
