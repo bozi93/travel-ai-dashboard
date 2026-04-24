@@ -762,12 +762,30 @@
       "product": "BizTrip AI",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 4,
         "newsRecency": "2026-02-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-01-14",
+          "title": "Sabre takes stake in BizTrip AI, plans AI corporate travel assistants - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Startup Stage: BizTrip AI wants to replace fragmented booking systems for business travelers - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2025-11-10",
+          "title": "Hot 25 Travel Startups for 2026: BizTrip AI - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-02-02",
           "title": "BizTrip AI raises $1.5 million for product development, hiring - PhocusWire",
