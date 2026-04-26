@@ -1,6 +1,6 @@
 {
-  "version": "2026-04-25",
-  "lastUpdated": "2026-04-25",
+  "version": "2026-04-26",
+  "lastUpdated": "2026-04-26",
   "companies": [
     {
       "id": "1",
@@ -797,6 +797,36 @@
       "description": "BizTrip AI",
       "isNew": true,
       "lastUpdated": "2026-04-24",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-d993018fbcab",
+      "name": "Vuelo",
+      "type": "startup",
+      "location": "Seed",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Vuelo",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-03-25",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-03-25",
+          "title": "Vuelo secures €64 million in Seed funding to build an AI-native travel booking experience - EU-Startups",
+          "type": "product",
+          "source": "https://www.eu-startups.com"
+        }
+      ],
+      "website": "https://www.vuelo.ai",
+      "description": "AI-powered travel technology by Vuelo",
+      "isNew": true,
+      "lastUpdated": "2026-04-26",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
