@@ -1,6 +1,6 @@
 {
-  "version": "2026-04-26",
-  "lastUpdated": "2026-04-26",
+  "version": "2026-04-27",
+  "lastUpdated": "2026-04-27",
   "companies": [
     {
       "id": "1",
@@ -827,6 +827,36 @@
       "description": "AI-powered travel technology by Vuelo",
       "isNew": true,
       "lastUpdated": "2026-04-26",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-7bf7fb4eee28",
+      "name": "Visio",
+      "type": "startup",
+      "location": "Series",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI travel startup Visio Trip",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2024-10-31",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2024-10-31",
+          "title": "AI travel startup Visio Trip raises $14 million in Series A round - China Travel News",
+          "type": "product",
+          "source": "https://www.chinatravelnews.com"
+        }
+      ],
+      "website": "https://www.visio.ai",
+      "description": "AI travel startup Visio Trip",
+      "isNew": true,
+      "lastUpdated": "2026-04-27",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
