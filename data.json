@@ -1,6 +1,6 @@
 {
-  "version": "2026-04-28",
-  "lastUpdated": "2026-04-28",
+  "version": "2026-04-29",
+  "lastUpdated": "2026-04-29",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 17,
+        "newsCount": 18,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2024-11-18",
+          "title": "Mindtrip’s AI-Driven B2B Platform Sets a New Standard for Travel Planning in Tourism Boards and Destination Marketing Organizations - Travel And Tour World",
+          "type": "product",
+          "source": "https://www.travelandtourworld.com"
+        },
         {
           "date": "2025-12-04",
           "title": "Capital One Ventures, United Airlines Ventures invest in Mindtrip - PhocusWire",
@@ -86,7 +92,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-04-24"
+      "lastUpdated": "2026-04-29"
     },
     {
       "id": "2",
