@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-06",
-  "lastUpdated": "2026-05-06",
+  "version": "2026-05-07",
+  "lastUpdated": "2026-05-07",
   "companies": [
     {
       "id": "1",
@@ -300,12 +300,18 @@
       "product": "Video-based travel planning platform with AI recommendations",
       "investors": "TVC, Madrona Venture Group, Trilogy Equity Partners",
       "metrics": {
-        "newsCount": 9,
+        "newsCount": 10,
         "newsRecency": "2026-01-01",
         "socialMentions": 52,
         "trafficGrowth": "+12%"
       },
       "news": [
+        {
+          "date": "2026-05-07",
+          "title": "The Weather Company’s New Ad Play Aims to Sell Experiences and Hotel Bookings",
+          "type": "product",
+          "source": "https://skift.com/2026/05/06/weather-company-steller-advertising-social-tech/"
+        },
         {
           "date": "2024-01-13",
           "title": "Steller Raises $5 Million for AI Trip Planner: Startup Funding Roundup - Skift",
@@ -332,7 +338,7 @@
       "website": "https://steller.co",
       "description": "Steller是由Pete Bryant领导的视频驱动旅行规划平台，整合创作者内容与AI推荐，让用户基于真实体验发现和预订旅行。",
       "isNew": false,
-      "lastUpdated": "2026-04-23"
+      "lastUpdated": "2026-05-07"
     },
     {
       "id": "6",
