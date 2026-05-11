@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-10",
-  "lastUpdated": "2026-05-10",
+  "version": "2026-05-11",
+  "lastUpdated": "2026-05-11",
   "companies": [
     {
       "id": "1",
@@ -606,12 +606,18 @@
       "product": "AI-powered luxury travel planning platform",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-04-23",
         "socialMentions": 8,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-11",
+          "title": "Voyagier targets luxury travel with AI-powered trip planning and booking - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-04-22",
           "title": "Voyagier launches AI luxury travel platform as it gears up for a seed round - Technical.ly",
@@ -628,7 +634,7 @@
       "website": "https://www.voyagier.com/",
       "description": "Voyagier is an AI-powered luxury travel planning platform that recently emerged from stealth and is gearing up for a seed round.",
       "isNew": true,
-      "lastUpdated": "2026-04-23",
+      "lastUpdated": "2026-05-11",
       "_autoDiscovered": true,
       "founded": "2023-01-01"
     },
@@ -893,6 +899,36 @@
       "description": "AI travel startup Visio Trip",
       "isNew": true,
       "lastUpdated": "2026-04-27",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-ce76b99e70a4",
+      "name": "RIAD",
+      "type": "startup",
+      "location": "South Korea",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-03-19",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-03-19",
+          "title": "Korean Travel AI Startup RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
+          "type": "product",
+          "source": "https://en.wowtale.net"
+        }
+      ],
+      "website": "https://www.riad.ai",
+      "description": "RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
+      "isNew": true,
+      "lastUpdated": "2026-05-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
