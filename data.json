@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-11",
-  "lastUpdated": "2026-05-11",
+  "version": "2026-05-12",
+  "lastUpdated": "2026-05-12",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 21,
+        "newsCount": 22,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2026-05-05",
+          "title": "Maine Office of Tourism Partners With Mindtrip to Power AI-Driven Trip Planning Across The Pine Tree State - Yahoo Finance",
+          "type": "product",
+          "source": "https://finance.yahoo.com"
+        },
         {
           "date": "2026-05-07",
           "title": "Mindtrip Launches Agentic AI Flight Booking for Travel Industry - Breaking Travel News",
@@ -110,7 +116,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-05-10"
+      "lastUpdated": "2026-05-12"
     },
     {
       "id": "2",
@@ -606,12 +612,18 @@
       "product": "AI-powered luxury travel planning platform",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 3,
+        "newsCount": 4,
         "newsRecency": "2026-04-23",
         "socialMentions": 8,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-11",
+          "title": "Startup Stage: Voyagier targets luxury travel with AI-powered trip planning and booking - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-05-11",
           "title": "Voyagier targets luxury travel with AI-powered trip planning and booking - PhocusWire",
@@ -634,7 +646,7 @@
       "website": "https://www.voyagier.com/",
       "description": "Voyagier is an AI-powered luxury travel planning platform that recently emerged from stealth and is gearing up for a seed round.",
       "isNew": true,
-      "lastUpdated": "2026-05-11",
+      "lastUpdated": "2026-05-12",
       "_autoDiscovered": true,
       "founded": "2023-01-01"
     },
