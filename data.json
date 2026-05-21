@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-20",
-  "lastUpdated": "2026-05-20",
+  "version": "2026-05-21",
+  "lastUpdated": "2026-05-21",
   "companies": [
     {
       "id": "1",
@@ -947,6 +947,66 @@
       "description": "RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
       "isNew": true,
       "lastUpdated": "2026-05-11",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-cfa62d7a3dd1",
+      "name": "Scapia",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Scapia",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-05-21",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-05-21",
+          "title": "Scapia raises $63 million to scale AI travel fintech - Let's Data Science",
+          "type": "product",
+          "source": "https://letsdatascience.com"
+        }
+      ],
+      "website": "https://www.scapia.ai",
+      "description": "AI-powered travel technology by Scapia",
+      "isNew": true,
+      "lastUpdated": "2026-05-21",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-2b5d098c51af",
+      "name": "Guilin",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Guilin",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2025-09-19",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2025-09-19",
+          "title": "Guilin launches AI tourism platform at 22nd China-ASEAN Expo - People's Daily Online",
+          "type": "product",
+          "source": "https://en.people.cn"
+        }
+      ],
+      "website": "https://www.guilin.ai",
+      "description": "AI-powered travel technology by Guilin",
+      "isNew": true,
+      "lastUpdated": "2026-05-21",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
