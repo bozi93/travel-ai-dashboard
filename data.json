@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-22",
-  "lastUpdated": "2026-05-22",
+  "version": "2026-05-23",
+  "lastUpdated": "2026-05-23",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 23,
+        "newsCount": 24,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2026-05-05",
+          "title": "Maine Office of Tourism Partners With Mindtrip to Power AI-Driven Trip Planning Across The Pine Tree State - PR Newswire",
+          "type": "product",
+          "source": "https://www.prnewswire.com"
+        },
         {
           "date": "2026-05-10",
           "title": "How PROMPERÚ and Mindtrip’s AI Integration is Revolutionizing Peru Travel Planning - Travel And Tour World",
@@ -122,7 +128,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-05-13"
+      "lastUpdated": "2026-05-23"
     },
     {
       "id": "2",
