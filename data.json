@@ -1,6 +1,6 @@
 {
-  "version": "2026-05-24",
-  "lastUpdated": "2026-05-24",
+  "version": "2026-05-25",
+  "lastUpdated": "2026-05-25",
   "companies": [
     {
       "id": "1",
@@ -157,12 +157,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 13,
+        "newsCount": 14,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2025-10-02",
+          "title": "Layla AI Travel Agent Revenue 2025: $2.8M ARR (Bootstrapped) - GetLatka",
+          "type": "product",
+          "source": "https://getlatka.com"
+        },
         {
           "date": "2024-02-12",
           "title": "Startup travel planner Layla acquires AI-itinerary builder Roam Around - PhocusWire",
@@ -189,7 +195,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-05-03"
+      "lastUpdated": "2026-05-25"
     },
     {
       "id": "3",
