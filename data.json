@@ -1,6 +1,6 @@
 {
-  "version": "2026-06-09",
-  "lastUpdated": "2026-06-09",
+  "version": "2026-06-10",
+  "lastUpdated": "2026-06-10",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 26,
+        "newsCount": 27,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2023-09-08",
+          "title": "Mindtrip Raises $7 Million for AI Trip Planner: Startup Funding Roundup - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
         {
           "date": "2025-06-25",
           "title": "Mindtrip Launches AI Travel App for Real-Time Discovery - AirGuide Business",
@@ -140,7 +146,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-06-09"
+      "lastUpdated": "2026-06-10"
     },
     {
       "id": "2",
@@ -169,12 +175,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 14,
+        "newsCount": 15,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2024-02-12",
+          "title": "Travel startup Layla acquires AI itinerary building bot Roam Around - TechCrunch",
+          "type": "product",
+          "source": "https://techcrunch.com"
+        },
         {
           "date": "2025-10-02",
           "title": "Layla AI Travel Agent Revenue 2025: $2.8M ARR (Bootstrapped) - GetLatka",
@@ -207,7 +219,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-05-25"
+      "lastUpdated": "2026-06-10"
     },
     {
       "id": "3",
@@ -1043,6 +1055,36 @@
       "description": "AI-powered travel technology by Guilin",
       "isNew": true,
       "lastUpdated": "2026-05-21",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-b88940373876",
+      "name": "Rimigo",
+      "type": "startup",
+      "location": "Pre",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI travel tech startup Rimigo",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2025-04-24",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2025-04-24",
+          "title": "AI travel tech startup Rimigo raises $550,000 in Pre-Seed funding - YourStory.com",
+          "type": "product",
+          "source": "https://yourstory.com"
+        }
+      ],
+      "website": "https://www.rimigo.ai",
+      "description": "AI travel tech startup Rimigo",
+      "isNew": true,
+      "lastUpdated": "2026-06-10",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
