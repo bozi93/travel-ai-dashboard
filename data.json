@@ -1,6 +1,6 @@
 {
-  "version": "2026-06-22",
-  "lastUpdated": "2026-06-22",
+  "version": "2026-06-23",
+  "lastUpdated": "2026-06-23",
   "companies": [
     {
       "id": "1",
@@ -1085,6 +1085,36 @@
       "description": "AI travel tech startup Rimigo",
       "isNew": true,
       "lastUpdated": "2026-06-10",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-856221e966dd",
+      "name": "Navan",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Navan",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-03-03",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-03-03",
+          "title": "Navan launches AI travel assistant for unmanaged business travelers - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.navan.ai",
+      "description": "AI-powered travel technology by Navan",
+      "isNew": true,
+      "lastUpdated": "2026-06-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
