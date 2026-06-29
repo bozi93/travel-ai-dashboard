@@ -1,6 +1,6 @@
 {
-  "version": "2026-06-28",
-  "lastUpdated": "2026-06-28",
+  "version": "2026-06-29",
+  "lastUpdated": "2026-06-29",
   "companies": [
     {
       "id": "1",
@@ -954,12 +954,24 @@
       "product": "AI travel startup Visio Trip",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 4,
         "newsRecency": "2024-10-31",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-06-29",
+          "title": "Saudi Arabia Launches AI Tourism Vision 2026 With TourismX and Smart Platforms to Transform Global Travel Through Artificial Intelligence Revolution: Know More - Travel And Tour World",
+          "type": "product",
+          "source": "https://www.travelandtourworld.com"
+        },
+        {
+          "date": "2026-06-29",
+          "title": "Saudi Arabia Unveils AI Tourism Vision with TourismX Platform to Redefine Visitor Experiences, Hospitality Operations and Smart Tourism Under Vision 2030—What It Means for Travellers - Travel And Tour World",
+          "type": "product",
+          "source": "https://www.travelandtourworld.com"
+        },
         {
           "date": "2026-06-08",
           "title": "Skyscanner CEO on Agentic Booking and the Future of Flight Metasearch",
@@ -976,7 +988,7 @@
       "website": "https://www.visio.ai",
       "description": "AI travel startup Visio Trip",
       "isNew": true,
-      "lastUpdated": "2026-06-09",
+      "lastUpdated": "2026-06-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
