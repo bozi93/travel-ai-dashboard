@@ -1,6 +1,6 @@
 {
-  "version": "2026-06-29",
-  "lastUpdated": "2026-06-29",
+  "version": "2026-06-30",
+  "lastUpdated": "2026-06-30",
   "companies": [
     {
       "id": "1",
@@ -954,12 +954,18 @@
       "product": "AI travel startup Visio Trip",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2024-10-31",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-06-29",
+          "title": "Saudi Arabia launches TourismX and national AI Tourism Vision to reshape visitor experiences - Fast Company Middle East",
+          "type": "product",
+          "source": "https://fastcompanyme.com"
+        },
         {
           "date": "2026-06-29",
           "title": "Saudi Arabia Launches AI Tourism Vision 2026 With TourismX and Smart Platforms to Transform Global Travel Through Artificial Intelligence Revolution: Know More - Travel And Tour World",
@@ -988,7 +994,7 @@
       "website": "https://www.visio.ai",
       "description": "AI travel startup Visio Trip",
       "isNew": true,
-      "lastUpdated": "2026-06-29",
+      "lastUpdated": "2026-06-30",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
