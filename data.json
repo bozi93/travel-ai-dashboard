@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-05",
-  "lastUpdated": "2026-07-05",
+  "version": "2026-07-06",
+  "lastUpdated": "2026-07-06",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 32,
+        "newsCount": 33,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2026-06-25",
+          "title": "Mindtrip Partners With Arkansas Tourism to Power Ai-Driven Trip Planning Across the Natural State - Yahoo Finance",
+          "type": "product",
+          "source": "https://finance.yahoo.com"
+        },
         {
           "date": "2026-07-01",
           "title": "Boston Tourism Embraces AI Revolution: Meet Boston Partners With Mindtrip for WhatsApp Trip Planning Ahead of FIFA World Cup 2026 - Nomad Lawyer",
@@ -176,7 +182,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-07-02"
+      "lastUpdated": "2026-07-06"
     },
     {
       "id": "2",
