@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-07",
-  "lastUpdated": "2026-07-07",
+  "version": "2026-07-08",
+  "lastUpdated": "2026-07-08",
   "companies": [
     {
       "id": "1",
@@ -1152,12 +1152,18 @@
       "product": "AI-powered travel technology by Navan",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-03-03",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-07-07",
+          "title": "Hilton Opens Direct Line to Navan, Cutting Out Corporate Travel Middlemen",
+          "type": "product",
+          "source": "https://skift.com/2026/07/07/hilton-opens-direct-line-to-navan-cutting-out-corporate-travel-middlemen/"
+        },
         {
           "date": "2026-03-11",
           "title": "Navan CEO on AI Travel Assistant & Corporate Spending - StartupHub.ai",
@@ -1174,7 +1180,7 @@
       "website": "https://www.navan.ai",
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-07-08",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
