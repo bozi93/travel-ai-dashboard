@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-08",
-  "lastUpdated": "2026-07-08",
+  "version": "2026-07-09",
+  "lastUpdated": "2026-07-09",
   "companies": [
     {
       "id": "1",
@@ -1152,12 +1152,18 @@
       "product": "AI-powered travel technology by Navan",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 3,
+        "newsCount": 4,
         "newsRecency": "2026-03-03",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-07-08",
+          "title": "GMH Hotels: The Supply Gap That Could Change Hotel Pricing.",
+          "type": "product",
+          "source": "https://skift.com/2026/07/08/gmh-hotels-the-supply-gap-that-could-change-hotel-pricing/"
+        },
         {
           "date": "2026-07-07",
           "title": "Hilton Opens Direct Line to Navan, Cutting Out Corporate Travel Middlemen",
@@ -1180,7 +1186,7 @@
       "website": "https://www.navan.ai",
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
-      "lastUpdated": "2026-07-08",
+      "lastUpdated": "2026-07-09",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
