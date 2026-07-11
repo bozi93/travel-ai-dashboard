@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-10",
-  "lastUpdated": "2026-07-10",
+  "version": "2026-07-11",
+  "lastUpdated": "2026-07-11",
   "companies": [
     {
       "id": "1",
@@ -1056,12 +1056,18 @@
       "product": "AI-powered travel technology by Scapia",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-05-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-11-04",
+          "title": "Revolutionizing travel scapia unveils ai driven experiences shopping and unique credit card solutions - ET TravelWorld",
+          "type": "product",
+          "source": "http://travel.economictimes.indiatimes.com"
+        },
         {
           "date": "2025-11-04",
           "title": "AI, commerce, and credit: Scapia expands its travel universe with three major launches - ET TravelWorld",
@@ -1078,7 +1084,7 @@
       "website": "https://www.scapia.ai",
       "description": "AI-powered travel technology by Scapia",
       "isNew": true,
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-07-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
