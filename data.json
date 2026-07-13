@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-12",
-  "lastUpdated": "2026-07-12",
+  "version": "2026-07-13",
+  "lastUpdated": "2026-07-13",
   "companies": [
     {
       "id": "1",
@@ -816,12 +816,18 @@
       "product": "AI-powered travel platform for trip planning",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2025-07-30",
         "socialMentions": 6,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-07-31",
+          "title": "Passprt trips secures 500k to revolutionize travel planning with ai technology - ET TravelWorld",
+          "type": "product",
+          "source": "https://travel.economictimes.indiatimes.com"
+        },
         {
           "date": "2025-07-30",
           "title": "Passprt Trips raises $500K to build AI-powered travel platform - ET TravelWorld",
@@ -832,7 +838,7 @@
       "website": "https://www.passprt.com/",
       "description": "Passprt Trips is an India-based startup that raised $500K to build an AI-powered travel platform focused on intelligent trip planning and recommendations.",
       "isNew": false,
-      "lastUpdated": "2026-04-23",
+      "lastUpdated": "2026-07-13",
       "_autoDiscovered": true,
       "founded": "2024-01-01",
       "fundingRounds": [
