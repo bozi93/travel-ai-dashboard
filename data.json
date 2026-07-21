@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-20",
-  "lastUpdated": "2026-07-20",
+  "version": "2026-07-21",
+  "lastUpdated": "2026-07-21",
   "companies": [
     {
       "id": "1",
@@ -1217,6 +1217,36 @@
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
       "lastUpdated": "2026-07-09",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-53d7d4df7e30",
+      "name": "Times",
+      "type": "startup",
+      "location": "India",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-07-21",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-07-21",
+          "title": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
+          "type": "product",
+          "source": "https://www.indianstartuptimes.com"
+        }
+      ],
+      "website": "https://www.times.ai",
+      "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
+      "isNew": true,
+      "lastUpdated": "2026-07-21",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
