@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-21",
-  "lastUpdated": "2026-07-21",
+  "version": "2026-07-22",
+  "lastUpdated": "2026-07-22",
   "companies": [
     {
       "id": "1",
@@ -1230,12 +1230,36 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 5,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-06-18",
+          "title": "Singapore favoured by Muslim travellers amid surge in AI-assisted holiday planning: report - The Business Times",
+          "type": "product",
+          "source": "https://www.businesstimes.com.sg"
+        },
+        {
+          "date": "2026-02-10",
+          "title": "South-east Asia’s governments put AI to work in tourism - The Business Times",
+          "type": "product",
+          "source": "https://www.businesstimes.com.sg"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "AI-powered 'tour guides' reshape China's tourism sector, boost consumption - Global Times",
+          "type": "product",
+          "source": "https://www.globaltimes.cn"
+        },
+        {
+          "date": "2026-05-16",
+          "title": "Ixigo Reinvents Travel App with Voice-Activated AI Assistant ‘TARA’ - Indian Startup Times",
+          "type": "product",
+          "source": "https://www.indianstartuptimes.com"
+        },
         {
           "date": "2026-07-21",
           "title": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
@@ -1246,7 +1270,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-07-21",
+      "lastUpdated": "2026-07-22",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
