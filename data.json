@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-22",
-  "lastUpdated": "2026-07-22",
+  "version": "2026-07-23",
+  "lastUpdated": "2026-07-23",
   "companies": [
     {
       "id": "1",
@@ -1182,12 +1182,18 @@
       "product": "AI-powered travel technology by Navan",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2026-03-03",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-03-11",
+          "title": "Navan CEO on AI Travel Assistant & Corporate Spendi… - StartupHub.ai",
+          "type": "product",
+          "source": "https://www.startuphub.ai"
+        },
         {
           "date": "2026-07-08",
           "title": "GMH Hotels: The Supply Gap That Could Change Hotel Pricing.",
@@ -1216,7 +1222,7 @@
       "website": "https://www.navan.ai",
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
-      "lastUpdated": "2026-07-09",
+      "lastUpdated": "2026-07-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
