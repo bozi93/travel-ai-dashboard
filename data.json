@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-26",
-  "lastUpdated": "2026-07-26",
+  "version": "2026-07-27",
+  "lastUpdated": "2026-07-27",
   "companies": [
     {
       "id": "1",
@@ -1050,12 +1050,18 @@
       "product": "RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-03-19",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-07-26",
+          "title": "US Travelers Adopt Generative AI for Holiday Planning Across Generations - Nomad Lawyer",
+          "type": "product",
+          "source": "https://www.nomadlawyer.org"
+        },
         {
           "date": "2026-03-19",
           "title": "Korean Travel AI Startup RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
@@ -1066,7 +1072,7 @@
       "website": "https://www.riad.ai",
       "description": "RIAD Corporation Raises Seed Bridge Round from Silicon Valley's Sazze Partners - Wowtale",
       "isNew": true,
-      "lastUpdated": "2026-05-11",
+      "lastUpdated": "2026-07-27",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
