@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-28",
-  "lastUpdated": "2026-07-28",
+  "version": "2026-07-29",
+  "lastUpdated": "2026-07-29",
   "companies": [
     {
       "id": "1",
@@ -996,12 +996,18 @@
       "product": "AI travel startup Visio Trip",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 5,
+        "newsCount": 6,
         "newsRecency": "2024-10-31",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-09-19",
+          "title": "OpenAI chairman shares vision on travel’s AI future - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-06-29",
           "title": "Saudi Arabia launches TourismX and national AI Tourism Vision to reshape visitor experiences - Fast Company Middle East",
@@ -1036,7 +1042,7 @@
       "website": "https://www.visio.ai",
       "description": "AI travel startup Visio Trip",
       "isNew": true,
-      "lastUpdated": "2026-06-30",
+      "lastUpdated": "2026-07-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
