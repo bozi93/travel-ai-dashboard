@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-29",
-  "lastUpdated": "2026-07-29",
+  "version": "2026-07-30",
+  "lastUpdated": "2026-07-30",
   "companies": [
     {
       "id": "1",
@@ -756,12 +756,18 @@
       "product": "Multi-day travel operations platform with AI features",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2025-09-25",
         "socialMentions": 25,
         "trafficGrowth": "+12%"
       },
       "news": [
+        {
+          "date": "2025-09-25",
+          "title": "Dutch startup WeTravel raises $92M to scale its multi-day travel operations with AI - techfundingnews.com",
+          "type": "product",
+          "source": "https://techfundingnews.com"
+        },
         {
           "date": "2025-09-25",
           "title": "Dutch startup WeTravel raises $92M to scale its multi-day travel operations with AI - Tech Funding News",
@@ -772,7 +778,7 @@
       "website": "https://www.wetravel.com",
       "description": "WeTravel is a Dutch startup that provides a payment and booking platform for multi-day travel operators, recently raised $92M to scale with AI-driven features.",
       "isNew": false,
-      "lastUpdated": "2026-04-23",
+      "lastUpdated": "2026-07-30",
       "_autoDiscovered": true,
       "founded": "2014-01-01",
       "fundingRounds": [
@@ -1301,6 +1307,36 @@
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
       "lastUpdated": "2026-07-28",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-aefae72e90af",
+      "name": "Skyscanner",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Skyscanner",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-06-30",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-06-30",
+          "title": "Skyscanner launches AI travel discovery, road trip planning tools - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.skyscanner.ai",
+      "description": "AI-powered travel technology by Skyscanner",
+      "isNew": true,
+      "lastUpdated": "2026-07-30",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
