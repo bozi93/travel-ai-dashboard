@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-31",
-  "lastUpdated": "2026-07-31",
+  "version": "2026-08-01",
+  "lastUpdated": "2026-08-01",
   "companies": [
     {
       "id": "1",
@@ -223,12 +223,30 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 16,
+        "newsCount": 19,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2026-08-01",
+          "title": "Expedia Buys Layla: AI Is Reshaping the Future of Travel - eTurboNews",
+          "type": "product",
+          "source": "https://eturbonews.com"
+        },
+        {
+          "date": "2026-07-31",
+          "title": "Expedia Acquired AI Trip-Planner Layla: Exclusive - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
+        {
+          "date": "2026-07-31",
+          "title": "Expedia Acquired AI Trip-Planner Layla: Exclusive",
+          "type": "product",
+          "source": "https://skift.com/2026/07/31/expedia-acquired-ai-trip-planner-layla-exclusive/"
+        },
         {
           "date": "2026-07-11",
           "title": "Layla AI Reaches $1 Billion in Trips Planned, Showcasing Human-AI Travel Model - Earnings Revision Upgrade - DonanımHaber",
@@ -273,7 +291,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-07-14"
+      "lastUpdated": "2026-08-01"
     },
     {
       "id": "3",
@@ -1254,12 +1272,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 7,
+        "newsCount": 8,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-03-04",
+          "title": "AI-powered 'tour guides' reshape China's tourism sector, boost consumption - globaltimes.cn",
+          "type": "product",
+          "source": "https://www.globaltimes.cn"
+        },
         {
           "date": "2026-06-15",
           "title": "Can AI plan a cheaper vacation than a travel agent? - The Times of India",
@@ -1306,7 +1330,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-07-28",
+      "lastUpdated": "2026-08-01",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1337,6 +1361,66 @@
       "description": "AI-powered travel technology by Skyscanner",
       "isNew": true,
       "lastUpdated": "2026-07-30",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-3f05228bcb63",
+      "name": "Tern",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Tern",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-06-10",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-06-10",
+          "title": "Tern launches agentic AI to boost travel advisor efficiency - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.tern.ai",
+      "description": "AI-powered travel technology by Tern",
+      "isNew": true,
+      "lastUpdated": "2026-08-01",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-96566406d49d",
+      "name": "Grab",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Grab",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-04-09",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-04-09",
+          "title": "Grab launches AI-powered travel tools - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.grab.ai",
+      "description": "AI-powered travel technology by Grab",
+      "isNew": true,
+      "lastUpdated": "2026-08-01",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
