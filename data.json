@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-01",
-  "lastUpdated": "2026-08-01",
+  "version": "2026-08-02",
+  "lastUpdated": "2026-08-02",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 35,
+        "newsCount": 36,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2026-05-08",
+          "title": "Maine tourism partners with Mindtrip for AI trip planning - traveldailymedia.com",
+          "type": "product",
+          "source": "https://www.traveldailymedia.com"
+        },
         {
           "date": "2024-11-18",
           "title": "AI trip planner Mindtrip adds B2B solution - PhocusWire",
@@ -194,7 +200,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-07-15"
+      "lastUpdated": "2026-08-02"
     },
     {
       "id": "2",
@@ -223,12 +229,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 19,
+        "newsCount": 20,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2026-07-31",
+          "title": "Expedia Acquired AI Trip-Planner Layla: Exclusive - skift.com",
+          "type": "product",
+          "source": "https://skift.com"
+        },
         {
           "date": "2026-08-01",
           "title": "Expedia Buys Layla: AI Is Reshaping the Future of Travel - eTurboNews",
@@ -291,7 +303,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-08-01"
+      "lastUpdated": "2026-08-02"
     },
     {
       "id": "3",
@@ -1272,12 +1284,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 8,
+        "newsCount": 9,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-28",
+          "title": "China AI Travel Curbs Reach Alibaba, DeepSeek: Private-Sector Researchers Need Beijing Approval - Tech Times",
+          "type": "product",
+          "source": "https://www.techtimes.com"
+        },
         {
           "date": "2026-03-04",
           "title": "AI-powered 'tour guides' reshape China's tourism sector, boost consumption - globaltimes.cn",
@@ -1330,7 +1348,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-08-01",
+      "lastUpdated": "2026-08-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
