@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-05",
-  "lastUpdated": "2026-08-05",
+  "version": "2026-08-06",
+  "lastUpdated": "2026-08-06",
   "companies": [
     {
       "id": "1",
@@ -1284,12 +1284,30 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 9,
+        "newsCount": 12,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-06-18",
+          "title": "Singapore favoured by Muslim travellers amid surge in AI-assisted holiday planning: report - businesstimes.com.sg",
+          "type": "product",
+          "source": "https://www.businesstimes.com.sg"
+        },
+        {
+          "date": "2026-02-10",
+          "title": "South-east Asia’s governments put AI to work in tourism - businesstimes.com.sg",
+          "type": "product",
+          "source": "https://www.businesstimes.com.sg"
+        },
+        {
+          "date": "2026-05-26",
+          "title": "China expands travel curbs to top AI talent at private firms - businesstimes.com.sg",
+          "type": "product",
+          "source": "https://www.businesstimes.com.sg"
+        },
         {
           "date": "2026-05-28",
           "title": "China AI Travel Curbs Reach Alibaba, DeepSeek: Private-Sector Researchers Need Beijing Approval - Tech Times",
@@ -1348,7 +1366,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-08-02",
+      "lastUpdated": "2026-08-06",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1392,12 +1410,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-10-15",
+          "title": "Revolut acquires Swifty, the AI travel booking startup developed by Lufthansa Innovation Hub - Travel Daily News International",
+          "type": "product",
+          "source": "https://www.traveldailynews.com"
+        },
         {
           "date": "2026-06-10",
           "title": "Tern launches agentic AI to boost travel advisor efficiency - PhocusWire",
@@ -1408,7 +1432,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-08-01",
+      "lastUpdated": "2026-08-06",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
