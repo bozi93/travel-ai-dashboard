@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-06",
-  "lastUpdated": "2026-08-06",
+  "version": "2026-08-07",
+  "lastUpdated": "2026-08-07",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,30 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 36,
+        "newsCount": 39,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2025-12-04",
+          "title": "Capital One Ventures, United Airlines Ventures invest in Mindtrip - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2025-10-16",
+          "title": "Mindtrip launches AI-powered tools for travel inspiration, organization - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2026-02-12",
+          "title": "Sabre, Mindtrip, PayPal partner to launch agentic AI assistant for travel - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-05-08",
           "title": "Maine tourism partners with Mindtrip for AI trip planning - traveldailymedia.com",
@@ -200,7 +218,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-08-02"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "2",
@@ -738,12 +756,18 @@
       "product": "AI-powered luxury travel planning platform",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2026-04-23",
         "socialMentions": 8,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-11",
+          "title": "Startup Stage: Voyagier targets luxury travel with AI-powered trip planning and booking - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-05-11",
           "title": "Startup Stage: Voyagier targets luxury travel with AI-powered trip planning and booking - PhocusWire",
@@ -772,7 +796,7 @@
       "website": "https://www.voyagier.com/",
       "description": "Voyagier is an AI-powered luxury travel planning platform that recently emerged from stealth and is gearing up for a seed round.",
       "isNew": true,
-      "lastUpdated": "2026-05-12",
+      "lastUpdated": "2026-08-07",
       "_autoDiscovered": true,
       "founded": "2023-01-01"
     },
@@ -954,12 +978,36 @@
       "product": "BizTrip AI",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 8,
         "newsRecency": "2026-02-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-01-14",
+          "title": "Sabre takes stake in BizTrip AI, plans AI corporate travel assistants - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Startup Stage: BizTrip AI wants to replace fragmented booking systems for business travelers - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2026-02-02",
+          "title": "BizTrip AI raises $1.5 million for product development, hiring - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2025-11-10",
+          "title": "Hot 25 Travel Startups for 2026: BizTrip AI - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-01-14",
           "title": "Sabre takes stake in BizTrip AI, plans AI corporate travel assistants - PhocusWire",
@@ -988,7 +1036,7 @@
       "website": "https://www.biztrip.ai",
       "description": "BizTrip AI",
       "isNew": true,
-      "lastUpdated": "2026-04-24",
+      "lastUpdated": "2026-08-07",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1284,12 +1332,24 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 12,
+        "newsCount": 14,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-06-15",
+          "title": "Can AI plan a cheaper vacation than a travel agent? - timesofindia.indiatimes.com",
+          "type": "product",
+          "source": "https://timesofindia.indiatimes.com"
+        },
+        {
+          "date": "2026-07-01",
+          "title": "Kazakhstan Plans to Introduce AI Tools in Sports and Tourism - timesca.com",
+          "type": "product",
+          "source": "https://timesca.com"
+        },
         {
           "date": "2026-06-18",
           "title": "Singapore favoured by Muslim travellers amid surge in AI-assisted holiday planning: report - businesstimes.com.sg",
@@ -1366,7 +1426,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-08-06",
+      "lastUpdated": "2026-08-07",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
