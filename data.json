@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-10",
-  "lastUpdated": "2026-08-10",
+  "version": "2026-08-11",
+  "lastUpdated": "2026-08-11",
   "companies": [
     {
       "id": "1",
@@ -247,12 +247,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 20,
+        "newsCount": 21,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2026-08-01",
+          "title": "Expedia Buys Layla: AI Is Reshaping the Future of Travel - eturbonews.com",
+          "type": "product",
+          "source": "https://eturbonews.com"
+        },
         {
           "date": "2026-07-31",
           "title": "Expedia Acquired AI Trip-Planner Layla: Exclusive - skift.com",
@@ -321,7 +327,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-08-02"
+      "lastUpdated": "2026-08-11"
     },
     {
       "id": "3",
@@ -1278,12 +1284,18 @@
       "product": "AI-powered travel technology by Navan",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 5,
+        "newsCount": 6,
         "newsRecency": "2026-03-03",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-08-10",
+          "title": "Perk Is in No Rush to IPO as Revenue Nears $400 Million",
+          "type": "product",
+          "source": "https://skift.com/2026/08/10/perk-is-in-no-rush-to-ipo-as-revenue-nears-400-million/"
+        },
         {
           "date": "2026-03-11",
           "title": "Navan CEO on AI Travel Assistant & Corporate Spendi… - StartupHub.ai",
@@ -1318,7 +1330,7 @@
       "website": "https://www.navan.ai",
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
-      "lastUpdated": "2026-07-23",
+      "lastUpdated": "2026-08-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1332,12 +1344,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 14,
+        "newsCount": 15,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-03-08",
+          "title": "Smart Tourism in Northern Pakistan: The Role of Artificial Intelligence in Sustainable Tourism Development - PAMIR TIMES",
+          "type": "product",
+          "source": "https://pamirtimes.net"
+        },
         {
           "date": "2026-06-15",
           "title": "Can AI plan a cheaper vacation than a travel agent? - timesofindia.indiatimes.com",
@@ -1426,7 +1444,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-08-07",
+      "lastUpdated": "2026-08-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1470,12 +1488,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-08-10",
+          "title": "Agoda CEO to Lead Booking Holdings’ New B2B Unit, New Tech Details: Scoop",
+          "type": "product",
+          "source": "https://skift.com/2026/08/10/booking-holdings-makes-leadership-appointments-tied-to-new-b2b-unit-as-partners-get-onboarded-scoop/"
+        },
         {
           "date": "2025-10-15",
           "title": "Revolut acquires Swifty, the AI travel booking startup developed by Lufthansa Innovation Hub - Travel Daily News International",
@@ -1492,7 +1516,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-08-06",
+      "lastUpdated": "2026-08-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
