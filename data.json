@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-12",
-  "lastUpdated": "2026-08-12",
+  "version": "2026-08-13",
+  "lastUpdated": "2026-08-13",
   "companies": [
     {
       "id": "1",
@@ -253,12 +253,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 21,
+        "newsCount": 22,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2026-08-10",
+          "title": "Layla AI Travel Agent Revenue 2025: $2.8M Est. ARR - GetLatka",
+          "type": "product",
+          "source": "https://getlatka.com"
+        },
         {
           "date": "2026-08-01",
           "title": "Expedia Buys Layla: AI Is Reshaping the Future of Travel - eturbonews.com",
@@ -333,7 +339,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-08-11"
+      "lastUpdated": "2026-08-13"
     },
     {
       "id": "3",
@@ -1290,12 +1296,18 @@
       "product": "AI-powered travel technology by Navan",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 6,
+        "newsCount": 7,
         "newsRecency": "2026-03-03",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-03-11",
+          "title": "Navan CEO on AI Travel Assistant & Corporate Spendi… - startuphub.ai",
+          "type": "product",
+          "source": "https://www.startuphub.ai"
+        },
         {
           "date": "2026-08-10",
           "title": "Perk Is in No Rush to IPO as Revenue Nears $400 Million",
@@ -1336,7 +1348,7 @@
       "website": "https://www.navan.ai",
       "description": "AI-powered travel technology by Navan",
       "isNew": true,
-      "lastUpdated": "2026-08-11",
+      "lastUpdated": "2026-08-13",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
