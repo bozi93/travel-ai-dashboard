@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-20",
-  "lastUpdated": "2026-08-20",
+  "version": "2026-08-21",
+  "lastUpdated": "2026-08-21",
   "companies": [
     {
       "id": "1",
@@ -1583,6 +1583,36 @@
       "description": "AI-powered travel technology by Grab",
       "isNew": true,
       "lastUpdated": "2026-08-01",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-a13ca2d12a6b",
+      "name": "Israel",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Israel",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-07-18",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-07-18",
+          "title": "Israel launches AI travel-tech network to boost tourism - Ynetnews",
+          "type": "product",
+          "source": "https://www.ynetnews.com"
+        }
+      ],
+      "website": "https://www.israel.ai",
+      "description": "AI-powered travel technology by Israel",
+      "isNew": true,
+      "lastUpdated": "2026-08-21",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
