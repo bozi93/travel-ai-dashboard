@@ -1,6 +1,6 @@
 {
-  "version": "2026-08-22",
-  "lastUpdated": "2026-08-22",
+  "version": "2026-08-23",
+  "lastUpdated": "2026-08-23",
   "companies": [
     {
       "id": "1",
@@ -1380,12 +1380,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 15,
+        "newsCount": 16,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-07-02",
+          "title": "AI Travel Booking Agents Cannot Confirm a Ticket: Travelport TripServices Tests a Fix - Tech Times",
+          "type": "product",
+          "source": "https://www.techtimes.com"
+        },
         {
           "date": "2026-03-08",
           "title": "Smart Tourism in Northern Pakistan: The Role of Artificial Intelligence in Sustainable Tourism Development - PAMIR TIMES",
@@ -1480,7 +1486,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-08-11",
+      "lastUpdated": "2026-08-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
