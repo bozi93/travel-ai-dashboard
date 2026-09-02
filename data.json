@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-01",
-  "lastUpdated": "2026-09-01",
+  "version": "2026-09-02",
+  "lastUpdated": "2026-09-02",
   "companies": [
     {
       "id": "1",
@@ -1116,12 +1116,18 @@
       "product": "AI travel startup Visio Trip",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 6,
+        "newsCount": 7,
         "newsRecency": "2024-10-31",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-02",
+          "title": "Saudi Tourism Names New CEO As Kingdom Pulls Back On Vision 2030 Spending",
+          "type": "product",
+          "source": "https://skift.com/2026/09/02/saudi-tourism-names-new-ceo-as-kingdom-pulls-back-on-vision-2030-spending/"
+        },
         {
           "date": "2025-09-19",
           "title": "OpenAI chairman shares vision on travel’s AI future - PhocusWire",
@@ -1162,7 +1168,7 @@
       "website": "https://www.visio.ai",
       "description": "AI travel startup Visio Trip",
       "isNew": true,
-      "lastUpdated": "2026-07-29",
+      "lastUpdated": "2026-09-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1631,6 +1637,36 @@
       "description": "AI-powered travel technology by Israel",
       "isNew": true,
       "lastUpdated": "2026-08-22",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-79d641bcdca9",
+      "name": "Visa",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Visa",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-02-07",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-02-07",
+          "title": "Visa launches Destinations. Yatra reconsiders Nasdaq. Travelport x Travelsoft. Hotels' AI race. - webintravel.com",
+          "type": "product",
+          "source": "https://www.webintravel.com"
+        }
+      ],
+      "website": "https://www.visa.ai",
+      "description": "AI-powered travel technology by Visa",
+      "isNew": true,
+      "lastUpdated": "2026-09-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
