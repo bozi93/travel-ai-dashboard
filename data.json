@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-02",
-  "lastUpdated": "2026-09-02",
+  "version": "2026-09-03",
+  "lastUpdated": "2026-09-03",
   "companies": [
     {
       "id": "1",
@@ -1512,12 +1512,18 @@
       "product": "AI-powered travel technology by Skyscanner",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-06-30",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-02",
+          "title": "The Economics of Flight Search, Post-Google",
+          "type": "product",
+          "source": "https://skift.com/2026/09/02/the-economics-of-flight-search-post-google/"
+        },
         {
           "date": "2026-06-30",
           "title": "Skyscanner launches AI travel discovery, road trip planning tools - PhocusWire",
@@ -1528,7 +1534,7 @@
       "website": "https://www.skyscanner.ai",
       "description": "AI-powered travel technology by Skyscanner",
       "isNew": true,
-      "lastUpdated": "2026-07-30",
+      "lastUpdated": "2026-09-03",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1542,12 +1548,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 3,
+        "newsCount": 4,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-02",
+          "title": "Virgin’s New International Trains Could Cut Emissions, Fares — and Fuel Its Loyalty Program",
+          "type": "product",
+          "source": "https://skift.com/2026/09/02/virgins-new-international-trains-could-cut-emissions-fares-and-fuel-its-loyalty-program/"
+        },
         {
           "date": "2026-08-10",
           "title": "Agoda CEO to Lead Booking Holdings’ New B2B Unit, New Tech Details: Scoop",
@@ -1570,7 +1582,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-08-11",
+      "lastUpdated": "2026-09-03",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
