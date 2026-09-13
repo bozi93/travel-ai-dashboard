@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-12",
-  "lastUpdated": "2026-09-12",
+  "version": "2026-09-13",
+  "lastUpdated": "2026-09-13",
   "companies": [
     {
       "id": "1",
@@ -277,12 +277,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 24,
+        "newsCount": 25,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2026-01-08",
+          "title": "Expedia Group acquires Layla to bolster its AI-powered trip planning and booking strategy - webintravel.com",
+          "type": "product",
+          "source": "https://www.webintravel.com"
+        },
         {
           "date": "2026-08-03",
           "title": "Expedia Group Acquires Berlin AI Startup Layla to Advance Intelligent Travel Planning - konsulteer.com",
@@ -375,7 +381,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-09-10"
+      "lastUpdated": "2026-09-13"
     },
     {
       "id": "3",
