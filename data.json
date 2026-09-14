@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-13",
-  "lastUpdated": "2026-09-13",
+  "version": "2026-09-14",
+  "lastUpdated": "2026-09-14",
   "companies": [
     {
       "id": "1",
@@ -1740,12 +1740,18 @@
       "product": "AI-powered travel technology by Visa",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-02-07",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-14",
+          "title": "Thailand Tightens Entry Rules to Focus on ‘Quality Tourism’",
+          "type": "product",
+          "source": "https://skift.com/2026/09/14/thailand-tightens-entry-rules-to-focus-on-quality-tourism/"
+        },
         {
           "date": "2026-02-07",
           "title": "Visa launches Destinations. Yatra reconsiders Nasdaq. Travelport x Travelsoft. Hotels' AI race. - webintravel.com",
@@ -1756,7 +1762,7 @@
       "website": "https://www.visa.ai",
       "description": "AI-powered travel technology by Visa",
       "isNew": true,
-      "lastUpdated": "2026-09-02",
+      "lastUpdated": "2026-09-14",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
