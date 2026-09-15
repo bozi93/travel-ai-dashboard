@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-14",
-  "lastUpdated": "2026-09-14",
+  "version": "2026-09-15",
+  "lastUpdated": "2026-09-15",
   "companies": [
     {
       "id": "1",
@@ -1428,12 +1428,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 21,
+        "newsCount": 22,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-16",
+          "title": "Ixigo Reinvents Travel App with Voice-Activated AI Assistant ‘TARA’ - indianstartuptimes.com",
+          "type": "product",
+          "source": "https://www.indianstartuptimes.com"
+        },
         {
           "date": "2026-03-08",
           "title": "Smart Tourism in Northern Pakistan: The Role of Artificial Intelligence in Sustainable Tourism Development - pamirtimes.net",
@@ -1564,7 +1570,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-09-10",
+      "lastUpdated": "2026-09-15",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1692,12 +1698,24 @@
       "product": "AI-powered travel technology by Israel",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 6,
         "newsRecency": "2026-07-18",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-02-05",
+          "title": "New AI-driven platform makes Israel trip planning easier for evangelicals - israeltoday.co.il",
+          "type": "product",
+          "source": "https://www.israeltoday.co.il"
+        },
+        {
+          "date": "2026-07-18",
+          "title": "Israel launches AI travel-tech network to boost tourism - ynetnews.com",
+          "type": "product",
+          "source": "https://www.ynetnews.com"
+        },
         {
           "date": "2026-05-19",
           "title": "Israeli travel company turns to AI to reshape vacation planning - jpost.com",
@@ -1726,7 +1744,7 @@
       "website": "https://www.israel.ai",
       "description": "AI-powered travel technology by Israel",
       "isNew": true,
-      "lastUpdated": "2026-09-10",
+      "lastUpdated": "2026-09-15",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1776,12 +1794,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-12-04",
+          "title": "Otto, led by former Expedia exec, rolls out AI agent for business travelers that mimics an executive assistant - GeekWire",
+          "type": "product",
+          "source": "https://www.geekwire.com"
+        },
         {
           "date": "2024-09-02",
           "title": "AI travel assistant startup Otto secures $6m seed round led by Madrona Ventures - fintech.global",
@@ -1792,7 +1816,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-15",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
