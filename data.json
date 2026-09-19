@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-18",
-  "lastUpdated": "2026-09-18",
+  "version": "2026-09-19",
+  "lastUpdated": "2026-09-19",
   "companies": [
     {
       "id": "1",
@@ -1806,12 +1806,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-12-04",
+          "title": "Otto, led by former Expedia exec, rolls out AI agent for business travelers that mimics an executive assistant - geekwire.com",
+          "type": "product",
+          "source": "https://www.geekwire.com"
+        },
         {
           "date": "2025-12-04",
           "title": "Otto, led by former Expedia exec, rolls out AI agent for business travelers that mimics an executive assistant - GeekWire",
@@ -1828,7 +1834,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-09-15",
+      "lastUpdated": "2026-09-19",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
