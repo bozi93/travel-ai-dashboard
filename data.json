@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-21",
-  "lastUpdated": "2026-09-21",
+  "version": "2026-09-22",
+  "lastUpdated": "2026-09-22",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 44,
+        "newsCount": 45,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2024-11-18",
+          "title": "AI trip planner Mindtrip adds B2B solution - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-09-10",
           "title": "Mindtrip Empowers Travelers with AI-Powered Trip Planning - PR Newswire",
@@ -248,7 +254,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-09-11"
+      "lastUpdated": "2026-09-22"
     },
     {
       "id": "2",
@@ -277,12 +283,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 26,
+        "newsCount": 27,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2024-02-12",
+          "title": "Startup travel planner Layla acquires AI-itinerary builder Roam Around - phocuswire.com",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-07-31",
           "title": "Expedia buys Berlin AI trip-planner Layla to speed up agent rollout - app.dealroom.co",
@@ -387,7 +399,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-09-17"
+      "lastUpdated": "2026-09-22"
     },
     {
       "id": "3",
