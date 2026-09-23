@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-22",
-  "lastUpdated": "2026-09-22",
+  "version": "2026-09-23",
+  "lastUpdated": "2026-09-23",
   "companies": [
     {
       "id": "1",
@@ -1062,12 +1062,18 @@
       "product": "BizTrip AI",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 8,
+        "newsCount": 9,
         "newsRecency": "2026-02-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-01-14",
+          "title": "Sabre and BizTrip AI Announce Strategic Partnership to Deliver Agentic AI Solutions for Global Corporate Travel Market - PR Newswire",
+          "type": "product",
+          "source": "https://www.prnewswire.com"
+        },
         {
           "date": "2026-01-14",
           "title": "Sabre takes stake in BizTrip AI, plans AI corporate travel assistants - phocuswire.com",
@@ -1120,7 +1126,7 @@
       "website": "https://www.biztrip.ai",
       "description": "BizTrip AI",
       "isNew": true,
-      "lastUpdated": "2026-08-07",
+      "lastUpdated": "2026-09-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
