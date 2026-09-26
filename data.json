@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-25",
-  "lastUpdated": "2026-09-25",
+  "version": "2026-09-26",
+  "lastUpdated": "2026-09-26",
   "companies": [
     {
       "id": "1",
@@ -1458,12 +1458,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 23,
+        "newsCount": 24,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-26",
+          "title": "World Tourism Day 2026: AI can plan your holiday, but can it understand the soul of a place? - The Times of India",
+          "type": "product",
+          "source": "https://timesofindia.indiatimes.com"
+        },
         {
           "date": "2026-09-24",
           "title": "World Tourism Day: AI may plan your holiday, but travellers still want the human touch | Travel - Hindustan Times",
@@ -1606,7 +1612,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-09-24",
+      "lastUpdated": "2026-09-26",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
