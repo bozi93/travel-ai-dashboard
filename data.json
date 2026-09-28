@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-27",
-  "lastUpdated": "2026-09-27",
+  "version": "2026-09-28",
+  "lastUpdated": "2026-09-28",
   "companies": [
     {
       "id": "1",
@@ -1458,12 +1458,36 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 25,
+        "newsCount": 29,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-27",
+          "title": "Maharashtra Tourism plans digital push with AI chatbot, smart ticketing and tourism dashboard - travel.economictimes.indiatimes.com",
+          "type": "product",
+          "source": "https://travel.economictimes.indiatimes.com"
+        },
+        {
+          "date": "2026-09-26",
+          "title": "World Tourism Day 2026: AI can plan your holiday, but can it understand the soul of a place? - timesofindia.indiatimes.com",
+          "type": "product",
+          "source": "https://timesofindia.indiatimes.com"
+        },
+        {
+          "date": "2026-09-27",
+          "title": "Govt plans makeover of tourism sector with AI, digital technology - timesofindia.indiatimes.com",
+          "type": "product",
+          "source": "https://timesofindia.indiatimes.com"
+        },
+        {
+          "date": "2026-03-04",
+          "title": "Toronto-based Indian startup targets AI data gap in USD 165.9B travel market - travel.economictimes.indiatimes.com",
+          "type": "product",
+          "source": "http://travel.economictimes.indiatimes.com"
+        },
         {
           "date": "2026-09-27",
           "title": "World Tourism Day 2026: How to use AI to plan a smarter holiday | Hindustan Times - Hindustan Times",
@@ -1618,7 +1642,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-09-27",
+      "lastUpdated": "2026-09-28",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
