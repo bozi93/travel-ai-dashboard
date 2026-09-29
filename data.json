@@ -1,6 +1,6 @@
 {
-  "version": "2026-09-28",
-  "lastUpdated": "2026-09-28",
+  "version": "2026-09-29",
+  "lastUpdated": "2026-09-29",
   "companies": [
     {
       "id": "1",
@@ -1458,12 +1458,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 29,
+        "newsCount": 30,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-27",
+          "title": "Govt plans makeover of tourism sector with AI, digital technology - The Times of India",
+          "type": "product",
+          "source": "https://timesofindia.indiatimes.com"
+        },
         {
           "date": "2026-09-27",
           "title": "Maharashtra Tourism plans digital push with AI chatbot, smart ticketing and tourism dashboard - travel.economictimes.indiatimes.com",
@@ -1642,7 +1648,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-09-28",
+      "lastUpdated": "2026-09-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1866,12 +1872,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 3,
+        "newsCount": 4,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-29",
+          "title": "Hilton’s Motto Debut in Japan Signals a Bigger Mid-Market Shift",
+          "type": "product",
+          "source": "https://skift.com/2026/09/28/hiltons-motto-debut-in-japan-signals-a-bigger-mid-market-shift/"
+        },
         {
           "date": "2025-12-04",
           "title": "Otto, led by former Expedia exec, rolls out AI agent for business travelers that mimics an executive assistant - geekwire.com",
@@ -1894,7 +1906,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-09-19",
+      "lastUpdated": "2026-09-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
