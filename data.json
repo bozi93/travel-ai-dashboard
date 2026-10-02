@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-01",
-  "lastUpdated": "2026-10-01",
+  "version": "2026-10-02",
+  "lastUpdated": "2026-10-02",
   "companies": [
     {
       "id": "1",
@@ -1470,12 +1470,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 31,
+        "newsCount": 32,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2020-06-20",
+          "title": "Goa Tourism plans AI-based chatbots to offer personalised services to tourists - travel.economictimes.indiatimes.com",
+          "type": "product",
+          "source": "http://travel.economictimes.indiatimes.com"
+        },
         {
           "date": "2026-09-29",
           "title": "AI must assist, not replace human judgment in tourism, say experts - The Shillong Times",
@@ -1666,7 +1672,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-09-30",
+      "lastUpdated": "2026-10-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1716,12 +1722,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-01",
+          "title": "No Starlink? United Airlines Targets Rivals With Status Match Offer",
+          "type": "product",
+          "source": "https://skift.com/2026/10/01/no-starlink-united-airlines-targets-rivals-with-status-match-offer/"
+        },
         {
           "date": "2026-09-02",
           "title": "Virgin’s New International Trains Could Cut Emissions, Fares — and Fuel Its Loyalty Program",
@@ -1750,7 +1762,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-10-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1890,12 +1902,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-01",
+          "title": "‘The P&L Doesn’t Lie’: Hotels See More AI Costs Than Bottom-Line Gains",
+          "type": "product",
+          "source": "https://skift.com/2026/10/01/the-pl-doesnt-lie-hotels-see-more-ai-costs-than-bottom-line-gains/"
+        },
         {
           "date": "2026-09-29",
           "title": "Hilton’s Motto Debut in Japan Signals a Bigger Mid-Market Shift",
@@ -1924,7 +1942,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-09-29",
+      "lastUpdated": "2026-10-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
