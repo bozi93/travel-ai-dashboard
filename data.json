@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-03",
-  "lastUpdated": "2026-10-03",
+  "version": "2026-10-04",
+  "lastUpdated": "2026-10-04",
   "companies": [
     {
       "id": "1",
@@ -1866,12 +1866,18 @@
       "product": "AI-powered travel technology by Visa",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 2,
+        "newsCount": 3,
         "newsRecency": "2026-02-07",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-08-17",
+          "title": "Hotels customer acquisition platform Visaible.ai finds room for $1 million - Startup Daily",
+          "type": "product",
+          "source": "https://www.startupdaily.net"
+        },
         {
           "date": "2026-09-14",
           "title": "Thailand Tightens Entry Rules to Focus on ‘Quality Tourism’",
@@ -1888,7 +1894,7 @@
       "website": "https://www.visa.ai",
       "description": "AI-powered travel technology by Visa",
       "isNew": true,
-      "lastUpdated": "2026-09-14",
+      "lastUpdated": "2026-10-04",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
