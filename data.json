@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-10",
-  "lastUpdated": "2026-10-10",
+  "version": "2026-10-11",
+  "lastUpdated": "2026-10-11",
   "companies": [
     {
       "id": "1",
@@ -1734,12 +1734,24 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 6,
+        "newsCount": 8,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-11",
+          "title": "The War Is Changing the Economics of Saudi Tourism",
+          "type": "product",
+          "source": "https://skift.com/2026/10/10/the-war-is-changing-the-economics-of-saudi-tourism/"
+        },
+        {
+          "date": "2026-10-11",
+          "title": "Travel AI’s Prove-It Phase, Visibility, and the Booking Gap",
+          "type": "product",
+          "source": "https://skift.com/2026/10/11/travel-ais-prove-it-phase-visibility-and-the-booking-gap/"
+        },
         {
           "date": "2026-10-06",
           "title": "Airlines Get More Time on Mumbai Airport Cuts — But the Move to Navi Mumbai Is Still Coming",
@@ -1780,7 +1792,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-07",
+      "lastUpdated": "2026-10-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
