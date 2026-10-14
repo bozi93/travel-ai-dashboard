@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-13",
-  "lastUpdated": "2026-10-13",
+  "version": "2026-10-14",
+  "lastUpdated": "2026-10-14",
   "companies": [
     {
       "id": "1",
@@ -1985,6 +1985,36 @@
       "description": "AI travel assistant startup Otto",
       "isNew": true,
       "lastUpdated": "2026-10-02",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-d3dbc4103c05",
+      "name": "Holdings",
+      "type": "startup",
+      "location": "Seattle",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "Booking Holdings",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-10-14",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings unveils AI travel startup Vayo, based in Seattle, with a planned $100M investment - GeekWire",
+          "type": "product",
+          "source": "https://www.geekwire.com"
+        }
+      ],
+      "website": "https://www.holdings.ai",
+      "description": "Booking Holdings",
+      "isNew": true,
+      "lastUpdated": "2026-10-14",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
