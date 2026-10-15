@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-14",
-  "lastUpdated": "2026-10-14",
+  "version": "2026-10-15",
+  "lastUpdated": "2026-10-15",
   "companies": [
     {
       "id": "1",
@@ -29,12 +29,18 @@
       "product": "AI-powered travel planning platform with real-time booking",
       "investors": "Amex Ventures, Capital One Ventures, United Airlines Ventures, Costanoa Ventures, Blackhorn Ventures",
       "metrics": {
-        "newsCount": 47,
+        "newsCount": 48,
         "newsRecency": "2026-03-01",
         "socialMentions": 45,
         "trafficGrowth": "+18%"
       },
       "news": [
+        {
+          "date": "2026-10-15",
+          "title": "Mindtrip brings AI discovery to Norwegian destination organizations - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-06-25",
           "title": "Mindtrip Partners With Arkansas Tourism to Power Ai-Driven Trip Planning Across the Natural State - prnewswire.com",
@@ -266,7 +272,7 @@
       "website": "https://mindtrip.ai",
       "description": "Mindtrip是一个AI原生旅游平台，结合对话式AI与实时预订功能，提供端到端的旅行规划体验。",
       "isNew": false,
-      "lastUpdated": "2026-09-30"
+      "lastUpdated": "2026-10-15"
     },
     {
       "id": "2",
@@ -1896,12 +1902,18 @@
       "product": "AI-powered travel technology by Visa",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 4,
+        "newsCount": 5,
         "newsRecency": "2026-02-07",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-14",
+          "title": "AI travel clearance startup Intellivisa raises $3M - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-08-17",
           "title": "Hotels customer acquisition platform Visaible.ai finds room for $1 million - startupdaily.net",
@@ -1930,7 +1942,7 @@
       "website": "https://www.visa.ai",
       "description": "AI-powered travel technology by Visa",
       "isNew": true,
-      "lastUpdated": "2026-10-06",
+      "lastUpdated": "2026-10-15",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1998,12 +2010,66 @@
       "product": "Booking Holdings",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 10,
         "newsRecency": "2026-10-14",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-05-06",
+          "title": "Kayak Founders Team Up for Booking Holdings AI Startup: Scoop - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
+        {
+          "date": "2026-09-29",
+          "title": "Kayak Co-Founders Launch Lola — Booking Holdings’ New AI Assistant: Exclusive - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings launches Vayo AI travel agent, plans $100M investment - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings launches Vayo, a $100M AI travel startup led by Mike Fridgen in Seattle - news.lavx.hu",
+          "type": "product",
+          "source": "https://news.lavx.hu"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings launches Vayo, an AI-native company - Travel Weekly",
+          "type": "product",
+          "source": "https://www.travelweekly.com"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings Plans to Fund New AI Startup Vayo With $100 Million - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings Launches AI Travel Startup Vayo with Planned $100M Investment - citybiz",
+          "type": "product",
+          "source": "https://www.citybiz.co"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings is building a new AI travel startup in Seattle - LinkedIn",
+          "type": "product",
+          "source": "https://www.linkedin.com"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings Plans to Fund New AI Startup Vayo With $100 Million",
+          "type": "product",
+          "source": "https://skift.com/2026/10/14/booking-holdings-second-ai-startup-vayo-launches-in-private-beta/"
+        },
         {
           "date": "2026-10-14",
           "title": "Booking Holdings unveils AI travel startup Vayo, based in Seattle, with a planned $100M investment - GeekWire",
@@ -2014,7 +2080,7 @@
       "website": "https://www.holdings.ai",
       "description": "Booking Holdings",
       "isNew": true,
-      "lastUpdated": "2026-10-14",
+      "lastUpdated": "2026-10-15",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
