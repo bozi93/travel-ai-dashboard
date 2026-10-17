@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-16",
-  "lastUpdated": "2026-10-16",
+  "version": "2026-10-17",
+  "lastUpdated": "2026-10-17",
   "companies": [
     {
       "id": "1",
@@ -1746,12 +1746,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 9,
+        "newsCount": 10,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-16",
+          "title": "Western Europe Drives Another Drop in Overseas Travel to the U.S.",
+          "type": "product",
+          "source": "https://skift.com/2026/10/16/us-overseas-travel-decline-september-2026/"
+        },
         {
           "date": "2026-10-14",
           "title": "Travel tech leaders identify six startup threats for 2027 - Travel Daily News International",
@@ -1810,7 +1816,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-16",
+      "lastUpdated": "2026-10-17",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -2022,12 +2028,18 @@
       "product": "Booking Holdings",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 12,
+        "newsCount": 13,
         "newsRecency": "2026-10-14",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-29",
+          "title": "Booking Holdings-backed Lola unveils membership model for AI travel and experiences assistant - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-10-16",
           "title": "Booking Holdings plans $100m investment in Vayo AI startup - Travel Daily News International",
@@ -2104,7 +2116,7 @@
       "website": "https://www.holdings.ai",
       "description": "Booking Holdings",
       "isNew": true,
-      "lastUpdated": "2026-10-16",
+      "lastUpdated": "2026-10-17",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
