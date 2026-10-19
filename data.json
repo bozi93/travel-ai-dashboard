@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-18",
-  "lastUpdated": "2026-10-18",
+  "version": "2026-10-19",
+  "lastUpdated": "2026-10-19",
   "companies": [
     {
       "id": "1",
@@ -1482,12 +1482,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 34,
+        "newsCount": 35,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-19",
+          "title": "What Timeshare Can Teach Hospitality About Experience-Led Loyalty: Watch Video",
+          "type": "product",
+          "source": "https://skift.com/2026/10/19/vacation-ownership-experience-platform/"
+        },
         {
           "date": "2026-03-08",
           "title": "Smart Tourism in Northern Pakistan: The Role of Artificial Intelligence in Sustainable Tourism Development - pamir times",
@@ -1696,7 +1702,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-10-16",
+      "lastUpdated": "2026-10-19",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1974,12 +1980,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 5,
+        "newsCount": 6,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-12-04",
+          "title": "Business travel AI assistant 'Otto The Agent' launches - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-10-01",
           "title": "‘The P&L Doesn’t Lie’: Hotels See More AI Costs Than Bottom-Line Gains",
@@ -2014,7 +2026,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-19",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
