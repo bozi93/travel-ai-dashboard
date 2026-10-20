@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19",
-  "lastUpdated": "2026-10-19",
+  "version": "2026-10-20",
+  "lastUpdated": "2026-10-20",
   "companies": [
     {
       "id": "1",
@@ -1752,12 +1752,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 10,
+        "newsCount": 11,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-19",
+          "title": "Third of Saudi Flights Canceled As High Profile Events Postponed",
+          "type": "product",
+          "source": "https://skift.com/2026/10/19/third-of-saudi-flights-canceled-as-high-profile-events-postponed/"
+        },
         {
           "date": "2026-10-16",
           "title": "Western Europe Drives Another Drop in Overseas Travel to the U.S.",
@@ -1822,7 +1828,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-17",
+      "lastUpdated": "2026-10-20",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -2040,12 +2046,18 @@
       "product": "Booking Holdings",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 13,
+        "newsCount": 14,
         "newsRecency": "2026-10-14",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-14",
+          "title": "Booking Holdings launches Vayo, an AI trip organizer - Travel Weekly",
+          "type": "product",
+          "source": "https://www.travelweekly.com"
+        },
         {
           "date": "2026-09-29",
           "title": "Booking Holdings-backed Lola unveils membership model for AI travel and experiences assistant - PhocusWire",
@@ -2128,7 +2140,7 @@
       "website": "https://www.holdings.ai",
       "description": "Booking Holdings",
       "isNew": true,
-      "lastUpdated": "2026-10-17",
+      "lastUpdated": "2026-10-20",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
