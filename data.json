@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-21",
-  "lastUpdated": "2026-10-21",
+  "version": "2026-10-22",
+  "lastUpdated": "2026-10-22",
   "companies": [
     {
       "id": "1",
@@ -1752,12 +1752,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 11,
+        "newsCount": 12,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-21",
+          "title": "Hilton Bets on Scandic to Crack Nordics",
+          "type": "product",
+          "source": "https://skift.com/2026/10/21/hilton-bets-on-scandic-to-crack-nordics/"
+        },
         {
           "date": "2026-10-19",
           "title": "Third of Saudi Flights Canceled As High Profile Events Postponed",
@@ -1828,7 +1834,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-20",
+      "lastUpdated": "2026-10-22",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1986,12 +1992,18 @@
       "product": "AI travel assistant startup Otto",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 6,
+        "newsCount": 7,
         "newsRecency": "2024-09-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-22",
+          "title": "Yotel Plans Upscale Brand and YotelAir in City Centers as It Targets 100 Hotels: Exclusive",
+          "type": "product",
+          "source": "https://skift.com/2026/10/21/yotel-plans-upscale-brand-and-yotelair-in-city-centers-as-it-targets-100-hotels-exclusive/"
+        },
         {
           "date": "2025-12-04",
           "title": "Business travel AI assistant 'Otto The Agent' launches - PhocusWire",
@@ -2032,7 +2044,7 @@
       "website": "https://www.otto.ai",
       "description": "AI travel assistant startup Otto",
       "isNew": true,
-      "lastUpdated": "2026-10-19",
+      "lastUpdated": "2026-10-22",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -2154,12 +2166,24 @@
       "product": "AI-powered travel technology by Meta",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 3,
         "newsRecency": "2026-09-09",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2025-06-30",
+          "title": "Ex-Meta engineers have built an AI tool to plan every detail of your trip - TechCrunch",
+          "type": "product",
+          "source": "https://techcrunch.com"
+        },
+        {
+          "date": "2026-10-22",
+          "title": "Meta Calls Travel ‘a Top Use Case’ for Muse — and Zuck Wants a Cut",
+          "type": "product",
+          "source": "https://skift.com/2026/10/21/meta-calls-travel-a-top-use-case-for-muse-and-zuck-wants-a-cut/"
+        },
         {
           "date": "2026-09-09",
           "title": "Meta launches AI agent with travel booking capabilities - PhocusWire",
@@ -2170,7 +2194,7 @@
       "website": "https://www.meta.ai",
       "description": "AI-powered travel technology by Meta",
       "isNew": true,
-      "lastUpdated": "2026-10-21",
+      "lastUpdated": "2026-10-22",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
