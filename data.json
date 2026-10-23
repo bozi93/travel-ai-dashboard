@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-22",
-  "lastUpdated": "2026-10-22",
+  "version": "2026-10-23",
+  "lastUpdated": "2026-10-23",
   "companies": [
     {
       "id": "1",
@@ -2166,12 +2166,18 @@
       "product": "AI-powered travel technology by Meta",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 3,
+        "newsCount": 4,
         "newsRecency": "2026-09-09",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-22",
+          "title": "Wyndham Courts AI Booking Agents in Push for Direct Bookings",
+          "type": "product",
+          "source": "https://skift.com/2026/10/22/wyndham-courts-ai-booking-agents-in-push-for-direct-bookings/"
+        },
         {
           "date": "2025-06-30",
           "title": "Ex-Meta engineers have built an AI tool to plan every detail of your trip - TechCrunch",
@@ -2194,7 +2200,7 @@
       "website": "https://www.meta.ai",
       "description": "AI-powered travel technology by Meta",
       "isNew": true,
-      "lastUpdated": "2026-10-22",
+      "lastUpdated": "2026-10-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
