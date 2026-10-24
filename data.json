@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-23",
-  "lastUpdated": "2026-10-23",
+  "version": "2026-10-24",
+  "lastUpdated": "2026-10-24",
   "companies": [
     {
       "id": "1",
@@ -1482,12 +1482,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 35,
+        "newsCount": 36,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-23",
+          "title": "Travel VC Funding Fell for the Second Straight Quarter, Rounds for AI Companies Cut in Half",
+          "type": "product",
+          "source": "https://skift.com/2026/10/23/travel-vc-funding-fell-for-the-second-straight-quarter-rounds-for-ai-companies-cut-in-half/"
+        },
         {
           "date": "2026-10-19",
           "title": "What Timeshare Can Teach Hospitality About Experience-Led Loyalty: Watch Video",
@@ -1702,7 +1708,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-10-19",
+      "lastUpdated": "2026-10-24",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
