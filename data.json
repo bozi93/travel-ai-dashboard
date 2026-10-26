@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-25",
-  "lastUpdated": "2026-10-25",
+  "version": "2026-10-26",
+  "lastUpdated": "2026-10-26",
   "companies": [
     {
       "id": "1",
@@ -1758,12 +1758,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 12,
+        "newsCount": 13,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-26",
+          "title": "IndiGo, Air India Group Agree to Phased Move of International Flights to Navi Mumbai Through 2027",
+          "type": "product",
+          "source": "https://skift.com/2026/10/26/indigo-air-india-group-agree-to-phased-move-of-international-flights-to-navi-mumbai-through-2027/"
+        },
         {
           "date": "2026-10-21",
           "title": "Hilton Bets on Scandic to Crack Nordics",
@@ -1840,7 +1846,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-22",
+      "lastUpdated": "2026-10-26",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
