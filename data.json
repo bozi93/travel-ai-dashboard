@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-27",
-  "lastUpdated": "2026-10-27",
+  "version": "2026-10-28",
+  "lastUpdated": "2026-10-28",
   "companies": [
     {
       "id": "1",
@@ -452,12 +452,18 @@
       "product": "AI-powered local discovery and hotel booking platform",
       "investors": "红杉中国, Coatue Management, Redpoint Ventures, Lightspeed Venture Partners",
       "metrics": {
-        "newsCount": 6,
+        "newsCount": 7,
         "newsRecency": "2026-01-01",
         "socialMentions": 32,
         "trafficGrowth": "+15%"
       },
       "news": [
+        {
+          "date": "2024-07-25",
+          "title": "STARTUP STAGE: Wanderboat wants to be an AI-companion for travel planning - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-01-20",
           "title": "推出AI酒店精选和预订平台",
@@ -479,7 +485,7 @@
       "website": "https://wanderboat.ai",
       "description": "Wanderboat AI专注于解决旅行「选择悖论」，通过AI驱动的本地发现和酒店精选平台，帮助用户轻松发现和预订理想酒店。",
       "isNew": false,
-      "lastUpdated": "2026-04-16"
+      "lastUpdated": "2026-10-28"
     },
     {
       "id": "4",
@@ -2213,6 +2219,36 @@
       "description": "AI-powered travel technology by Meta",
       "isNew": true,
       "lastUpdated": "2026-10-23",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-3de63a700f51",
+      "name": "Nicer",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "Travel startup Nicer",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2024-02-08",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2024-02-08",
+          "title": "Travel startup Nicer raises $2M to bring AI to travel advisors - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        }
+      ],
+      "website": "https://www.nicer.ai",
+      "description": "Travel startup Nicer",
+      "isNew": true,
+      "lastUpdated": "2026-10-28",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
