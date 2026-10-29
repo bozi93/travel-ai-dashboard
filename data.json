@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-28",
-  "lastUpdated": "2026-10-28",
+  "version": "2026-10-29",
+  "lastUpdated": "2026-10-29",
   "companies": [
     {
       "id": "1",
@@ -1764,12 +1764,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 13,
+        "newsCount": 14,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-10-29",
+          "title": "Why AI Agents Could Become Travel’s New Digital Front Door: Watch Video",
+          "type": "product",
+          "source": "https://skift.com/2026/10/29/ai-agents-travel-digital-front-door/"
+        },
         {
           "date": "2026-10-26",
           "title": "IndiGo, Air India Group Agree to Phased Move of International Flights to Navi Mumbai Through 2027",
@@ -1852,7 +1858,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-26",
+      "lastUpdated": "2026-10-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1956,12 +1962,18 @@
       "product": "AI-powered travel technology by Visa",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 5,
+        "newsCount": 6,
         "newsRecency": "2026-02-07",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-02-07",
+          "title": "Visa launches Destinations. Yatra reconsiders Nasdaq. Travelport x Travelsoft. Hotels' AI race. - Web In Travel",
+          "type": "product",
+          "source": "https://www.webintravel.com"
+        },
         {
           "date": "2026-10-14",
           "title": "AI travel clearance startup Intellivisa raises $3M - PhocusWire",
@@ -1996,7 +2008,7 @@
       "website": "https://www.visa.ai",
       "description": "AI-powered travel technology by Visa",
       "isNew": true,
-      "lastUpdated": "2026-10-15",
+      "lastUpdated": "2026-10-29",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
