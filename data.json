@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-01",
-  "lastUpdated": "2026-11-01",
+  "version": "2026-11-02",
+  "lastUpdated": "2026-11-02",
   "companies": [
     {
       "id": "1",
@@ -301,12 +301,18 @@
       "product": "AI travel planner with creator content integration",
       "investors": "United Airlines Ventures, 百度风投, INCE Capital, M13, Firstminute Capital, Barry Smith, Andy Phillips, Paris Hilton, SparkLabs",
       "metrics": {
-        "newsCount": 28,
+        "newsCount": 29,
         "newsRecency": "2026-03-01",
         "socialMentions": 68,
         "trafficGrowth": "+25%"
       },
       "news": [
+        {
+          "date": "2023-11-30",
+          "title": "Layla uses short-form videos to help tourists plan their trips. It just raised $3 million with this 8-slide pitch deck. - Business Insider",
+          "type": "product",
+          "source": "https://www.businessinsider.com"
+        },
         {
           "date": "2026-01-08",
           "title": "Expedia Group acquires Layla to bolster its AI-powered trip planning and booking strategy - Web In Travel",
@@ -423,7 +429,7 @@
       "website": "https://layla.ai",
       "description": "Layla是由Saad Saeed（前Flink创始人）创立的AI旅行规划平台，整合创作者内容与AI技术，提供个性化旅行推荐。",
       "isNew": false,
-      "lastUpdated": "2026-10-07"
+      "lastUpdated": "2026-11-02"
     },
     {
       "id": "3",
@@ -1770,12 +1776,18 @@
       "product": "AI-powered travel technology by Tern",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 14,
+        "newsCount": 15,
         "newsRecency": "2026-06-10",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-02",
+          "title": "Adani Expects ‘One or Two’ Foreign Airlines to Pause Mumbai Flights Rather Than Move Airports",
+          "type": "product",
+          "source": "https://skift.com/2026/11/02/adani-expects-one-or-two-foreign-airlines-to-pause-mumbai-flights-rather-than-move-airports/"
+        },
         {
           "date": "2026-10-29",
           "title": "Why AI Agents Could Become Travel’s New Digital Front Door: Watch Video",
@@ -1864,7 +1876,7 @@
       "website": "https://www.tern.ai",
       "description": "AI-powered travel technology by Tern",
       "isNew": true,
-      "lastUpdated": "2026-10-29",
+      "lastUpdated": "2026-11-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -2267,6 +2279,66 @@
       "description": "Travel startup Nicer",
       "isNew": true,
       "lastUpdated": "2026-10-28",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-9ea9a27eca49",
+      "name": "Booked",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "Melbourne startup Booked AI",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2024-11-14",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2024-11-14",
+          "title": "Melbourne startup Booked AI launches virtual travel agent - Business News Australia",
+          "type": "product",
+          "source": "https://www.businessnewsaustralia.com"
+        }
+      ],
+      "website": "https://www.booked.ai",
+      "description": "Melbourne startup Booked AI",
+      "isNew": true,
+      "lastUpdated": "2026-11-02",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-9568289d0c89",
+      "name": "Tourlane",
+      "type": "startup",
+      "location": "Germany",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI-powered travel technology by Tourlane",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2024-11-14",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2024-11-14",
+          "title": "German travel startup Tourlane raises $26M led by Sequoia - TechCrunch",
+          "type": "product",
+          "source": "https://techcrunch.com"
+        }
+      ],
+      "website": "https://www.tourlane.ai",
+      "description": "AI-powered travel technology by Tourlane",
+      "isNew": true,
+      "lastUpdated": "2026-11-02",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
