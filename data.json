@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-02",
-  "lastUpdated": "2026-11-02",
+  "version": "2026-11-03",
+  "lastUpdated": "2026-11-03",
   "companies": [
     {
       "id": "1",
@@ -1494,12 +1494,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 37,
+        "newsCount": 38,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-09-29",
+          "title": "Beijing broadens travel curbs to encompass family of top AI talent in China - The Japan Times",
+          "type": "product",
+          "source": "https://www.japantimes.co.jp"
+        },
         {
           "date": "2026-10-29",
           "title": "Hyatt Raises Outlook, but Its All-Inclusives Lag",
@@ -1726,7 +1732,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-10-30",
+      "lastUpdated": "2026-11-03",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
