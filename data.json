@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-10",
-  "lastUpdated": "2026-11-10",
+  "version": "2026-11-11",
+  "lastUpdated": "2026-11-11",
   "companies": [
     {
       "id": "1",
@@ -1098,12 +1098,18 @@
       "product": "BizTrip AI",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 9,
+        "newsCount": 10,
         "newsRecency": "2026-02-02",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-11",
+          "title": "BizTrip AI adds trip planning in Slack, Teams and iMessage - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-01-14",
           "title": "Sabre and BizTrip AI Announce Strategic Partnership to Deliver Agentic AI Solutions for Global Corporate Travel Market - PR Newswire",
@@ -1162,7 +1168,7 @@
       "website": "https://www.biztrip.ai",
       "description": "BizTrip AI",
       "isNew": true,
-      "lastUpdated": "2026-09-23",
+      "lastUpdated": "2026-11-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -1494,12 +1500,18 @@
       "product": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 38,
+        "newsCount": 39,
         "newsRecency": "2026-07-21",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-11",
+          "title": "OpenAI acquires AI travel startup Odessia; founder Francis Davidson to join team - The Economic Times",
+          "type": "product",
+          "source": "https://m.economictimes.com"
+        },
         {
           "date": "2026-09-29",
           "title": "Beijing broadens travel curbs to encompass family of top AI talent in China - The Japan Times",
@@ -1732,7 +1744,7 @@
       "website": "https://www.times.ai",
       "description": "30 Sundays Raises $6.7 Million Led by Bessemer Venture Partners to Expand AI-Powered Travel Platform - Indian Startup Times",
       "isNew": true,
-      "lastUpdated": "2026-11-03",
+      "lastUpdated": "2026-11-11",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
