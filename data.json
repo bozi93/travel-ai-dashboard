@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-13",
-  "lastUpdated": "2026-11-13",
+  "version": "2026-11-14",
+  "lastUpdated": "2026-11-14",
   "companies": [
     {
       "id": "1",
@@ -2412,12 +2412,18 @@
       "product": "AI-powered travel technology by Hanoi",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2026-11-13",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-13",
+          "title": "Hanoi launches HanoiGo tourism platform, AI-assisted in itinerary planning. - Vietnam.vn",
+          "type": "product",
+          "source": "https://www.vietnam.vn"
+        },
         {
           "date": "2026-11-13",
           "title": "Hanoi launches HanoiGo tourism platform with AI-powered itinerary planning - Tuoi Tre News | The News Gateway to Vietnam",
@@ -2428,7 +2434,7 @@
       "website": "https://www.hanoi.ai",
       "description": "AI-powered travel technology by Hanoi",
       "isNew": true,
-      "lastUpdated": "2026-11-13",
+      "lastUpdated": "2026-11-14",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
