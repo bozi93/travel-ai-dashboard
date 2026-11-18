@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-17",
-  "lastUpdated": "2026-11-17",
+  "version": "2026-11-18",
+  "lastUpdated": "2026-11-18",
   "companies": [
     {
       "id": "1",
@@ -2142,12 +2142,30 @@
       "product": "Booking Holdings",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 14,
+        "newsCount": 17,
         "newsRecency": "2026-10-14",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-17",
+          "title": "Booking Holdings' Vayo starts booking whole trips with AI agents, including on rival Expedia - MLQ.ai",
+          "type": "product",
+          "source": "https://mlq.ai"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Booking Holdings’ AI Agent Vayo Can Now Reserve Flights and Hotels - Skift",
+          "type": "product",
+          "source": "https://skift.com"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "Booking Holdings' travel startup Vayo starts booking trips with AI agents, even on rival Expedia - GeekWire",
+          "type": "product",
+          "source": "https://www.geekwire.com"
+        },
         {
           "date": "2026-10-14",
           "title": "Booking Holdings launches Vayo, an AI trip organizer - Travel Weekly",
@@ -2236,7 +2254,7 @@
       "website": "https://www.holdings.ai",
       "description": "Booking Holdings",
       "isNew": true,
-      "lastUpdated": "2026-10-20",
+      "lastUpdated": "2026-11-18",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
@@ -2441,6 +2459,36 @@
       "description": "AI-powered travel technology by Hanoi",
       "isNew": true,
       "lastUpdated": "2026-11-14",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-20751c5b9dfd",
+      "name": "Labs",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "Voyage Labs",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2026-11-17",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2026-11-17",
+          "title": "Voyage Labs raises $12 million for a specialized AI travel assistant - TechCrunch",
+          "type": "product",
+          "source": "https://techcrunch.com"
+        }
+      ],
+      "website": "https://www.labs.ai",
+      "description": "Voyage Labs",
+      "isNew": true,
+      "lastUpdated": "2026-11-18",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
