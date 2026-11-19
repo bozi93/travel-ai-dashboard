@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-18",
-  "lastUpdated": "2026-11-18",
+  "version": "2026-11-19",
+  "lastUpdated": "2026-11-19",
   "companies": [
     {
       "id": "1",
@@ -2472,12 +2472,24 @@
       "product": "Voyage Labs",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 3,
         "newsRecency": "2026-11-17",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-17",
+          "title": "Voyage Labs raises $12M to build end-to-end AI travel agent Atlas - Dealroom",
+          "type": "product",
+          "source": "https://app.dealroom.co"
+        },
+        {
+          "date": "2026-11-19",
+          "title": "Google Maps alum's Voyage Labs raises $12M to build AI travel agent - PhocusWire",
+          "type": "product",
+          "source": "https://www.phocuswire.com"
+        },
         {
           "date": "2026-11-17",
           "title": "Voyage Labs raises $12 million for a specialized AI travel assistant - TechCrunch",
@@ -2488,7 +2500,37 @@
       "website": "https://www.labs.ai",
       "description": "Voyage Labs",
       "isNew": true,
-      "lastUpdated": "2026-11-18",
+      "lastUpdated": "2026-11-19",
+      "_autoDiscovered": true,
+      "founded": "2026-01-01"
+    },
+    {
+      "id": "auto-e69fd0f8f1bf",
+      "name": "Ziptrrip",
+      "type": "startup",
+      "location": "Unknown",
+      "stage": "Unknown",
+      "totalFunding": "N/A",
+      "product": "AI travel tech startup Ziptrrip",
+      "investors": "N/A",
+      "metrics": {
+        "newsCount": 1,
+        "newsRecency": "2024-08-19",
+        "socialMentions": 5,
+        "trafficGrowth": "待观察"
+      },
+      "news": [
+        {
+          "date": "2024-08-19",
+          "title": "AI travel tech startup Ziptrrip raises INR 2 crore in pre-seed funding, achieves profitability in Q4 - ET TravelWorld",
+          "type": "product",
+          "source": "http://travel.economictimes.indiatimes.com"
+        }
+      ],
+      "website": "https://www.ziptrrip.ai",
+      "description": "AI travel tech startup Ziptrrip",
+      "isNew": true,
+      "lastUpdated": "2026-11-19",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     }
