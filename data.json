@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-22",
-  "lastUpdated": "2026-11-22",
+  "version": "2026-11-23",
+  "lastUpdated": "2026-11-23",
   "companies": [
     {
       "id": "1",
@@ -2346,12 +2346,18 @@
       "product": "Melbourne startup Booked AI",
       "investors": "N/A",
       "metrics": {
-        "newsCount": 1,
+        "newsCount": 2,
         "newsRecency": "2024-11-14",
         "socialMentions": 5,
         "trafficGrowth": "待观察"
       },
       "news": [
+        {
+          "date": "2026-11-23",
+          "title": "Mr & Mrs Smith Booked More Under Hyatt but Earned Less on Each Stay",
+          "type": "product",
+          "source": "https://skift.com/2026/11/23/mr-mrs-smith-booked-more-under-hyatt-but-earned-less-on-each-stay/"
+        },
         {
           "date": "2024-11-14",
           "title": "Melbourne startup Booked AI launches virtual travel agent - Business News Australia",
@@ -2362,7 +2368,7 @@
       "website": "https://www.booked.ai",
       "description": "Melbourne startup Booked AI",
       "isNew": true,
-      "lastUpdated": "2026-11-02",
+      "lastUpdated": "2026-11-23",
       "_autoDiscovered": true,
       "founded": "2026-01-01"
     },
